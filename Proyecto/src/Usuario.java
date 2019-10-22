@@ -1,67 +1,54 @@
 
 public class Usuario {
-	String cor = " " ;
-	String con = " " ;
-	String nom = " " ;
-	String apl= " " ;
-	String tdb = " " ;
-	
-	public Usuario(String cor, String con, String nom, String apl, String tdb) {
+	private String correo;
+	String contrasenya;
+	String nombre;
+	String apellido;
+	String tarjetadeusto;
+	public Usuario(String correo, String contrasenya, String nombre, String apellido, String tarjetadeusto) {
 		super();
-		this.cor = cor;
-		this.con = con;
-		
-		this.nom = nom;
-		this.apl = apl;
-		this.tdb = tdb;
+		this.correo = correo;
+		this.contrasenya = contrasenya;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.tarjetadeusto = tarjetadeusto;
 	}
-
-	public String getCor() {
-		return cor;
+	public String getCorreo() {
+		return correo;
 	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
-
-	public String getCon() {
-		return con;
+	public String getContrasenya() {
+		return contrasenya;
 	}
-
-	public void setCon(String con) {
-		this.con = con;
+	public void setContrasenya(String contrasenya) {
+		this.contrasenya = contrasenya;
 	}
-
-	
-
-	public String getNom() {
-		return nom;
+	public String getNombre() {
+		return nombre;
 	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
-
-	public String getApl() {
-		return apl;
+	public String getApellido() {
+		return apellido;
 	}
-
-	public void setApl(String apl) {
-		this.apl = apl;
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
-
-	public String getTdb() {
-		return tdb;
+	public String getTarjetadeusto() {
+		return tarjetadeusto;
 	}
-
-	public void setTdb(String tdb) {
-		this.tdb = tdb;
+	public void setTarjetadeusto(String tarjetadeusto) {
+		this.tarjetadeusto = tarjetadeusto;
 	}
-
 	@Override
 	public String toString() {
-		return "Usuario [cor=" + cor + ", con=" + con +  ", nom=" + nom + ", apl=" + apl + ", tdb="
-				+ tdb + "]";
+		return "Usuario [correo=" + correo + ", contrasenya=" + contrasenya + ", nombre=" + nombre + ", apellido="
+				+ apellido + ", tarjetadeusto=" + tarjetadeusto + "]";
 	}
+	
+	
 	
 }

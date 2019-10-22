@@ -118,21 +118,21 @@ public class VentanaRegistro extends JFrame {
 				
 	if (textCorreo.getText().length()<=20 && textCorreo.getText().length()>0) {
 					cor = textCorreo.getText();
-					//errorNombre.setVisible(false);
+					
 				} else {
-					//errorNombre.setVisible(true);
+					
 			}
 	if (textContra.getText().length()<=8 && textContra.getText().length()>0) {
-		//errorNombre.setVisible(false);
+		
 	} else {
-		//errorNombre.setVisible(true);
+		
 }
 	if (textContra.getText()==textContra1.getText()) {
 		con = textContra.getText();
-		//errorNombre.setVisible(false);
+		
 		lblNewLabel_6.setVisible(false);
 	} else {
-		//errorNombre.setVisible(true);
+		
 		lblNewLabel_6.setVisible(true);
 }
 	if (textNom.getText().length()<=20 && textNom.getText().length()>0) {
@@ -149,9 +149,9 @@ public class VentanaRegistro extends JFrame {
 }
 	if (textTD.getText().length()==8) {
 		tdb = textTD.getText();
-		//errorNombre.setVisible(false);
+		
 	} else {
-		//errorNombre.setVisible(true);
+		
 }
 	if(textCorreo.getText().length()<=20 && textCorreo.getText().length()>0 && textContra.getText().length()<=8 && textContra.getText().length()>0 
 			&& textContra.getText()==textContra1.getText() && textNom.getText().length()<=20 && textNom.getText().length()>0 && textApel.getText().length()<=20 && textApel.getText().length()>0
