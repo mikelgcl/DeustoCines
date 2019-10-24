@@ -13,6 +13,8 @@ import javax.swing.UIManager;
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
+import javax.swing.JProgressBar;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -53,10 +55,15 @@ public class VLugar {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		JProgressBar progressBar = new JProgressBar();
+		progressBar.setBounds(0, 257, 417, 23);
+		progressBar.setValue(0);
+		frame.getContentPane().add(progressBar);
+		
 		JLabel lblCinesDeusto = new JLabel("Cines Deusto");
 		lblCinesDeusto.setForeground(UIManager.getColor("ColorChooser.background"));
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 45));
-		lblCinesDeusto.setBounds(84, 11, 294, 71);
+		lblCinesDeusto.setBounds(85, 11, 294, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		JLabel lblNombre = new JLabel("Elige un cine:");
@@ -76,7 +83,7 @@ public class VLugar {
 		button_1.setBounds(0, -11, 434, 102);
 		frame.getContentPane().add(button_1);
 		
-		JButton button = new JButton("Entrar");
+		/*JButton button = new JButton("Entrar");
 		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -88,11 +95,12 @@ public class VLugar {
 				
 				
 			}
-		});
-		button.setForeground(Color.WHITE);
+		});*/
+		
+		/*button.setForeground(Color.WHITE);
 		button.setBackground(SystemColor.textHighlight);
 		button.setBounds(84, 217, 95, 33);
-		frame.getContentPane().add(button);
+		frame.getContentPane().add(button);*/
 		
 		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
 		btnCerrarSesin.addActionListener(new ActionListener() {
@@ -104,7 +112,7 @@ public class VLugar {
 			}
 		});
 		btnCerrarSesin.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnCerrarSesin.setBounds(189, 217, 150, 33);
+		btnCerrarSesin.setBounds(189, 200, 150, 33);
 		frame.getContentPane().add(btnCerrarSesin);
 		
 		JComboBox comboBox = new JComboBox();
@@ -117,6 +125,45 @@ public class VLugar {
 	
 		
 		frame.getContentPane().add(comboBox);
+		
+		//Prueba
+		JButton btnEmpezar = new JButton("Empezar");
+		btnEmpezar.setForeground(SystemColor.text);
+		btnEmpezar.setBackground(SystemColor.textHighlight);
+		btnEmpezar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				Thread hilito = new Thread(new Runnable() {
+
+					@Override
+					public void run() {
+						for (int i = 0; i <= 1000000; i++) {
+							int progreso = 0;
+							i = i + i/150000;
+							
+							progreso = (int)i/10000;
+							System.out.println();
+							progressBar.setValue(progreso);
+							if (progreso == 100) {
+								VCartelera nuevaVentana = new VCartelera(); 
+								nuevaVentana.frame.setVisible(true);
+								frame.dispose();
+							}
+						}
+						
+					}
+					
+				}); 
+				hilito.start();
+				
+				
+				
+			
+			}
+		});
+		btnEmpezar.setBounds(84, 200, 95, 33);
+		frame.getContentPane().add(btnEmpezar);
 		
 		frame.setLocationRelativeTo(null);
 	}
