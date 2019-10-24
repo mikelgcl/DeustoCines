@@ -97,20 +97,8 @@ public class VentanaRegistro extends JFrame {
 		JLabel lblRegistro = new JLabel("Registro");
 		lblRegistro.setForeground(Color.WHITE);
 		lblRegistro.setFont(new Font("Tahoma", Font.PLAIN, 48));
-		lblRegistro.setBounds(82, 32, 195, 59);
+		lblRegistro.setBounds(81, 21, 195, 59);
 		getContentPane().add(lblRegistro);
-		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setEnabled(false);
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnNewButton_1.setForeground(Color.WHITE);
-		btnNewButton_1.setBackground(SystemColor.textHighlight);
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 40));
-		btnNewButton_1.setBounds(0, 11, 344, 98);
-		getContentPane().add(btnNewButton_1);
 		
 		JButton btnAtrs = new JButton("Atr\u00E1s");
 		btnAtrs.addActionListener(new ActionListener() {
@@ -124,7 +112,7 @@ public class VentanaRegistro extends JFrame {
 			}
 		});
 		btnAtrs.setForeground(Color.WHITE);
-		btnAtrs.setBackground(SystemColor.textHighlight);
+		btnAtrs.setBackground(new Color(0, 0, 153));
 		btnAtrs.setBounds(56, 497, 107, 20);
 		getContentPane().add(btnAtrs);
 		
@@ -147,6 +135,11 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnRegistrar.setBounds(174, 497, 113, 20);
 		getContentPane().add(btnRegistrar);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/imagenes/fondo1bueno.jpg")));
+		lblNewLabel_7.setBounds(0, 0, 344, 98);
+		getContentPane().add(lblNewLabel_7);
 		
 		VentanaRegistro.this.setLocationRelativeTo(null);
 		

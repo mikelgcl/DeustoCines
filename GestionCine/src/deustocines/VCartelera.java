@@ -65,18 +65,6 @@ public class VCartelera {
 		lblNombre.setBounds(50, 100, 121, 32);
 		frame.getContentPane().add(lblNombre);
 		
-		JButton button_1 = new JButton("");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		button_1.setForeground(Color.WHITE);
-		button_1.setFont(new Font("Gadugi", Font.BOLD, 32));
-		button_1.setEnabled(false);
-		button_1.setBackground(SystemColor.textHighlight);
-		button_1.setBounds(0, -11, 566, 100);
-		frame.getContentPane().add(button_1);
-		
 		JButton btnAtrs = new JButton("Atr\u00E1s");
 		btnAtrs.addActionListener(new ActionListener() {
 			
@@ -89,7 +77,7 @@ public class VCartelera {
 			}
 		});
 		btnAtrs.setForeground(Color.WHITE);
-		btnAtrs.setBackground(SystemColor.textHighlight);
+		btnAtrs.setBackground(new Color(0, 0, 153));
 		btnAtrs.setBounds(28, 531, 100, 32);
 		frame.getContentPane().add(btnAtrs);
 		
@@ -204,7 +192,7 @@ public class VCartelera {
 			}
 		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnNewButton_3.setBackground(Color.RED);
+		btnNewButton_3.setBackground(new Color(204, 0, 0));
 		btnNewButton_3.setForeground(Color.BLACK);
 		btnNewButton_3.setBounds(411, 531, 121, 32);
 		frame.getContentPane().add(btnNewButton_3);
@@ -282,6 +270,12 @@ public class VCartelera {
 		JLabel label_1 = new JLabel("124'");
 		label_1.setBounds(180, 393, 46, 14);
 		frame.getContentPane().add(label_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBackground(new Color(0, 0, 153));
+		lblNewLabel.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/fondo1bueno.jpg")));
+		lblNewLabel.setBounds(0, 0, 566, 93);
+		frame.getContentPane().add(lblNewLabel);
 		
 		frame.setLocationRelativeTo(null);
 	}

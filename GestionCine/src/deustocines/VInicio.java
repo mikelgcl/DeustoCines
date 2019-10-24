@@ -15,12 +15,14 @@ import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class VInicio {
 
 	public JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private final JLabel label_1 = new JLabel("");
 
 	/**
 	 * Launch the application.
@@ -59,7 +61,7 @@ public class VInicio {
 		JLabel lblCinesDeusto = new JLabel("Cines Deusto");
 		lblCinesDeusto.setForeground(UIManager.getColor("ColorChooser.background"));
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 45));
-		lblCinesDeusto.setBounds(60, 11, 320, 71);
+		lblCinesDeusto.setBounds(61, 11, 320, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		textField = new JTextField();
@@ -76,18 +78,6 @@ public class VInicio {
 		lblContrasea.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblContrasea.setBounds(39, 182, 160, 14);
 		frame.getContentPane().add(lblContrasea);
-		
-		JButton button_1 = new JButton("");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		button_1.setForeground(Color.WHITE);
-		button_1.setFont(new Font("Gadugi", Font.BOLD, 32));
-		button_1.setEnabled(false);
-		button_1.setBackground(SystemColor.textHighlight);
-		button_1.setBounds(0, -11, 482, 101);
-		frame.getContentPane().add(button_1);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(132, 180, 215, 20);
@@ -120,7 +110,7 @@ public class VInicio {
 			}
 		});
 		button.setForeground(Color.WHITE);
-		button.setBackground(SystemColor.textHighlight);
+		button.setBackground(new Color(0, 0, 153));
 		button.setBounds(39, 244, 121, 20);
 		frame.getContentPane().add(button);
 		
@@ -143,6 +133,9 @@ public class VInicio {
 		JLabel label = new JLabel("");
 		label.setBounds(83, 205, 46, 14);
 		frame.getContentPane().add(label);
+		label_1.setIcon(new ImageIcon(VInicio.class.getResource("/imagenes/fondo1bueno.jpg")));
+		label_1.setBounds(0, 0, 391, 98);
+		frame.getContentPane().add(label_1);
 		
 		frame.setLocationRelativeTo(null);
 	}

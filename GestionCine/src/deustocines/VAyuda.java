@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 
 public class VAyuda {
 
@@ -60,18 +61,6 @@ public class VAyuda {
 		lblCinesDeusto.setBounds(84, 11, 294, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
-		JButton button_1 = new JButton("");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		button_1.setForeground(Color.WHITE);
-		button_1.setFont(new Font("Gadugi", Font.BOLD, 32));
-		button_1.setEnabled(false);
-		button_1.setBackground(SystemColor.textHighlight);
-		button_1.setBounds(0, -11, 434, 102);
-		frame.getContentPane().add(button_1);
-		
 		JButton btnAtras = new JButton("Cerrar");
 		btnAtras.addActionListener(new ActionListener() {
 			
@@ -83,7 +72,7 @@ public class VAyuda {
 			}
 		});
 		btnAtras.setForeground(Color.WHITE);
-		btnAtras.setBackground(SystemColor.textHighlight);
+		btnAtras.setBackground(new Color(0, 0, 153));
 		btnAtras.setBounds(46, 401, 95, 23);
 		frame.getContentPane().add(btnAtras);
 		
@@ -116,6 +105,11 @@ public class VAyuda {
 		label_3.setFont(new Font("Consolas", Font.BOLD, 50));
 		label_3.setBounds(84, 325, 320, 65);
 		frame.getContentPane().add(label_3);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VAyuda.class.getResource("/imagenes/fondo1bueno.jpg")));
+		lblNewLabel.setBounds(0, 0, 444, 93);
+		frame.getContentPane().add(lblNewLabel);
 		
 		frame.setLocationRelativeTo(null);
 	}

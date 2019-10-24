@@ -18,6 +18,7 @@ import javax.swing.JProgressBar;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import javax.swing.ImageIcon;
 
 public class VLugar {
 
@@ -73,18 +74,6 @@ public class VLugar {
 		lblNombre.setBounds(84, 115, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
-		JButton button_1 = new JButton("");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		button_1.setForeground(Color.WHITE);
-		button_1.setFont(new Font("Gadugi", Font.BOLD, 32));
-		button_1.setEnabled(false);
-		button_1.setBackground(SystemColor.textHighlight);
-		button_1.setBounds(0, -11, 434, 102);
-		frame.getContentPane().add(button_1);
-		
 	
 		
 		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
@@ -114,7 +103,7 @@ public class VLugar {
 		//Prueba
 		JButton btnEmpezar = new JButton("Empezar");
 		btnEmpezar.setForeground(SystemColor.text);
-		btnEmpezar.setBackground(SystemColor.textHighlight);
+		btnEmpezar.setBackground(new Color(0, 0, 153));
 		btnEmpezar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -146,6 +135,11 @@ public class VLugar {
 		});
 		btnEmpezar.setBounds(84, 200, 95, 33);
 		frame.getContentPane().add(btnEmpezar);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VLugar.class.getResource("/imagenes/fondo1bueno.jpg")));
+		lblNewLabel.setBounds(0, 0, 417, 95);
+		frame.getContentPane().add(lblNewLabel);
 		
 		frame.setLocationRelativeTo(null);
 	}
