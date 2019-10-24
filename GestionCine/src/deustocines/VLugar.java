@@ -56,7 +56,9 @@ public class VLugar {
 		frame.getContentPane().setLayout(null);
 		
 		JProgressBar progressBar = new JProgressBar();
-		progressBar.setBounds(0, 257, 417, 23);
+		progressBar.setForeground(UIManager.getColor("InternalFrame.activeTitleBackground"));
+		progressBar.setBackground(UIManager.getColor("FormattedTextField.inactiveBackground"));
+		progressBar.setBounds(-11, 257, 434, 23);
 		progressBar.setValue(0);
 		frame.getContentPane().add(progressBar);
 		
@@ -83,24 +85,7 @@ public class VLugar {
 		button_1.setBounds(0, -11, 434, 102);
 		frame.getContentPane().add(button_1);
 		
-		/*JButton button = new JButton("Entrar");
-		button.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {
-				VCartelera nuevaVentana = new VCartelera(); 
-				nuevaVentana.frame.setVisible(true);
-				frame.dispose();
-				
-				//Meterse en otra ventana
-				
-				
-			}
-		});*/
-		
-		/*button.setForeground(Color.WHITE);
-		button.setBackground(SystemColor.textHighlight);
-		button.setBounds(84, 217, 95, 33);
-		frame.getContentPane().add(button);*/
+	
 		
 		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
 		btnCerrarSesin.addActionListener(new ActionListener() {
@@ -156,10 +141,7 @@ public class VLugar {
 					
 				}); 
 				hilito.start();
-				
-				
-				
-			
+	
 			}
 		});
 		btnEmpezar.setBounds(84, 200, 95, 33);
