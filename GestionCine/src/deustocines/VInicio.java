@@ -51,7 +51,7 @@ public class VInicio {
 	private void initialize() {
 		frame = new JFrame();
 		
-		frame.setBounds(100, 100, 498, 357);
+		frame.setBounds(100, 100, 407, 344);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
@@ -59,22 +59,22 @@ public class VInicio {
 		JLabel lblCinesDeusto = new JLabel("Cines Deusto");
 		lblCinesDeusto.setForeground(UIManager.getColor("ColorChooser.background"));
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 45));
-		lblCinesDeusto.setBounds(110, 11, 324, 71);
+		lblCinesDeusto.setBounds(60, 11, 320, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		textField = new JTextField();
-		textField.setBounds(103, 143, 277, 20);
+		textField.setBounds(125, 132, 222, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNombre = new JLabel("Usuario:");
-		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNombre.setBounds(103, 112, 121, 20);
+		lblNombre.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNombre.setBounds(39, 131, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
-		lblContrasea.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblContrasea.setBounds(103, 174, 160, 14);
+		lblContrasea.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblContrasea.setBounds(39, 182, 160, 14);
 		frame.getContentPane().add(lblContrasea);
 		
 		JButton button_1 = new JButton("");
@@ -90,13 +90,13 @@ public class VInicio {
 		frame.getContentPane().add(button_1);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(103, 199, 277, 20);
+		passwordField.setBounds(125, 180, 222, 20);
 		frame.getContentPane().add(passwordField);
 		
 		JLabel lblError = new JLabel("Usuario y/o contrase\u00F1a incorrectos");
 		lblError.setForeground(Color.RED);
 		lblError.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblError.setBounds(103, 221, 171, 21);
+		lblError.setBounds(125, 207, 171, 12);
 		lblError.setVisible(false);
 		frame.getContentPane().add(lblError);
 		
@@ -121,7 +121,7 @@ public class VInicio {
 		});
 		button.setForeground(Color.WHITE);
 		button.setBackground(SystemColor.textHighlight);
-		button.setBounds(103, 253, 107, 31);
+		button.setBounds(39, 244, 121, 20);
 		frame.getContentPane().add(button);
 		
 		JButton button_2 = new JButton("Nuevo Usuario");
@@ -135,7 +135,7 @@ public class VInicio {
 			}
 		});
 		button_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		button_2.setBounds(220, 253, 160, 31);
+		button_2.setBounds(176, 244, 171, 20);
 		frame.getContentPane().add(button_2);
 		
 	

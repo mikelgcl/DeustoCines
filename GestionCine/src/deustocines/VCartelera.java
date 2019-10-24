@@ -16,6 +16,7 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import javax.swing.ImageIcon;
 
 public class VCartelera {
 
@@ -49,7 +50,7 @@ public class VCartelera {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 582, 569);
+		frame.setBounds(100, 100, 576, 624);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -89,42 +90,16 @@ public class VCartelera {
 		});
 		btnAtrs.setForeground(Color.WHITE);
 		btnAtrs.setBackground(SystemColor.textHighlight);
-		btnAtrs.setBounds(50, 467, 89, 32);
+		btnAtrs.setBounds(28, 531, 100, 32);
 		frame.getContentPane().add(btnAtrs);
 		
-		JButton btnNewButton = new JButton("Pel\u00EDcula 1");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnNewButton.setBackground(Color.LIGHT_GRAY);
-		btnNewButton.setEnabled(false);
-		btnNewButton.setBounds(50, 186, 89, 110);
-		frame.getContentPane().add(btnNewButton);
-		
-		JButton btnPelcula_1 = new JButton("Pel\u00EDcula 3");
+		JButton btnPelcula_1 = new JButton("");
+		btnPelcula_1.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli2buena.jpg")));
 		btnPelcula_1.setBackground(Color.LIGHT_GRAY);
-		btnPelcula_1.setEnabled(false);
-		btnPelcula_1.setBounds(50, 327, 89, 110);
+		btnPelcula_1.setBounds(29, 180, 99, 143);
 		frame.getContentPane().add(btnPelcula_1);
 		
-		JButton btnPelcula = new JButton("Pel\u00EDcula 2");
-		btnPelcula.setBackground(Color.LIGHT_GRAY);
-		btnPelcula.setEnabled(false);
-		btnPelcula.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnPelcula.setBounds(300, 186, 89, 110);
-		frame.getContentPane().add(btnPelcula);
-		
-		JButton btnPelcula_2 = new JButton("Pel\u00EDcula 4");
-		btnPelcula_2.setBackground(Color.LIGHT_GRAY);
-		btnPelcula_2.setEnabled(false);
-		btnPelcula_2.setBounds(300, 327, 89, 110);
-		frame.getContentPane().add(btnPelcula_2);
-		
-		JLabel lblZombieland = new JLabel("TerraZombi 32");
+		JLabel lblZombieland = new JLabel("Zombieland 2");
 		lblZombieland.setBounds(149, 191, 79, 14);
 		frame.getContentPane().add(lblZombieland);
 		
@@ -160,113 +135,41 @@ public class VCartelera {
 		button_5.setBounds(149, 263, 34, 20);
 		frame.getContentPane().add(button_5);
 		
-		JLabel lblFrozen = new JLabel("La hielos");
-		lblFrozen.setBounds(149, 331, 79, 14);
-		frame.getContentPane().add(lblFrozen);
-		
-		JLabel lblM_1 = new JLabel("M3");
-		lblM_1.setBounds(149, 350, 34, 14);
-		frame.getContentPane().add(lblM_1);
-		
-		JLabel label_3 = new JLabel("84'");
-		label_3.setBounds(182, 350, 46, 14);
-		frame.getContentPane().add(label_3);
-		
-		JButton button_6 = new JButton("16:40");
-		button_6.setBounds(149, 371, 34, 20);
-		frame.getContentPane().add(button_6);
-		
-		JButton button_7 = new JButton("16:40");
-		button_7.setBounds(192, 370, 34, 20);
-		frame.getContentPane().add(button_7);
-		
-		JButton button_8 = new JButton("16:40");
-		button_8.setBounds(236, 370, 34, 20);
-		frame.getContentPane().add(button_8);
-		
-		JButton button_9 = new JButton("16:40");
-		button_9.setBounds(149, 403, 34, 20);
-		frame.getContentPane().add(button_9);
-		
-		JButton button_10 = new JButton("16:40");
-		button_10.setBounds(192, 402, 34, 20);
-		frame.getContentPane().add(button_10);
-		
-		JButton button_11 = new JButton("16:40");
-		button_11.setBounds(236, 402, 34, 20);
-		frame.getContentPane().add(button_11);
-		
-		JLabel lblJoker = new JLabel("El bromas");
-		lblJoker.setBounds(399, 191, 79, 14);
+		JLabel lblJoker = new JLabel("Joker");
+		lblJoker.setBounds(411, 190, 79, 14);
 		frame.getContentPane().add(lblJoker);
 		
 		JLabel label_5 = new JLabel("M18");
-		label_5.setBounds(399, 210, 34, 14);
+		label_5.setBounds(411, 209, 34, 14);
 		frame.getContentPane().add(label_5);
 		
 		JLabel label_6 = new JLabel("121'");
-		label_6.setBounds(432, 210, 46, 14);
+		label_6.setBounds(444, 209, 46, 14);
 		frame.getContentPane().add(label_6);
 		
 		JButton button_12 = new JButton("16:40");
-		button_12.setBounds(399, 231, 34, 20);
+		button_12.setBounds(411, 230, 34, 20);
 		frame.getContentPane().add(button_12);
 		
 		JButton button_13 = new JButton("16:40");
-		button_13.setBounds(442, 230, 34, 20);
+		button_13.setBounds(454, 229, 34, 20);
 		frame.getContentPane().add(button_13);
 		
 		JButton button_14 = new JButton("16:40");
-		button_14.setBounds(486, 230, 34, 20);
+		button_14.setBounds(498, 229, 34, 20);
 		frame.getContentPane().add(button_14);
 		
 		JButton button_15 = new JButton("16:40");
-		button_15.setBounds(399, 263, 34, 20);
+		button_15.setBounds(411, 262, 34, 20);
 		frame.getContentPane().add(button_15);
 		
 		JButton button_16 = new JButton("16:40");
-		button_16.setBounds(442, 262, 34, 20);
+		button_16.setBounds(454, 261, 34, 20);
 		frame.getContentPane().add(button_16);
 		
 		JButton button_17 = new JButton("16:40");
-		button_17.setBounds(486, 262, 34, 20);
+		button_17.setBounds(498, 261, 34, 20);
 		frame.getContentPane().add(button_17);
-		
-		JLabel lblLosAvengadores = new JLabel("Los Avengadores");
-		lblLosAvengadores.setBounds(399, 331, 99, 14);
-		frame.getContentPane().add(lblLosAvengadores);
-		
-		JLabel lblM_2 = new JLabel("M13");
-		lblM_2.setBounds(399, 350, 34, 14);
-		frame.getContentPane().add(lblM_2);
-		
-		JLabel label_9 = new JLabel("178'");
-		label_9.setBounds(432, 350, 46, 14);
-		frame.getContentPane().add(label_9);
-		
-		JButton button_18 = new JButton("16:40");
-		button_18.setBounds(399, 371, 34, 20);
-		frame.getContentPane().add(button_18);
-		
-		JButton button_19 = new JButton("16:40");
-		button_19.setBounds(442, 370, 34, 20);
-		frame.getContentPane().add(button_19);
-		
-		JButton button_20 = new JButton("16:40");
-		button_20.setBounds(486, 370, 34, 20);
-		frame.getContentPane().add(button_20);
-		
-		JButton button_21 = new JButton("16:40");
-		button_21.setBounds(399, 403, 34, 20);
-		frame.getContentPane().add(button_21);
-		
-		JButton button_22 = new JButton("16:40");
-		button_22.setBounds(442, 402, 34, 20);
-		frame.getContentPane().add(button_22);
-		
-		JButton button_23 = new JButton("16:40");
-		button_23.setBounds(486, 402, 34, 20);
-		frame.getContentPane().add(button_23);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(86, 140, 114, 20);
@@ -298,7 +201,7 @@ public class VCartelera {
 			
 			}
 		});
-		btnNewButton_2.setBounds(149, 467, 99, 32);
+		btnNewButton_2.setBounds(149, 531, 99, 32);
 		frame.getContentPane().add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Cerrar sesi\u00F3n");
@@ -315,8 +218,98 @@ public class VCartelera {
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnNewButton_3.setBackground(Color.RED);
 		btnNewButton_3.setForeground(Color.BLACK);
-		btnNewButton_3.setBounds(300, 467, 220, 32);
+		btnNewButton_3.setBounds(411, 531, 121, 32);
 		frame.getContentPane().add(btnNewButton_3);
+		
+		JButton button_24 = new JButton("");
+		button_24.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli1buena.jpg")));
+		button_24.setBackground(Color.LIGHT_GRAY);
+		button_24.setBounds(290, 180, 99, 143);
+		frame.getContentPane().add(button_24);
+		
+		JButton button_6 = new JButton("");
+		button_6.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli3buena.jpg")));
+		button_6.setBackground(Color.LIGHT_GRAY);
+		button_6.setBounds(29, 359, 99, 143);
+		frame.getContentPane().add(button_6);
+		
+		JButton button_7 = new JButton("16:40");
+		button_7.setBounds(149, 446, 34, 20);
+		frame.getContentPane().add(button_7);
+		
+		JButton button_8 = new JButton("16:40");
+		button_8.setBounds(149, 414, 34, 20);
+		frame.getContentPane().add(button_8);
+		
+		JLabel lblM_1 = new JLabel("M7");
+		lblM_1.setBounds(149, 393, 34, 14);
+		frame.getContentPane().add(lblM_1);
+		
+		JLabel lblAdAstra = new JLabel("Ad Astra");
+		lblAdAstra.setBounds(149, 374, 79, 14);
+		frame.getContentPane().add(lblAdAstra);
+		
+		JButton button_9 = new JButton("16:40");
+		button_9.setBounds(192, 413, 34, 20);
+		frame.getContentPane().add(button_9);
+		
+		JButton button_10 = new JButton("16:40");
+		button_10.setBounds(236, 413, 34, 20);
+		frame.getContentPane().add(button_10);
+		
+		JButton button_11 = new JButton("16:40");
+		button_11.setBounds(236, 445, 34, 20);
+		frame.getContentPane().add(button_11);
+		
+		JButton button_18 = new JButton("16:40");
+		button_18.setBounds(192, 445, 34, 20);
+		frame.getContentPane().add(button_18);
+		
+		JButton button_19 = new JButton("");
+		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
+		button_19.setBackground(Color.LIGHT_GRAY);
+		button_19.setBounds(290, 359, 99, 143);
+		frame.getContentPane().add(button_19);
+		
+		JButton button_20 = new JButton("16:40");
+		button_20.setBounds(411, 409, 34, 20);
+		frame.getContentPane().add(button_20);
+		
+		JLabel lblTp = new JLabel("TP");
+		lblTp.setBounds(411, 388, 34, 14);
+		frame.getContentPane().add(lblTp);
+		
+		JLabel lblDoraYLa = new JLabel("Dora y la ciudad perdida");
+		lblDoraYLa.setBounds(411, 369, 121, 14);
+		frame.getContentPane().add(lblDoraYLa);
+		
+		JLabel label_7 = new JLabel("102'");
+		label_7.setBounds(444, 388, 46, 14);
+		frame.getContentPane().add(label_7);
+		
+		JButton button_21 = new JButton("16:40");
+		button_21.setBounds(454, 408, 34, 20);
+		frame.getContentPane().add(button_21);
+		
+		JButton button_22 = new JButton("16:40");
+		button_22.setBounds(498, 408, 34, 20);
+		frame.getContentPane().add(button_22);
+		
+		JButton button_23 = new JButton("16:40");
+		button_23.setBounds(498, 440, 34, 20);
+		frame.getContentPane().add(button_23);
+		
+		JButton button_25 = new JButton("16:40");
+		button_25.setBounds(454, 440, 34, 20);
+		frame.getContentPane().add(button_25);
+		
+		JButton button_26 = new JButton("16:40");
+		button_26.setBounds(411, 441, 34, 20);
+		frame.getContentPane().add(button_26);
+		
+		JLabel label_1 = new JLabel("124'");
+		label_1.setBounds(180, 393, 46, 14);
+		frame.getContentPane().add(label_1);
 		
 		frame.setLocationRelativeTo(null);
 	}
