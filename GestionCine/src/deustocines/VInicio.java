@@ -1,3 +1,4 @@
+package deustocines;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -14,11 +15,12 @@ import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JComboBox;
 
-public class VLugar {
+public class VInicio {
 
 	public JFrame frame;
+	private JTextField textField;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -27,7 +29,7 @@ public class VLugar {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VLugar window = new VLugar();
+					VInicio window = new VInicio();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +41,7 @@ public class VLugar {
 	/**
 	 * Create the application.
 	 */
-	public VLugar() {
+	public VInicio() {
 		initialize();
 	}
 
@@ -48,20 +50,32 @@ public class VLugar {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 433, 319);
+		
+		frame.setBounds(100, 100, 498, 357);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setVisible(true);
 		
 		JLabel lblCinesDeusto = new JLabel("Cines Deusto");
 		lblCinesDeusto.setForeground(UIManager.getColor("ColorChooser.background"));
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 45));
-		lblCinesDeusto.setBounds(84, 11, 294, 71);
+		lblCinesDeusto.setBounds(110, 11, 324, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
-		JLabel lblNombre = new JLabel("Elige un cine:");
+		textField = new JTextField();
+		textField.setBounds(103, 143, 277, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNombre = new JLabel("Usuario:");
 		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNombre.setBounds(84, 115, 121, 20);
+		lblNombre.setBounds(103, 112, 121, 20);
 		frame.getContentPane().add(lblNombre);
+		
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
+		lblContrasea.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblContrasea.setBounds(103, 174, 160, 14);
+		frame.getContentPane().add(lblContrasea);
 		
 		JButton button_1 = new JButton("");
 		button_1.addActionListener(new ActionListener() {
@@ -72,51 +86,66 @@ public class VLugar {
 		button_1.setFont(new Font("Gadugi", Font.BOLD, 32));
 		button_1.setEnabled(false);
 		button_1.setBackground(SystemColor.textHighlight);
-		button_1.setBounds(0, -11, 434, 102);
+		button_1.setBounds(0, -11, 482, 101);
 		frame.getContentPane().add(button_1);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(103, 199, 277, 20);
+		frame.getContentPane().add(passwordField);
+		
+		JLabel lblError = new JLabel("Usuario y/o contrase\u00F1a incorrectos");
+		lblError.setForeground(Color.RED);
+		lblError.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblError.setBounds(103, 221, 171, 21);
+		lblError.setVisible(false);
+		frame.getContentPane().add(lblError);
 		
 		JButton button = new JButton("Entrar");
 		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				VCartelera nuevaVentana = new VCartelera(); 
-				nuevaVentana.frame.setVisible(true);
-				frame.dispose();
+				String pass = new String(passwordField.getPassword());
+				if (textField.getText().equals("mikeljon") && pass.equals("1234")) {
+					VLugar nuevaVentana = new VLugar(); 
+					nuevaVentana.frame.setVisible(true);
+					
+					frame.dispose();
+				} else {
+					lblError.setVisible(true);
+					passwordField.setText("");
+				}
 				
-				//Meterse en otra ventana
 				
 				
 			}
 		});
 		button.setForeground(Color.WHITE);
 		button.setBackground(SystemColor.textHighlight);
-		button.setBounds(84, 217, 95, 33);
+		button.setBounds(103, 253, 107, 31);
 		frame.getContentPane().add(button);
 		
-		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
-		btnCerrarSesin.addActionListener(new ActionListener() {
+		JButton button_2 = new JButton("Nuevo Usuario");
+		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				VInicio nuevaVentanaInicio = new VInicio(); 
-				nuevaVentanaInicio.frame.setVisible(true);
+				VentanaRegistro nuevaVentana = new VentanaRegistro(); 
+				nuevaVentana.setVisible(true);
 				frame.dispose();
+				
 			}
 		});
-		btnCerrarSesin.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnCerrarSesin.setBounds(189, 217, 150, 33);
-		frame.getContentPane().add(btnCerrarSesin);
+		button_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button_2.setBounds(220, 253, 160, 31);
+		frame.getContentPane().add(button_2);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.addItem("Deusto");
-		comboBox.setBounds(84, 146, 255, 27);
-		comboBox.addItem("Santurtzi");
-		comboBox.addItem("Getxo");
-		comboBox.addItem("Barakaldo");
-		comboBox.addItem("Basauri");
 	
 		
-		frame.getContentPane().add(comboBox);
+		JLabel label = new JLabel("");
+		label.setBounds(83, 205, 46, 14);
+		frame.getContentPane().add(label);
 		
 		frame.setLocationRelativeTo(null);
 	}
+
+	
 }

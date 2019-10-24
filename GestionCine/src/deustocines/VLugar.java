@@ -1,3 +1,4 @@
+package deustocines;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -15,9 +16,8 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
-import javax.swing.JTextArea;
 
-public class VAyuda {
+public class VLugar {
 
 	public JFrame frame;
 
@@ -28,7 +28,7 @@ public class VAyuda {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VAyuda window = new VAyuda();
+					VLugar window = new VLugar();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class VAyuda {
 	/**
 	 * Create the application.
 	 */
-	public VAyuda() {
+	public VLugar() {
 		initialize();
 	}
 
@@ -49,7 +49,7 @@ public class VAyuda {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 460, 502);
+		frame.setBounds(100, 100, 433, 319);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -58,6 +58,11 @@ public class VAyuda {
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 45));
 		lblCinesDeusto.setBounds(84, 11, 294, 71);
 		frame.getContentPane().add(lblCinesDeusto);
+		
+		JLabel lblNombre = new JLabel("Elige un cine:");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNombre.setBounds(84, 115, 121, 20);
+		frame.getContentPane().add(lblNombre);
 		
 		JButton button_1 = new JButton("");
 		button_1.addActionListener(new ActionListener() {
@@ -71,50 +76,47 @@ public class VAyuda {
 		button_1.setBounds(0, -11, 434, 102);
 		frame.getContentPane().add(button_1);
 		
-		JButton btnAtras = new JButton("Cerrar");
-		btnAtras.addActionListener(new ActionListener() {
+		JButton button = new JButton("Entrar");
+		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				
-			
+				VCartelera nuevaVentana = new VCartelera(); 
+				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
-					
+				
+				//Meterse en otra ventana
+				
+				
 			}
 		});
-		btnAtras.setForeground(Color.WHITE);
-		btnAtras.setBackground(SystemColor.textHighlight);
-		btnAtras.setBounds(46, 401, 95, 33);
-		frame.getContentPane().add(btnAtras);
+		button.setForeground(Color.WHITE);
+		button.setBackground(SystemColor.textHighlight);
+		button.setBounds(84, 217, 95, 33);
+		frame.getContentPane().add(button);
 		
-		JLabel lblMakina = new JLabel("EN PROCESO");
-		lblMakina.setFont(new Font("Consolas", Font.BOLD, 50));
-		lblMakina.setBounds(84, 146, 320, 65);
-		frame.getContentPane().add(lblMakina);
+		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
+		btnCerrarSesin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				VInicio nuevaVentanaInicio = new VInicio(); 
+				nuevaVentanaInicio.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
+		btnCerrarSesin.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnCerrarSesin.setBounds(189, 217, 150, 33);
+		frame.getContentPane().add(btnCerrarSesin);
 		
-		JLabel lblAyuda = new JLabel("Ayuda:");
-		lblAyuda.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblAyuda.setBounds(46, 118, 46, 14);
-		frame.getContentPane().add(lblAyuda);
+		JComboBox comboBox = new JComboBox();
+		comboBox.addItem("Deusto");
+		comboBox.setBounds(84, 146, 255, 27);
+		comboBox.addItem("Santurtzi");
+		comboBox.addItem("Getxo");
+		comboBox.addItem("Barakaldo");
+		comboBox.addItem("Basauri");
+	
 		
-		JLabel label = new JLabel("EN PROCESO");
-		label.setFont(new Font("Consolas", Font.BOLD, 50));
-		label.setBounds(84, 192, 320, 65);
-		frame.getContentPane().add(label);
-		
-		JLabel label_1 = new JLabel("EN PROCESO");
-		label_1.setFont(new Font("Consolas", Font.BOLD, 50));
-		label_1.setBounds(84, 237, 320, 65);
-		frame.getContentPane().add(label_1);
-		
-		JLabel label_2 = new JLabel("EN PROCESO");
-		label_2.setFont(new Font("Consolas", Font.BOLD, 50));
-		label_2.setBounds(84, 282, 320, 65);
-		frame.getContentPane().add(label_2);
-		
-		JLabel label_3 = new JLabel("EN PROCESO");
-		label_3.setFont(new Font("Consolas", Font.BOLD, 50));
-		label_3.setBounds(84, 325, 320, 65);
-		frame.getContentPane().add(label_3);
+		frame.getContentPane().add(comboBox);
 		
 		frame.setLocationRelativeTo(null);
 	}
