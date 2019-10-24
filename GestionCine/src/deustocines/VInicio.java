@@ -63,7 +63,7 @@ public class VInicio {
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		textField = new JTextField();
-		textField.setBounds(125, 132, 222, 20);
+		textField.setBounds(132, 132, 215, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
@@ -90,13 +90,13 @@ public class VInicio {
 		frame.getContentPane().add(button_1);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(125, 180, 222, 20);
+		passwordField.setBounds(132, 180, 215, 20);
 		frame.getContentPane().add(passwordField);
 		
 		JLabel lblError = new JLabel("Usuario y/o contrase\u00F1a incorrectos");
 		lblError.setForeground(Color.RED);
 		lblError.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblError.setBounds(125, 207, 171, 12);
+		lblError.setBounds(132, 207, 171, 12);
 		lblError.setVisible(false);
 		frame.getContentPane().add(lblError);
 		
