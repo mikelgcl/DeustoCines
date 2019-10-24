@@ -50,7 +50,7 @@ public class VAyuda {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 460, 502);
+		frame.setBounds(100, 100, 460, 490);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -84,7 +84,7 @@ public class VAyuda {
 		});
 		btnAtras.setForeground(Color.WHITE);
 		btnAtras.setBackground(SystemColor.textHighlight);
-		btnAtras.setBounds(46, 401, 95, 33);
+		btnAtras.setBounds(46, 401, 95, 23);
 		frame.getContentPane().add(btnAtras);
 		
 		JLabel lblMakina = new JLabel("EN PROCESO");
@@ -93,8 +93,8 @@ public class VAyuda {
 		frame.getContentPane().add(lblMakina);
 		
 		JLabel lblAyuda = new JLabel("Ayuda:");
-		lblAyuda.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblAyuda.setBounds(46, 118, 46, 14);
+		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblAyuda.setBounds(46, 118, 58, 14);
 		frame.getContentPane().add(lblAyuda);
 		
 		JLabel label = new JLabel("EN PROCESO");

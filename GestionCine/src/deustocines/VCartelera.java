@@ -123,10 +123,6 @@ public class VCartelera {
 		button_2.setBounds(236, 230, 34, 20);
 		frame.getContentPane().add(button_2);
 		
-		JButton button_3 = new JButton("16:40");
-		button_3.setBounds(236, 262, 34, 20);
-		frame.getContentPane().add(button_3);
-		
 		JButton button_4 = new JButton("16:40");
 		button_4.setBounds(192, 262, 34, 20);
 		frame.getContentPane().add(button_4);
@@ -162,14 +158,6 @@ public class VCartelera {
 		JButton button_15 = new JButton("16:40");
 		button_15.setBounds(411, 262, 34, 20);
 		frame.getContentPane().add(button_15);
-		
-		JButton button_16 = new JButton("16:40");
-		button_16.setBounds(454, 261, 34, 20);
-		frame.getContentPane().add(button_16);
-		
-		JButton button_17 = new JButton("16:40");
-		button_17.setBounds(498, 261, 34, 20);
-		frame.getContentPane().add(button_17);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(86, 140, 114, 20);
@@ -233,10 +221,6 @@ public class VCartelera {
 		button_6.setBounds(29, 359, 99, 143);
 		frame.getContentPane().add(button_6);
 		
-		JButton button_7 = new JButton("16:40");
-		button_7.setBounds(149, 446, 34, 20);
-		frame.getContentPane().add(button_7);
-		
 		JButton button_8 = new JButton("16:40");
 		button_8.setBounds(149, 414, 34, 20);
 		frame.getContentPane().add(button_8);
@@ -256,14 +240,6 @@ public class VCartelera {
 		JButton button_10 = new JButton("16:40");
 		button_10.setBounds(236, 413, 34, 20);
 		frame.getContentPane().add(button_10);
-		
-		JButton button_11 = new JButton("16:40");
-		button_11.setBounds(236, 445, 34, 20);
-		frame.getContentPane().add(button_11);
-		
-		JButton button_18 = new JButton("16:40");
-		button_18.setBounds(192, 445, 34, 20);
-		frame.getContentPane().add(button_18);
 		
 		JButton button_19 = new JButton("");
 		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
@@ -294,10 +270,6 @@ public class VCartelera {
 		JButton button_22 = new JButton("16:40");
 		button_22.setBounds(498, 408, 34, 20);
 		frame.getContentPane().add(button_22);
-		
-		JButton button_23 = new JButton("16:40");
-		button_23.setBounds(498, 440, 34, 20);
-		frame.getContentPane().add(button_23);
 		
 		JButton button_25 = new JButton("16:40");
 		button_25.setBounds(454, 440, 34, 20);
