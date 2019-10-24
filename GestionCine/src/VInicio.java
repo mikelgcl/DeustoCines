@@ -124,6 +124,15 @@ public class VInicio {
 		frame.getContentPane().add(button);
 		
 		JButton button_2 = new JButton("Nuevo Usuario");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				VentanaRegistro nuevaVentana = new VentanaRegistro(); 
+				nuevaVentana.setVisible(true);
+				frame.dispose();
+				
+			}
+		});
 		button_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		button_2.setBounds(220, 253, 160, 31);
 		frame.getContentPane().add(button_2);
