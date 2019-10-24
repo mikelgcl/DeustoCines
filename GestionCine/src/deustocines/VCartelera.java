@@ -280,7 +280,7 @@ public class VCartelera {
 		frame.getContentPane().add(lblTp);
 		
 		JLabel lblDoraYLa = new JLabel("Dora y la ciudad perdida");
-		lblDoraYLa.setBounds(411, 369, 121, 14);
+		lblDoraYLa.setBounds(411, 369, 155, 14);
 		frame.getContentPane().add(lblDoraYLa);
 		
 		JLabel label_7 = new JLabel("102'");

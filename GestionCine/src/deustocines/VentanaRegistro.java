@@ -22,33 +22,39 @@ public class VentanaRegistro extends JFrame {
  
 	public VentanaRegistro() {
 		
-		this.setSize(360, 597);
+		this.setSize(360, 585);
 		getContentPane().setBackground(new Color(230, 230, 250));
 		getContentPane().setForeground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Correo");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel.setBounds(56, 136, 124, 14);
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_1.setBounds(56, 192, 124, 14);
 		getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Confirmar contrase\u00F1a");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_2.setBounds(56, 248, 135, 14);
 		getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Nombre");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_3.setBounds(56, 311, 124, 14);
 		getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Apellidos");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_4.setBounds(56, 367, 135, 14);
 		getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Tarjeta Deusto");
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_5.setBounds(56, 423, 124, 14);
 		getContentPane().add(lblNewLabel_5);
 		
@@ -119,7 +125,7 @@ public class VentanaRegistro extends JFrame {
 		});
 		btnAtrs.setForeground(Color.WHITE);
 		btnAtrs.setBackground(SystemColor.textHighlight);
-		btnAtrs.setBounds(56, 497, 107, 31);
+		btnAtrs.setBounds(56, 497, 107, 20);
 		getContentPane().add(btnAtrs);
 		
 		JButton btnRegistrar = new JButton("Registrar");
@@ -139,7 +145,7 @@ public class VentanaRegistro extends JFrame {
 			}
 		});
 		btnRegistrar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnRegistrar.setBounds(174, 497, 113, 31);
+		btnRegistrar.setBounds(174, 497, 113, 20);
 		getContentPane().add(btnRegistrar);
 		
 		VentanaRegistro.this.setLocationRelativeTo(null);

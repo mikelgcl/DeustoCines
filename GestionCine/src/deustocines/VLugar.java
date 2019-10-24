@@ -60,7 +60,7 @@ public class VLugar {
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		JLabel lblNombre = new JLabel("Elige un cine:");
-		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNombre.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblNombre.setBounds(84, 115, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
