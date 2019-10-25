@@ -74,21 +74,6 @@ public class VLugar {
 		lblNombre.setBounds(84, 115, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
-	
-		
-		JButton btnCerrarSesin = new JButton("Cerrar sesi\u00F3n");
-		btnCerrarSesin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				VInicio nuevaVentanaInicio = new VInicio(); 
-				nuevaVentanaInicio.frame.setVisible(true);
-				frame.dispose();
-			}
-		});
-		btnCerrarSesin.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnCerrarSesin.setBounds(189, 200, 150, 33);
-		frame.getContentPane().add(btnCerrarSesin);
-		
 		JComboBox comboBox = new JComboBox();
 		comboBox.addItem("Deusto");
 		comboBox.setBounds(84, 146, 255, 27);
@@ -140,6 +125,21 @@ public class VLugar {
 		lblNewLabel.setIcon(new ImageIcon(VLugar.class.getResource("/imagenes/fondo1bueno.jpg")));
 		lblNewLabel.setBounds(0, 0, 417, 95);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JButton button = new JButton("Cerrar sesi\u00F3n");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				VInicio nuevaVentanaInicio = new VInicio(); 
+				nuevaVentanaInicio.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
+		button.setForeground(Color.BLACK);
+		button.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button.setBackground(new Color(204, 0, 0));
+		button.setBounds(189, 201, 150, 32);
+		frame.getContentPane().add(button);
 		
 		frame.setLocationRelativeTo(null);
 	}
