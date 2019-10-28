@@ -15,6 +15,14 @@ public class Usuario {
 		this.apellido = apellido;
 		this.tarjetadeusto = tarjetadeusto;
 	}
+	public Usuario() {
+		super();
+		this.correo = "";
+		this.contrasenya = "";
+		this.nombre = "";
+		this.apellido = "";
+		this.tarjetadeusto = "";
+	}
 	public String getCorreo() {
 		return correo;
 	}

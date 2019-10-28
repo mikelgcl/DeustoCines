@@ -1,16 +1,15 @@
 package deustocines;
-import java.sql.Connection;
 import java.sql.*;
-import java.sql.DriverManager;
 import java.util.logging.Level;
+
+
 
 public class ZBaseDeDatos {
 	
 	
-	private static final String NOMBRETABLA = "Usuarios";
-	private static final String COLUMNAS_TABLA = " (nombre string, password string)";
 
-	public static Connection initBD( String nombreBD ) {
+
+	public  Connection initBD( String nombreBD ) {
 
 		try {
 			Class.forName("org.sqlite.JDBC");
@@ -24,37 +23,75 @@ public class ZBaseDeDatos {
 			return null;
 		}
 	}
-
-	public static Statement usarCrearTablasBD( Connection con ) {
+	
+	public void desconecta(Connection con)  {
 		try {
-			Statement statement = con.createStatement();
-			statement.setQueryTimeout(30); // poner timeout 30 msg
-			try {
-				statement.executeUpdate("create table "+NOMBRETABLA+COLUMNAS_TABLA);
-			} catch (SQLException e) {} // Tabla ya existe. Nada que hacer
-			//log( Level.INFO, "Creada base de datos", null );
-			return statement;
+			con.close();
 		} catch (SQLException e) {
-			//lastError = e;
-			//log( Level.SEVERE, "Error en creaci�n de base de datos", e );
-			e.printStackTrace();
-			return null;
+			
 		}
 	}
-	
-	public static void insertDatos(Connection con,String nombre,String password) {
+
+	public void insertDatosUsuario(Connection con,Usuario user) {
 		try {
-			Statement st=con.createStatement();
-			st.executeUpdate("Insert into "+ NOMBRETABLA+" values ('"+nombre+"', '"+password+"')");
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?,?)");
+			stmt.setString(1, user.getNombre());
+			stmt.setString(2, user.getContrasenya());
+			stmt.setString(3, user.getNombre());
+			stmt.setString(4, user.getApellido());
+			stmt.setString(5, user.getTarjetadeusto());
+			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public void insertDatosCine(Connection con,Cine cin) {
+		try {
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			stmt.setString(1, cin.getNombre());
+			stmt.setString(2, cin.getLocalizacion());
+			stmt.setString(3, cin.getCartelera());
+			stmt.setInt(4, cin.getNumsalas());
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void insertDatosPelicula(Connection con,Pelicula pel) {
+		try {
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			stmt.setString(1, pel.getTitulo());
+			stmt.setString(2, pel.getDuracion());
+			stmt.setString(3, pel.getEdad());
+			stmt.setString(4, pel.getHoras());
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public Usuario iniciarSesion(Connection con,String nombre) {
+		Usuario u=new Usuario();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select nombre,contraseña from Usuario where nombre=?");
+			stmt.setString(1, nombre);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				
+				u.setNombre(rs.getString("nombre"));
+				u.setContrasenya(rs.getString("contrasenya"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return u;
+	}
+	
+
 
 	public static void main(String[] args) {
-		Connection con=initBD("Usuarios");
-		usarCrearTablasBD(con);
-		insertDatos(con, "mikeljon", "1234");
+		
+		
 	}
 
 }
