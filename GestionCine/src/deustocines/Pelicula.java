@@ -1,17 +1,20 @@
 package deustocines;
 
 public class Pelicula {
+private int Cod_Pelicula;
 private String titulo;
 private String duracion;
 private String edad;
 private String horas;
+private int cartelera;
 
-public Pelicula(String titulo, String duracion, String edad, String horas) {
+public Pelicula(String titulo, String duracion, String edad, String horas,int cartelera) {
 	super();
 	this.titulo = titulo;
 	this.duracion = duracion;
 	this.edad = edad;
 	this.horas = horas;
+	this.cartelera=cartelera;
 }
 
 public String getTitulo() {
@@ -44,6 +47,14 @@ public String getHoras() {
 
 public void setHoras(String horas) {
 	this.horas = horas;
+}
+
+public int getCartelera() {
+	return cartelera;
+}
+
+public void setCartelera(int cartelera) {
+	this.cartelera = cartelera;
 }
  
  

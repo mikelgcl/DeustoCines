@@ -14,11 +14,13 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
 public class VInicio {
-
+	
+	
 	public JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
@@ -52,7 +54,7 @@ public class VInicio {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		
+		ZBaseDeDatos c=new ZBaseDeDatos();
 		frame.setBounds(100, 100, 407, 344);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -91,11 +93,14 @@ public class VInicio {
 		frame.getContentPane().add(lblError);
 		
 		JButton button = new JButton("Entrar");
+		Connection conn=c.initBD("DeustoCines");
 		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				String pass = new String(passwordField.getPassword());
-				if (textField.getText().equals("mikeljon") && pass.equals("1234")) {
+				String nom=new String(textField.getText());
+				Usuario u=c.iniciarSesion(conn, nom);
+				if (u.getNombre().equals(nom) && u.getContrasenya().equals(pass)) {
 					VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);
 					
@@ -106,8 +111,9 @@ public class VInicio {
 				}
 				
 				
-				
+			c.desconecta(conn);
 			}
+			
 		});
 		button.setForeground(Color.WHITE);
 		button.setBackground(new Color(0, 0, 153));

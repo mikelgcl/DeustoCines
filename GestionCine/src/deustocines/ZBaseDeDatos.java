@@ -51,7 +51,7 @@ public class ZBaseDeDatos {
 			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
 			stmt.setString(1, cin.getNombre());
 			stmt.setString(2, cin.getLocalizacion());
-			stmt.setString(3, cin.getCartelera());
+			stmt.setInt(3, cin.getCartelera());
 			stmt.setInt(4, cin.getNumsalas());
 			stmt.executeUpdate();
 		} catch (Exception e) {
@@ -60,11 +60,25 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosPelicula(Connection con,Pelicula pel) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?,?)");
 			stmt.setString(1, pel.getTitulo());
 			stmt.setString(2, pel.getDuracion());
 			stmt.setString(3, pel.getEdad());
 			stmt.setString(4, pel.getHoras());
+			stmt.setInt(5, pel.getCartelera());
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void insertDatosCartelera(Connection con,Cartelera car) {
+		try {
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			stmt.setInt(1, car.getCod_Cartelera());
+			stmt.setInt(2, car.getCod_Cine());
+			stmt.setInt(3, car.getCod_Pelicula());
+			stmt.setString(4, car.getFecha());
+			
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

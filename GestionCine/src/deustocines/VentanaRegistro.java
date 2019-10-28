@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
@@ -18,10 +19,10 @@ public class VentanaRegistro extends JFrame {
 	private JTextField textNom;
 	private JTextField textApel;
 	private JTextField textTD;
-	
+	ZBaseDeDatos c=new ZBaseDeDatos();
  
 	public VentanaRegistro() {
-		
+		Connection conn=c.initBD("DeustoCines");
 		this.setSize(360, 585);
 		getContentPane().setBackground(new Color(230, 230, 250));
 		getContentPane().setForeground(Color.WHITE);
@@ -119,18 +120,34 @@ public class VentanaRegistro extends JFrame {
 		JButton btnRegistrar = new JButton("Registrar");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String pass = new String(textContra.getPassword());
-				String pass1 = new String(textContra1.getPassword());
+				String cor = " " ;
+				String con = " " ;
+				String con1 = " " ;
+				String nom = " " ;
+				String apl= " " ;
+				String tdb = " " ;
 				
 				if (textContra == textContra1) {
-					VInicio nuevaVentana = new VInicio(); 
-					nuevaVentana.frame.setVisible(true);
-					VentanaRegistro.this.dispose();	
+					con=textContra.getText();
 				} else {
 					lblNewLabel_6.setVisible(true);
 				}
-			
+				if(textCorreo.getText().length()<=20 && textCorreo.getText().length()>0 && textContra.getText().length()<=8 && textContra.getText().length()>0 
+						&& textContra.getText()==textContra1.getText() && textNom.getText().length()<=20 && textNom.getText().length()>0 && textApel.getText().length()<=20 && textApel.getText().length()>0
+						 && textTD.getText().length()==8) {
+					cor=textCorreo.getText();
+					nom=textNom.getName();
+					apl=textApel.getName();
+					tdb=textTD.getText();
+					Usuario p1=new Usuario(cor, con, nom, apl, tdb);
+					c.insertDatosUsuario(conn, p1);
+					VInicio nuevaVentana = new VInicio(); 
+					nuevaVentana.frame.setVisible(true);
+					VentanaRegistro.this.dispose();	
 			}
+		c.desconecta(conn);
+			}
+			
 		});
 		btnRegistrar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnRegistrar.setBounds(174, 497, 113, 20);
@@ -142,6 +159,7 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().add(lblNewLabel_7);
 		
 		VentanaRegistro.this.setLocationRelativeTo(null);
+		
 		
 	}
 	public static void main(String[] args) {
