@@ -89,11 +89,11 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().add(textTD);
 		textTD.setColumns(10);
 		
-		JLabel lblNewLabel_6 = new JLabel("Las contrase\u00F1as no coinciden");
+		/*JLabel lblNewLabel_6 = new JLabel("Las contrase\u00F1as no coinciden");
 		lblNewLabel_6.setVisible(false);
 		lblNewLabel_6.setForeground(Color.RED);
 		lblNewLabel_6.setBounds(56, 294, 212, 14);
-		getContentPane().add(lblNewLabel_6);
+		getContentPane().add(lblNewLabel_6);*/
 		
 		JLabel lblRegistro = new JLabel("Registro");
 		lblRegistro.setForeground(Color.WHITE);
@@ -121,19 +121,20 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String cor = " " ;
-				String con = " " ;
+				char[] conc = textContra.getPassword(); ;
+				String con = " ";
 				String nom = " " ;
 				String apl= " " ;
 				String tdb = " " ;
 				
 				cor=textCorreo.getText();
-				con=textContra.getText();
+				con = String.valueOf(conc);
 				nom=textNom.getText();
 				apl=textApel.getText();
 				tdb=textTD.getText();
 				
 				if(textCorreo.getText().length()<=45 && textCorreo.getText().length()>0 
-						&& textContra.getText().length()<=8 && textContra.getText().length()>0 
+						&& con.length()<=8 && con.length()>0 
 						&& textNom.getText().length()<=45 && textNom.getText().length()>0 
 						&& textApel.getText().length()<=45 && textApel.getText().length()>0
 						&& textTD.getText().length()==8) {
