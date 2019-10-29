@@ -1,24 +1,25 @@
 package deustocines;
 import java.sql.*;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
 public class ZBaseDeDatos {
 	
 	
-
+	Logger logger=Logger.getLogger(ZBaseDeDatos.class.getName());
 
 	public  Connection initBD( String nombreBD ) {
-
+		
 		try {
 			Class.forName("org.sqlite.JDBC");
 			Connection con = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
-			//log( Level.INFO, "Conectada base de datos " + nombreBD, null );
+			logger.log(Level.INFO, "Conectada base de datos " + nombreBD);
 			return con;
 		} catch (ClassNotFoundException | SQLException e) {
-			//lastError = e;
-			//log( Level.SEVERE, "Error en conexi�n de base de datos " + nombreBD, e );
+			
+			logger.log( Level.SEVERE, "Error en conexi�n de base de datos " + nombreBD, e );
 			e.printStackTrace();
 			return null;
 		}
@@ -34,21 +35,23 @@ public class ZBaseDeDatos {
 
 	public void insertDatosUsuario(Connection con,Usuario user) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?,?)");
-			stmt.setString(1, user.getNombre());
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario (correo, contraseña, nombre, apellido, tarjetadeusto) values(?,?,?,?,?)");
+			stmt.setString(1, user.getCorreo());
 			stmt.setString(2, user.getContrasenya());
 			stmt.setString(3, user.getNombre());
 			stmt.setString(4, user.getApellido());
 			stmt.setString(5, user.getTarjetadeusto());
 			stmt.executeUpdate();
+			logger.log(Level.INFO, "Acierto al registrar"+user.getNombre());
 		} catch (Exception e) {
 			e.printStackTrace();
+			logger.log(Level.SEVERE, "Fallo al registrar"+user.getNombre());
 		}
 	}
 	
 	public void insertDatosCine(Connection con,Cine cin) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Cine values(?,?,?,?)");
 			stmt.setString(1, cin.getNombre());
 			stmt.setString(2, cin.getLocalizacion());
 			stmt.setInt(3, cin.getCartelera());
@@ -60,7 +63,7 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosPelicula(Connection con,Pelicula pel) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?)");
 			stmt.setString(1, pel.getTitulo());
 			stmt.setString(2, pel.getDuracion());
 			stmt.setString(3, pel.getEdad());
@@ -73,7 +76,7 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosCartelera(Connection con,Cartelera car) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario values(?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Cartelera values(?,?,?,?)");
 			stmt.setInt(1, car.getCod_Cartelera());
 			stmt.setInt(2, car.getCod_Cine());
 			stmt.setInt(3, car.getCod_Pelicula());
@@ -93,7 +96,7 @@ public class ZBaseDeDatos {
 			while(rs.next()) {
 				
 				u.setNombre(rs.getString("nombre"));
-				u.setContrasenya(rs.getString("contrasenya"));
+				u.setContrasenya(rs.getString("contraseña"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

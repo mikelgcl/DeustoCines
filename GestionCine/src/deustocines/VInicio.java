@@ -111,7 +111,7 @@ public class VInicio {
 				}
 				
 				
-			c.desconecta(conn);
+			
 			}
 			
 		});

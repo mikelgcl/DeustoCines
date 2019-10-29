@@ -122,30 +122,31 @@ public class VentanaRegistro extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String cor = " " ;
 				String con = " " ;
-				String con1 = " " ;
 				String nom = " " ;
 				String apl= " " ;
 				String tdb = " " ;
 				
-				if (textContra == textContra1) {
-					con=textContra.getText();
-				} else {
-					lblNewLabel_6.setVisible(true);
-				}
-				if(textCorreo.getText().length()<=20 && textCorreo.getText().length()>0 && textContra.getText().length()<=8 && textContra.getText().length()>0 
-						&& textContra.getText()==textContra1.getText() && textNom.getText().length()<=20 && textNom.getText().length()>0 && textApel.getText().length()<=20 && textApel.getText().length()>0
-						 && textTD.getText().length()==8) {
+				
+				if(textCorreo.getText().length()<=20 && textCorreo.getText().length()>0 && textContra.getPassword().length<=8 && textContra.getPassword().length>0 
+						&& textContra.getPassword()==textContra1.getPassword() && textNom.getText().length()<=20 && textNom.getText().length()>0 && textApel.getText().length()<=20 && textApel.getText().length()>0
+						&& textTD.getText().length()==8) {
+					
 					cor=textCorreo.getText();
-					nom=textNom.getName();
-					apl=textApel.getName();
+					con=textContra.getPassword().toString();
+					nom=textNom.getText();
+					apl=textApel.getText();
 					tdb=textTD.getText();
+					
 					Usuario p1=new Usuario(cor, con, nom, apl, tdb);
+					System.out.println(p1);
 					c.insertDatosUsuario(conn, p1);
 					VInicio nuevaVentana = new VInicio(); 
 					nuevaVentana.frame.setVisible(true);
 					VentanaRegistro.this.dispose();	
+			}else {
+				System.out.println("Fallo a registrar");
 			}
-		c.desconecta(conn);
+		
 			}
 			
 		});
@@ -159,7 +160,7 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().add(lblNewLabel_7);
 		
 		VentanaRegistro.this.setLocationRelativeTo(null);
-		
+	
 		
 	}
 	public static void main(String[] args) {
