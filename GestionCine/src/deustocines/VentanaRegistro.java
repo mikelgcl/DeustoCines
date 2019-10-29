@@ -126,16 +126,18 @@ public class VentanaRegistro extends JFrame {
 				String apl= " " ;
 				String tdb = " " ;
 				
+				cor=textCorreo.getText();
+				con=textContra.getText();
+				nom=textNom.getText();
+				apl=textApel.getText();
+				tdb=textTD.getText();
 				
-				if(textCorreo.getText().length()<=20 && textCorreo.getText().length()>0 && textContra.getPassword().length<=8 && textContra.getPassword().length>0 
-						&& textContra.getPassword()==textContra1.getPassword() && textNom.getText().length()<=20 && textNom.getText().length()>0 && textApel.getText().length()<=20 && textApel.getText().length()>0
+				if(textCorreo.getText().length()<=45 && textCorreo.getText().length()>0 
+						&& textContra.getText().length()<=8 && textContra.getText().length()>0 
+						&& textNom.getText().length()<=45 && textNom.getText().length()>0 
+						&& textApel.getText().length()<=45 && textApel.getText().length()>0
 						&& textTD.getText().length()==8) {
 					
-					cor=textCorreo.getText();
-					con=textContra.getPassword().toString();
-					nom=textNom.getText();
-					apl=textApel.getText();
-					tdb=textTD.getText();
 					
 					Usuario p1=new Usuario(cor, con, nom, apl, tdb);
 					System.out.println(p1);
