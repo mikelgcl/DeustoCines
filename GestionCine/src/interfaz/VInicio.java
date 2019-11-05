@@ -1,4 +1,4 @@
-package deustocines;
+package interfaz;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,7 +8,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-
+import deustocines.Usuario;
+import deustocines.ZBaseDeDatos;
 
 import java.awt.SystemColor;
 import java.awt.Color;
@@ -98,9 +99,9 @@ public class VInicio {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				String pass = new String(passwordField.getPassword());
-				String nom=new String(textField.getText());
-				Usuario u=c.iniciarSesion(conn, nom);
-				if (u.getNombre().equals(nom) && u.getContrasenya().equals(pass)) {
+				String cor=new String(textField.getText());
+				Usuario u=c.iniciarSesion(conn, cor);
+				if (u.getCorreo().equals(cor) && u.getContrasenya().equals(pass)) {
 					VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);
 					

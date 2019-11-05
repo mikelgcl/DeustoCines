@@ -1,4 +1,4 @@
-package deustocines;
+package interfaz;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;

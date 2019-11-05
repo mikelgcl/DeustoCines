@@ -1,4 +1,4 @@
-package deustocines;
+package interfaz;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -7,8 +7,6 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
-
-
 
 import java.awt.SystemColor;
 import java.awt.Color;

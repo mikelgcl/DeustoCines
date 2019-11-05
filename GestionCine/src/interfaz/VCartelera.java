@@ -1,4 +1,4 @@
-package deustocines;
+package interfaz;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,8 +8,6 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-
-
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
@@ -17,9 +15,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
-import javax.swing.DefaultComboBoxModel;
 
-public class VCarteleraFalsa {
+public class VCartelera {
 
 	public JFrame frame;
 
@@ -30,7 +27,7 @@ public class VCarteleraFalsa {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VCarteleraFalsa window = new VCarteleraFalsa();
+					VCartelera window = new VCartelera();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +39,7 @@ public class VCarteleraFalsa {
 	/**
 	 * Create the application.
 	 */
-	public VCarteleraFalsa() {
+	public VCartelera() {
 		initialize();
 	}
 
@@ -83,12 +80,21 @@ public class VCarteleraFalsa {
 		frame.getContentPane().add(btnAtrs);
 		
 		JButton btnPelcula_1 = new JButton("");
-		btnPelcula_1.setIcon(new ImageIcon(VCarteleraFalsa.class.getResource("/imagenes/peli1buena.jpg")));
+		btnPelcula_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				VInfoPeli nuevaVentana = new VInfoPeli(); 
+				nuevaVentana.frame.setVisible(true);
+				
+				
+			}
+		});
+		btnPelcula_1.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli2buena.jpg")));
 		btnPelcula_1.setBackground(Color.LIGHT_GRAY);
 		btnPelcula_1.setBounds(29, 180, 99, 143);
 		frame.getContentPane().add(btnPelcula_1);
 		
-		JLabel lblZombieland = new JLabel("Joker");
+		JLabel lblZombieland = new JLabel("Zombieland 2");
 		lblZombieland.setBounds(149, 191, 79, 14);
 		frame.getContentPane().add(lblZombieland);
 		
@@ -96,7 +102,7 @@ public class VCarteleraFalsa {
 		lblM.setBounds(149, 210, 34, 14);
 		frame.getContentPane().add(lblM);
 		
-		JLabel label = new JLabel("121'");
+		JLabel label = new JLabel("98'");
 		label.setBounds(182, 210, 46, 14);
 		frame.getContentPane().add(label);
 		
@@ -120,15 +126,15 @@ public class VCarteleraFalsa {
 		button_5.setBounds(149, 263, 34, 20);
 		frame.getContentPane().add(button_5);
 		
-		JLabel lblJoker = new JLabel("Ad Astra");
+		JLabel lblJoker = new JLabel("Joker");
 		lblJoker.setBounds(411, 190, 79, 14);
 		frame.getContentPane().add(lblJoker);
 		
-		JLabel lblM_2 = new JLabel("M7");
-		lblM_2.setBounds(411, 209, 34, 14);
-		frame.getContentPane().add(lblM_2);
+		JLabel label_5 = new JLabel("M18");
+		label_5.setBounds(411, 209, 34, 14);
+		frame.getContentPane().add(label_5);
 		
-		JLabel label_6 = new JLabel("124'");
+		JLabel label_6 = new JLabel("121'");
 		label_6.setBounds(444, 209, 46, 14);
 		frame.getContentPane().add(label_6);
 		
@@ -145,22 +151,21 @@ public class VCarteleraFalsa {
 		frame.getContentPane().add(button_14);
 		
 		JButton button_15 = new JButton("16:40");
-		button_15.setBounds(236, 261, 34, 20);
+		button_15.setBounds(411, 262, 34, 20);
 		frame.getContentPane().add(button_15);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (comboBox.getSelectedItem() == "23/10/2019") {
+				if (comboBox.getSelectedItem() == "28/10/2019") {
 					
-					VCartelera nuevaVentana = new VCartelera(); 
+					VCarteleraFalsa nuevaVentana = new VCarteleraFalsa(); 
 					nuevaVentana.frame.setVisible(true);
 					frame.dispose();
 					
 				}
 			}
 		});
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"28/10/2019", "23/10/2019", "24/10/2019", "25/10/2019", "26/10/2019", "27/10/2019", "29/10/2019"}));
 		comboBox.setBounds(86, 140, 114, 20);
 		comboBox.addItem("23/10/2019");
 		comboBox.addItem("24/10/2019");
@@ -211,13 +216,13 @@ public class VCarteleraFalsa {
 		frame.getContentPane().add(btnNewButton_3);
 		
 		JButton button_24 = new JButton("");
-		button_24.setIcon(new ImageIcon(VCarteleraFalsa.class.getResource("/imagenes/peli3buena.jpg")));
+		button_24.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli1buena.jpg")));
 		button_24.setBackground(Color.LIGHT_GRAY);
 		button_24.setBounds(290, 180, 99, 143);
 		frame.getContentPane().add(button_24);
 		
 		JButton button_6 = new JButton("");
-		button_6.setIcon(new ImageIcon(VCarteleraFalsa.class.getResource("/imagenes/peli5buena.jpg")));
+		button_6.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli3buena.jpg")));
 		button_6.setBackground(Color.LIGHT_GRAY);
 		button_6.setBounds(29, 359, 99, 143);
 		frame.getContentPane().add(button_6);
@@ -230,8 +235,8 @@ public class VCarteleraFalsa {
 		lblM_1.setBounds(149, 393, 34, 14);
 		frame.getContentPane().add(lblM_1);
 		
-		JLabel lblAdAstra = new JLabel("La familia Addams");
-		lblAdAstra.setBounds(149, 374, 121, 14);
+		JLabel lblAdAstra = new JLabel("Ad Astra");
+		lblAdAstra.setBounds(149, 374, 79, 14);
 		frame.getContentPane().add(lblAdAstra);
 		
 		JButton button_9 = new JButton("16:40");
@@ -242,7 +247,45 @@ public class VCarteleraFalsa {
 		button_10.setBounds(236, 413, 34, 20);
 		frame.getContentPane().add(button_10);
 		
-		JLabel label_1 = new JLabel("87'");
+		JButton button_19 = new JButton("");
+		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
+		button_19.setBackground(Color.LIGHT_GRAY);
+		button_19.setBounds(290, 359, 99, 143);
+		frame.getContentPane().add(button_19);
+		
+		JButton button_20 = new JButton("16:40");
+		button_20.setBounds(411, 409, 34, 20);
+		frame.getContentPane().add(button_20);
+		
+		JLabel lblTp = new JLabel("TP");
+		lblTp.setBounds(411, 388, 34, 14);
+		frame.getContentPane().add(lblTp);
+		
+		JLabel lblDoraYLa = new JLabel("Dora y la ciudad perdida");
+		lblDoraYLa.setBounds(411, 369, 155, 14);
+		frame.getContentPane().add(lblDoraYLa);
+		
+		JLabel label_7 = new JLabel("102'");
+		label_7.setBounds(444, 388, 46, 14);
+		frame.getContentPane().add(label_7);
+		
+		JButton button_21 = new JButton("16:40");
+		button_21.setBounds(454, 408, 34, 20);
+		frame.getContentPane().add(button_21);
+		
+		JButton button_22 = new JButton("16:40");
+		button_22.setBounds(498, 408, 34, 20);
+		frame.getContentPane().add(button_22);
+		
+		JButton button_25 = new JButton("16:40");
+		button_25.setBounds(454, 440, 34, 20);
+		frame.getContentPane().add(button_25);
+		
+		JButton button_26 = new JButton("16:40");
+		button_26.setBounds(411, 441, 34, 20);
+		frame.getContentPane().add(button_26);
+		
+		JLabel label_1 = new JLabel("124'");
 		label_1.setBounds(180, 393, 46, 14);
 		frame.getContentPane().add(label_1);
 		
@@ -252,9 +295,20 @@ public class VCarteleraFalsa {
 		lblNewLabel.setBounds(0, 0, 566, 93);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JButton button_1 = new JButton("16:40");
-		button_1.setBounds(149, 448, 34, 20);
-		frame.getContentPane().add(button_1);
+		JButton btnNewButton = new JButton(">>");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//Abrir siguiente página de cartelera 
+				VCartelera2 nuevaVentana = new VCartelera2(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+				
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnNewButton.setBounds(335, 531, 54, 32);
+		frame.getContentPane().add(btnNewButton);
 		
 		frame.setLocationRelativeTo(null);
 	}

@@ -1,6 +1,10 @@
-package deustocines;
+package interfaz;
 
 import javax.swing.*;
+
+import deustocines.Usuario;
+import deustocines.ZBaseDeDatos;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;

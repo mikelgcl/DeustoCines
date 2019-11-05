@@ -87,20 +87,21 @@ public class ZBaseDeDatos {
 			e.printStackTrace();
 		}
 	}
-	public Usuario iniciarSesion(Connection con,String nombre) {
+	public Usuario iniciarSesion(Connection con,String correo) {
 		Usuario u=new Usuario();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select nombre,contraseña from Usuario where nombre=?");
-			stmt.setString(1, nombre);
+			PreparedStatement stmt=con.prepareStatement("Select correo,contraseña from usuario where correo=?");
+			stmt.setString(1, correo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
 				
-				u.setNombre(rs.getString("nombre"));
+				u.setCorreo(rs.getString("correo"));
 				u.setContrasenya(rs.getString("contraseña"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		logger.log(Level.INFO, "Usuario:"+u);
 		return u;
 	}
 	
