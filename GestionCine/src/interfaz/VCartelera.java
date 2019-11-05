@@ -107,6 +107,15 @@ public class VCartelera {
 		frame.getContentPane().add(label);
 		
 		JButton btnNewButton_1 = new JButton("16:40");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+				
+			}
+		});
 		btnNewButton_1.setBounds(149, 231, 34, 20);
 		frame.getContentPane().add(btnNewButton_1);
 		
