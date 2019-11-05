@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -105,7 +106,18 @@ public class VComprar {
 		JButton btnContinuar = new JButton("Continuar");
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			}
+				int seleccion = JOptionPane.showOptionDialog(null,"Subtotal de 24.40 euros, ¿Desea continuar?", "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
+					if(seleccion==1 ){
+					//Que no pase nah
+					}
+					else{
+						VPago nuevaVentana = new VPago(); 
+						nuevaVentana.frame.setVisible(true);
+						
+						frame.dispose();
+					}
+			}	
+			
 		});
 		btnContinuar.setForeground(Color.WHITE);
 		btnContinuar.setBackground(new Color(0, 0, 153));
