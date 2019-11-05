@@ -8,8 +8,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-import deustocines.Usuario;
-import deustocines.ZBaseDeDatos;
+import baseDeDatos.Usuario;
+import baseDeDatos.ZBaseDeDatos;
 
 import java.awt.SystemColor;
 import java.awt.Color;

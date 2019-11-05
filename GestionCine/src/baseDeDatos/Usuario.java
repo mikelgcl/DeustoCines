@@ -1,4 +1,4 @@
-package deustocines;
+package baseDeDatos;
 
 
 public class Usuario {

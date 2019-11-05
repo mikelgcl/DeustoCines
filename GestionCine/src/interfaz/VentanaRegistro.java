@@ -2,8 +2,8 @@ package interfaz;
 
 import javax.swing.*;
 
-import deustocines.Usuario;
-import deustocines.ZBaseDeDatos;
+import baseDeDatos.Usuario;
+import baseDeDatos.ZBaseDeDatos;
 
 import java.awt.Color;
 import java.awt.Font;

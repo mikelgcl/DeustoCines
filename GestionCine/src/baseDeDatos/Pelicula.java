@@ -1,4 +1,4 @@
-package deustocines;
+package baseDeDatos;
 
 public class Pelicula {
 private int Cod_Pelicula;
