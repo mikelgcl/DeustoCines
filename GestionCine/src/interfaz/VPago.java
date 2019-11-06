@@ -150,9 +150,9 @@ public class VPago {
 				}
 			}
 		});
-		btnConfirmarCompra.setForeground(new Color(255, 255, 255));
+		 btnConfirmarCompra.setForeground(new Color(255, 255, 255));
 		btnConfirmarCompra.setBackground(new Color(0, 0, 204));
-		btnConfirmarCompra.setBounds(243, 295, 146, 20);
+		btnConfirmarCompra.setBounds(243, 295, 139, 20);
 		frame.getContentPane().add(btnConfirmarCompra);
 		
 		frame.setLocationRelativeTo(null);
