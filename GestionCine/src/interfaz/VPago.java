@@ -135,6 +135,21 @@ public class VPago {
 		frame.getContentPane().add(passwordField_1);
 		
 		JButton btnConfirmarCompra = new JButton("Confirmar compra");
+		btnConfirmarCompra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int seleccion = JOptionPane.showOptionDialog(null,"¿Está seguro de que desea realizar su compra?", "",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
+				if(seleccion==1 ){
+				//Que no pase nah
+				}
+				else{
+					JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
+					
+					VCartelera nuevaVentana = new VCartelera(); 
+					nuevaVentana.frame.setVisible(true);	
+					frame.dispose();
+				}
+			}
+		});
 		btnConfirmarCompra.setForeground(new Color(255, 255, 255));
 		btnConfirmarCompra.setBackground(new Color(0, 0, 204));
 		btnConfirmarCompra.setBounds(243, 295, 146, 20);
