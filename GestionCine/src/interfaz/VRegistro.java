@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
-public class VentanaRegistro extends JFrame {
+public class VRegistro extends JFrame {
 	/**
 	 * 
 	 */
@@ -25,7 +25,7 @@ public class VentanaRegistro extends JFrame {
 	private JTextField textTD;
 	ZBaseDeDatos c=new ZBaseDeDatos();
  
-	public VentanaRegistro() {
+	public VRegistro() {
 		Connection conn=c.initBD("DeustoCines");
 		this.setSize(360, 585);
 		getContentPane().setBackground(new Color(230, 230, 250));
@@ -108,7 +108,7 @@ public class VentanaRegistro extends JFrame {
 				VInicio nuevaVentana = new VInicio(); 
 				nuevaVentana.frame.setVisible(true);
 				
-				VentanaRegistro.this.dispose();	
+				VRegistro.this.dispose();	
 				
 			}
 		});
@@ -230,7 +230,7 @@ public class VentanaRegistro extends JFrame {
 					c.insertDatosUsuario(conn, p1);
 					VInicio nuevaVentana = new VInicio(); 
 					nuevaVentana.frame.setVisible(true);
-					VentanaRegistro.this.dispose();	
+					VRegistro.this.dispose();	
 			}else {
 				System.out.println("Fallo a registrar");
 			}
@@ -243,19 +243,19 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().add(btnRegistrar);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/imagenes/fondo1bueno.jpg")));
+		lblNewLabel_7.setIcon(new ImageIcon(VRegistro.class.getResource("/imagenes/fondo1bueno.jpg")));
 		lblNewLabel_7.setBounds(0, 0, 344, 98);
 		getContentPane().add(lblNewLabel_7);
 		
 		
 		
 		
-		VentanaRegistro.this.setLocationRelativeTo(null);
+		VRegistro.this.setLocationRelativeTo(null);
 	
 		
 	}
 	public static void main(String[] args) {
-		VentanaRegistro v=new VentanaRegistro();
+		VRegistro v=new VRegistro();
 		v.setVisible(true);
 	}
 }

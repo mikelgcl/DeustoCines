@@ -125,7 +125,7 @@ public class VInicio {
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				VentanaRegistro nuevaVentana = new VentanaRegistro(); 
+				VRegistro nuevaVentana = new VRegistro(); 
 				nuevaVentana.setVisible(true);
 				frame.dispose();
 				
