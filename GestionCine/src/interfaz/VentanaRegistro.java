@@ -93,11 +93,7 @@ public class VentanaRegistro extends JFrame {
 		getContentPane().add(textTD);
 		textTD.setColumns(10);
 		
-		/*JLabel lblNewLabel_6 = new JLabel("Las contrase\u00F1as no coinciden");
-		lblNewLabel_6.setVisible(false);
-		lblNewLabel_6.setForeground(Color.RED);
-		lblNewLabel_6.setBounds(56, 294, 212, 14);
-		getContentPane().add(lblNewLabel_6);*/
+		
 		
 		JLabel lblRegistro = new JLabel("Registro");
 		lblRegistro.setForeground(Color.WHITE);
@@ -121,26 +117,111 @@ public class VentanaRegistro extends JFrame {
 		btnAtrs.setBounds(56, 497, 107, 20);
 		getContentPane().add(btnAtrs);
 		
+		//Etiquetas de error
+		
+				JLabel lblErrorCorreo = new JLabel("Formato de correo incorrecto");
+				lblErrorCorreo.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorCorreo.setForeground(new Color(255, 0, 0));
+				lblErrorCorreo.setBounds(56, 180, 172, 14);
+				lblErrorCorreo.setVisible(false);
+				getContentPane().add(lblErrorCorreo);
+				
+				JLabel lblErrorContrasena = new JLabel("La contrase\u00F1a tiene que tener al menos 6 caracteres");
+				lblErrorContrasena.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorContrasena.setForeground(Color.RED);
+				lblErrorContrasena.setBounds(56, 237, 278, 14);
+				lblErrorContrasena.setVisible(false);
+				getContentPane().add(lblErrorContrasena);
+				
+				JLabel lblErrorContrasena2 = new JLabel("Las contrase\u00F1as no coinciden");
+				lblErrorContrasena2.setForeground(Color.RED);
+				lblErrorContrasena2.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorContrasena2.setBounds(56, 292, 278, 14);
+				lblErrorContrasena2.setVisible(false);
+				getContentPane().add(lblErrorContrasena2);
+				
+				JLabel lblErrorNombre = new JLabel("El nombre tiene que tener al menos 2 caracteres");
+				lblErrorNombre.setForeground(Color.RED);
+				lblErrorNombre.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorNombre.setBounds(56, 355, 278, 14);
+				lblErrorNombre.setVisible(false);
+				getContentPane().add(lblErrorNombre);
+				
+				JLabel lblErrorApellido = new JLabel("El apellido tiene que tener al menos 2 caracteres");
+				lblErrorApellido.setForeground(Color.RED);
+				lblErrorApellido.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorApellido.setBounds(56, 411, 278, 14);
+				lblErrorApellido.setVisible(false);
+				getContentPane().add(lblErrorApellido);
+				
+				JLabel lblErrorTDeusto = new JLabel("La tarjeta Deusto tiene que tener 8 n\u00FAmeros");
+				lblErrorTDeusto.setForeground(Color.RED);
+				lblErrorTDeusto.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblErrorTDeusto.setBounds(56, 466, 278, 14);
+				lblErrorTDeusto.setVisible(false);
+				getContentPane().add(lblErrorTDeusto);
+		
 		JButton btnRegistrar = new JButton("Registrar");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String cor = " " ;
-				char[] conc = textContra.getPassword(); ;
+				char[] conc = textContra.getPassword(); 
 				String con = " ";
+				char[] conc1 = textContra1.getPassword(); 
+				String con1 = " ";
 				String nom = " " ;
 				String apl= " " ;
 				String tdb = " " ;
 				
 				cor=textCorreo.getText();
 				con = String.valueOf(conc);
+				con1 = String.valueOf(conc1);
 				nom=textNom.getText();
 				apl=textApel.getText();
 				tdb=textTD.getText();
 				
-				if(textCorreo.getText().length()<=45 && textCorreo.getText().length()>0 
-						&& con.length()<=8 && con.length()>0 
-						&& textNom.getText().length()<=45 && textNom.getText().length()>0 
-						&& textApel.getText().length()<=45 && textApel.getText().length()>0
+				//Mensajes de error en pantalla 
+				
+				if (textCorreo.getText().length()<=45 && textCorreo.getText().length()>1 && textCorreo.getText().contains("@")) {
+					lblErrorCorreo.setVisible(false);
+				} else {
+					lblErrorCorreo.setVisible(true);
+				}
+				
+				if (con.equals(con1)) {
+					lblErrorContrasena2.setVisible(false);
+				} else {
+					lblErrorContrasena2.setVisible(true);
+				}
+				
+				if (con.length()<=20 && con.length()>5) {
+					lblErrorContrasena.setVisible(false);
+				} else {
+					lblErrorContrasena.setVisible(true);
+				}
+				
+				if (textNom.getText().length()<=45 && textNom.getText().length()>1 ) {
+					lblErrorNombre.setVisible(false);
+				} else {
+					lblErrorNombre.setVisible(true);
+				}
+				
+				if (textApel.getText().length()<=45 && textApel.getText().length()>1) {
+					lblErrorApellido.setVisible(false);
+				} else {
+					lblErrorApellido.setVisible(true);
+				}
+				
+				if (textTD.getText().length()==8) {
+					lblErrorTDeusto.setVisible(false);
+				} else {
+					lblErrorTDeusto.setVisible(true);
+				}
+				
+				if(textCorreo.getText().length()<=45 && textCorreo.getText().length()>1 && textCorreo.getText().contains("@")
+						&& con.length()<=20 && con.length()>5
+						&& textNom.getText().length()<=45 && textNom.getText().length()>1 
+						&& textApel.getText().length()<=45 && textApel.getText().length()>1
 						&& textTD.getText().length()==8) {
 					
 					
@@ -165,6 +246,9 @@ public class VentanaRegistro extends JFrame {
 		lblNewLabel_7.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/imagenes/fondo1bueno.jpg")));
 		lblNewLabel_7.setBounds(0, 0, 344, 98);
 		getContentPane().add(lblNewLabel_7);
+		
+		
+		
 		
 		VentanaRegistro.this.setLocationRelativeTo(null);
 	

@@ -228,7 +228,7 @@ public class VCartelera2 {
 		frame.getContentPane().add(lblM_1);
 		
 		JLabel lblAdAstra = new JLabel("Noche de bodas");
-		lblAdAstra.setBounds(149, 374, 79, 14);
+		lblAdAstra.setBounds(149, 374, 114, 14);
 		frame.getContentPane().add(lblAdAstra);
 		
 		JButton button_9 = new JButton("16:40");
