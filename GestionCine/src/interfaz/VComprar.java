@@ -80,6 +80,16 @@ public class VComprar {
 		frame.getContentPane().add(btnAtras);
 		
 		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnNewButton_1.getBackground().equals(new Color(50,220,50))) {
+					btnNewButton_1.setBackground(new Color(255,255,255));
+				} else {
+					btnNewButton_1.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		btnNewButton_1.setBackground(new Color(255, 255, 255));
 		btnNewButton_1.setBounds(84, 251, 25, 23);
 		frame.getContentPane().add(btnNewButton_1);
 		
@@ -130,82 +140,269 @@ public class VComprar {
 		frame.getContentPane().add(label);
 		
 		JButton button = new JButton("");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button.getBackground().equals(new Color(50,220,50))) {
+					button.setBackground(new Color(255,255,255));
+				} else {
+					button.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button.setBackground(new Color(255, 255, 255));
 		button.setBounds(116, 251, 25, 23);
 		frame.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_1.getBackground().equals(new Color(50,220,50))) {
+					button_1.setBackground(new Color(255,255,255));
+				} else {
+					button_1.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_1.setBackground(new Color(255, 255, 255));
 		button_1.setBounds(183, 251, 25, 23);
 		frame.getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_2.getBackground().equals(new Color(50,220,50))) {
+					button_2.setBackground(new Color(255,255,255));
+				} else {
+					button_2.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_2.setBackground(new Color(255, 255, 255));
 		button_2.setBounds(151, 251, 25, 23);
 		frame.getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_3.getBackground().equals(new Color(50,220,50))) {
+					button_3.setBackground(new Color(255,255,255));
+				} else {
+					button_3.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_3.setBackground(new Color(255, 255, 255));
 		button_3.setBounds(317, 251, 25, 23);
 		frame.getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("");
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_4.getBackground().equals(new Color(50,220,50))) {
+					button_4.setBackground(new Color(255,255,255));
+				} else {
+					button_4.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_4.setBackground(new Color(255, 255, 255));
 		button_4.setBounds(285, 251, 25, 23);
 		frame.getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("");
+		button_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_5.getBackground().equals(new Color(50,220,50))) {
+					button_5.setBackground(new Color(255,255,255));
+				} else {
+					button_5.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_5.setBackground(new Color(255, 255, 255));
 		button_5.setBounds(250, 251, 25, 23);
 		frame.getContentPane().add(button_5);
 		
 		JButton button_6 = new JButton("");
+		button_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_6.getBackground().equals(new Color(50,220,50))) {
+					button_6.setBackground(new Color(255,255,255));
+				} else {
+					button_6.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_6.setBackground(new Color(255, 255, 255));
 		button_6.setBounds(218, 251, 25, 23);
 		frame.getContentPane().add(button_6);
 		
 		JButton button_7 = new JButton("");
+		button_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_7.getBackground().equals(new Color(50,220,50))) {
+					button_7.setBackground(new Color(255,255,255));
+				} else {
+					button_7.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_7.setBackground(new Color(255, 255, 255));
 		button_7.setBounds(84, 285, 25, 23);
 		frame.getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("");
+		button_8.setBackground(new Color(255, 255, 255));
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if (button_8.getBackground().equals(new Color(50,220,50))) {
+					button_8.setBackground(new Color(255,255,255));
+				} else {
+					button_8.setBackground(new Color(50,220,50));
+				}
 			}
 		});
 		button_8.setBounds(116, 285, 25, 23);
 		frame.getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("");
+		button_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_9.getBackground().equals(new Color(50,220,50))) {
+					button_9.setBackground(new Color(255,255,255));
+				} else {
+					button_9.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_9.setBackground(new Color(255, 255, 255));
 		button_9.setBounds(183, 285, 25, 23);
 		frame.getContentPane().add(button_9);
 		
 		JButton button_10 = new JButton("");
+		button_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_10.getBackground().equals(new Color(50,220,50))) {
+					button_10.setBackground(new Color(255,255,255));
+				} else {
+					button_10.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_10.setBackground(new Color(255, 255, 255));
 		button_10.setBounds(151, 285, 25, 23);
 		frame.getContentPane().add(button_10);
 		
 		JButton button_11 = new JButton("");
+		button_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_11.getBackground().equals(new Color(50,220,50))) {
+					button_11.setBackground(new Color(255,255,255));
+				} else {
+					button_11.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_11.setBackground(new Color(255, 255, 255));
 		button_11.setBounds(250, 285, 25, 23);
 		frame.getContentPane().add(button_11);
 		
 		JButton button_12 = new JButton("");
+		button_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_12.getBackground().equals(new Color(50,220,50))) {
+					button_12.setBackground(new Color(255,255,255));
+				} else {
+					button_12.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_12.setBackground(new Color(255, 255, 255));
 		button_12.setBounds(218, 285, 25, 23);
 		frame.getContentPane().add(button_12);
 		
 		JButton button_13 = new JButton("");
+		button_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_13.getBackground().equals(new Color(50,220,50))) {
+					button_13.setBackground(new Color(255,255,255));
+				} else {
+					button_13.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_13.setBackground(new Color(255, 255, 255));
 		button_13.setBounds(317, 285, 25, 23);
 		frame.getContentPane().add(button_13);
 		
 		JButton button_14 = new JButton("");
+		button_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_14.getBackground().equals(new Color(50,220,50))) {
+					button_14.setBackground(new Color(255,255,255));
+				} else {
+					button_14.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_14.setBackground(new Color(255, 255, 255));
 		button_14.setBounds(285, 285, 25, 23);
 		frame.getContentPane().add(button_14);
 		
 		JButton button_15 = new JButton("");
+		button_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_15.getBackground().equals(new Color(50,220,50))) {
+					button_15.setBackground(new Color(255,255,255));
+				} else {
+					button_15.setBackground(new Color(50,220,50));
+				}
+			}
+		
+		});
+		button_15.setBackground(new Color(255, 255, 255));
 		button_15.setBounds(317, 353, 25, 23);
 		frame.getContentPane().add(button_15);
 		
 		JButton button_16 = new JButton("");
+		button_16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_16.getBackground().equals(new Color(50,220,50))) {
+					button_16.setBackground(new Color(255,255,255));
+				} else {
+					button_16.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_16.setBackground(new Color(255, 255, 255));
 		button_16.setBounds(84, 319, 25, 23);
 		frame.getContentPane().add(button_16);
 		
 		JButton button_17 = new JButton("");
+		button_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_17.getBackground().equals(new Color(50,220,50))) {
+					button_17.setBackground(new Color(255,255,255));
+				} else {
+					button_17.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_17.setBackground(new Color(255, 255, 255));
 		button_17.setBounds(116, 319, 25, 23);
 		frame.getContentPane().add(button_17);
 		
 		JButton button_18 = new JButton("");
+		button_18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_18.getBackground().equals(new Color(50,220,50))) {
+					button_18.setBackground(new Color(255,255,255));
+				} else {
+					button_18.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_18.setBackground(new Color(255, 255, 255));
 		button_18.setBounds(84, 353, 25, 23);
 		frame.getContentPane().add(button_18);
 		
@@ -256,29 +453,84 @@ public class VComprar {
 		frame.getContentPane().add(button_27);
 		
 		JButton button_28 = new JButton("");
+		button_28.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_28.getBackground().equals(new Color(50,220,50))) {
+					button_28.setBackground(new Color(255,255,255));
+				} else {
+					button_28.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_28.setBackground(new Color(255, 255, 255));
 		button_28.setBounds(285, 353, 25, 23);
 		frame.getContentPane().add(button_28);
 		
 		JButton button_29 = new JButton("");
+		button_29.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_29.getBackground().equals(new Color(50,220,50))) {
+					button_29.setBackground(new Color(255,255,255));
+				} else {
+					button_29.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_29.setBackground(new Color(255, 255, 255));
 		button_29.setBounds(285, 319, 25, 23);
 		frame.getContentPane().add(button_29);
 		
 		JButton button_30 = new JButton("");
+		button_30.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_30.getBackground().equals(new Color(50,220,50))) {
+					button_30.setBackground(new Color(255,255,255));
+				} else {
+					button_30.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_30.setBackground(new Color(255, 255, 255));
 		button_30.setBounds(317, 319, 25, 23);
 		frame.getContentPane().add(button_30);
 		
 		JButton button_31 = new JButton("");
+		button_31.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_31.getBackground().equals(new Color(50,220,50))) {
+					button_31.setBackground(new Color(255,255,255));
+				} else {
+					button_31.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_31.setBackground(new Color(255, 255, 255));
 		button_31.setBounds(317, 486, 25, 23);
 		frame.getContentPane().add(button_31);
 		
 		JButton button_32 = new JButton("");
+		button_32.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_32.getBackground().equals(new Color(50,220,50))) {
+					button_32.setBackground(new Color(255,255,255));
+				} else {
+					button_32.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_32.setBackground(new Color(255, 255, 255));
 		button_32.setBounds(285, 486, 25, 23);
 		frame.getContentPane().add(button_32);
 		
 		JButton button_33 = new JButton("");
+		button_33.setBackground(new Color(255, 255, 255));
 		button_33.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				button_33.setBackground(new Color(50,220,50));
+				if (button_33.getBackground().equals(new Color(50,220,50))) {
+					button_33.setBackground(new Color(255,255,255));
+				} else {
+					button_33.setBackground(new Color(50,220,50));
+				}
 			}
 		});
 		button_33.setBounds(250, 486, 25, 23);
@@ -295,9 +547,14 @@ public class VComprar {
 		frame.getContentPane().add(button_35);
 		
 		JButton button_36 = new JButton("");
+		button_36.setBackground(new Color(255, 255, 255));
 		button_36.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				button_36.setBackground(new Color(50,220,50));
+				if (button_36.getBackground().equals(new Color(50,220,50))) {
+					button_36.setBackground(new Color(255,255,255));
+				} else {
+					button_36.setBackground(new Color(50,220,50));
+				}
 			}
 		});
 		button_36.setBounds(218, 486, 25, 23);
@@ -309,6 +566,16 @@ public class VComprar {
 		frame.getContentPane().add(button_37);
 		
 		JButton button_38 = new JButton("");
+		button_38.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_38.getBackground().equals(new Color(50,220,50))) {
+					button_38.setBackground(new Color(255,255,255));
+				} else {
+					button_38.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_38.setBackground(new Color(255, 255, 255));
 		button_38.setBounds(317, 452, 25, 23);
 		frame.getContentPane().add(button_38);
 		
@@ -318,6 +585,16 @@ public class VComprar {
 		frame.getContentPane().add(button_39);
 		
 		JButton button_40 = new JButton("");
+		button_40.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_40.getBackground().equals(new Color(50,220,50))) {
+					button_40.setBackground(new Color(255,255,255));
+				} else {
+					button_40.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_40.setBackground(new Color(255, 255, 255));
 		button_40.setBounds(317, 384, 25, 23);
 		frame.getContentPane().add(button_40);
 		
@@ -332,6 +609,16 @@ public class VComprar {
 		frame.getContentPane().add(button_42);
 		
 		JButton button_51 = new JButton("");
+		button_51.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_51.getBackground().equals(new Color(50,220,50))) {
+					button_51.setBackground(new Color(255,255,255));
+				} else {
+					button_51.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_51.setBackground(new Color(255, 255, 255));
 		button_51.setBounds(116, 384, 25, 23);
 		frame.getContentPane().add(button_51);
 		
@@ -346,10 +633,30 @@ public class VComprar {
 		frame.getContentPane().add(button_53);
 		
 		JButton button_54 = new JButton("");
+		button_54.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_54.getBackground().equals(new Color(50,220,50))) {
+					button_54.setBackground(new Color(255,255,255));
+				} else {
+					button_54.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_54.setBackground(new Color(255, 255, 255));
 		button_54.setBounds(84, 384, 25, 23);
 		frame.getContentPane().add(button_54);
 		
 		JButton button_55 = new JButton("");
+		button_55.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_55.getBackground().equals(new Color(50,220,50))) {
+					button_55.setBackground(new Color(255,255,255));
+				} else {
+					button_55.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_55.setBackground(new Color(255, 255, 255));
 		button_55.setBounds(84, 452, 25, 23);
 		frame.getContentPane().add(button_55);
 		
@@ -359,10 +666,30 @@ public class VComprar {
 		frame.getContentPane().add(button_56);
 		
 		JButton button_57 = new JButton("");
+		button_57.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_57.getBackground().equals(new Color(50,220,50))) {
+					button_57.setBackground(new Color(255,255,255));
+				} else {
+					button_57.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_57.setBackground(new Color(255, 255, 255));
 		button_57.setBounds(116, 486, 25, 23);
 		frame.getContentPane().add(button_57);
 		
 		JButton button_58 = new JButton("");
+		button_58.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_58.getBackground().equals(new Color(50,220,50))) {
+					button_58.setBackground(new Color(255,255,255));
+				} else {
+					button_58.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_58.setBackground(new Color(255, 255, 255));
 		button_58.setBounds(116, 452, 25, 23);
 		frame.getContentPane().add(button_58);
 		
@@ -372,12 +699,20 @@ public class VComprar {
 		frame.getContentPane().add(button_59);
 		
 		JButton button_60 = new JButton("");
+		button_60.setBackground(new Color(255, 255, 255));
 		button_60.setBounds(151, 486, 25, 23);
 		button_60.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent arg0) {
-				button_60.setBackground(new Color(50,220,50));
+				if (button_60.getBackground().equals(new Color(50,220,50))) {
+					button_60.setBackground(new Color(255,255,255));
+				} else {
+					button_60.setBackground(new Color(50,220,50));
+				}
+					
 			}
 		});
+		
 		frame.getContentPane().add(button_60);
 		
 		JButton button_61 = new JButton("");
@@ -386,39 +721,114 @@ public class VComprar {
 		frame.getContentPane().add(button_61);
 		
 		JButton button_62 = new JButton("");
+		button_62.setBackground(new Color(255, 255, 255));
 		button_62.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				button_62.setBackground(new Color(50,220,50));
+				if (button_62.getBackground().equals(new Color(50,220,50))) {
+					button_62.setBackground(new Color(255,255,255));
+				} else {
+					button_62.setBackground(new Color(50,220,50));
+				}
 			}
 		});
 		button_62.setBounds(183, 486, 25, 23);
 		frame.getContentPane().add(button_62);
 		
 		JButton button_63 = new JButton("");
+		button_63.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_63.getBackground().equals(new Color(50,220,50))) {
+					button_63.setBackground(new Color(255,255,255));
+				} else {
+					button_63.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_63.setBackground(new Color(255, 255, 255));
 		button_63.setBounds(84, 520, 25, 23);
 		frame.getContentPane().add(button_63);
 		
 		JButton button_64 = new JButton("");
+		button_64.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_64.getBackground().equals(new Color(50,220,50))) {
+					button_64.setBackground(new Color(255,255,255));
+				} else {
+					button_64.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_64.setBackground(new Color(255, 255, 255));
 		button_64.setBounds(116, 520, 25, 23);
 		frame.getContentPane().add(button_64);
 		
 		JButton button_65 = new JButton("");
+		button_65.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_65.getBackground().equals(new Color(50,220,50))) {
+					button_65.setBackground(new Color(255,255,255));
+				} else {
+					button_65.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_65.setBackground(new Color(255, 255, 255));
 		button_65.setBounds(151, 520, 25, 23);
 		frame.getContentPane().add(button_65);
 		
 		JButton button_66 = new JButton("");
+		button_66.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_66.getBackground().equals(new Color(50,220,50))) {
+					button_66.setBackground(new Color(255,255,255));
+				} else {
+					button_66.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_66.setBackground(new Color(255, 255, 255));
 		button_66.setBounds(183, 520, 25, 23);
 		frame.getContentPane().add(button_66);
 		
 		JButton button_67 = new JButton("");
+		button_67.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_67.getBackground().equals(new Color(50,220,50))) {
+					button_67.setBackground(new Color(255,255,255));
+				} else {
+					button_67.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_67.setBackground(new Color(255, 255, 255));
 		button_67.setBounds(218, 520, 25, 23);
 		frame.getContentPane().add(button_67);
 		
 		JButton button_68 = new JButton("");
+		button_68.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_68.getBackground().equals(new Color(50,220,50))) {
+					button_68.setBackground(new Color(255,255,255));
+				} else {
+					button_68.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_68.setBackground(new Color(255, 255, 255));
 		button_68.setBounds(250, 520, 25, 23);
 		frame.getContentPane().add(button_68);
 		
 		JButton button_69 = new JButton("");
+		button_69.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_69.getBackground().equals(new Color(50,220,50))) {
+					button_69.setBackground(new Color(255,255,255));
+				} else {
+					button_69.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_69.setBackground(new Color(255, 255, 255));
 		button_69.setBounds(285, 520, 25, 23);
 		frame.getContentPane().add(button_69);
 		
@@ -428,26 +838,86 @@ public class VComprar {
 		frame.getContentPane().add(button_70);
 		
 		JButton button_71 = new JButton("");
+		button_71.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_71.getBackground().equals(new Color(50,220,50))) {
+					button_71.setBackground(new Color(255,255,255));
+				} else {
+					button_71.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_71.setBackground(new Color(255, 255, 255));
 		button_71.setBounds(49, 285, 25, 23);
 		frame.getContentPane().add(button_71);
 		
 		JButton button_72 = new JButton("");
+		button_72.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_72.getBackground().equals(new Color(50,220,50))) {
+					button_72.setBackground(new Color(255,255,255));
+				} else {
+					button_72.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_72.setBackground(new Color(255, 255, 255));
 		button_72.setBounds(49, 319, 25, 23);
 		frame.getContentPane().add(button_72);
 		
 		JButton button_73 = new JButton("");
+		button_73.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_73.getBackground().equals(new Color(50,220,50))) {
+					button_73.setBackground(new Color(255,255,255));
+				} else {
+					button_73.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_73.setBackground(new Color(255, 255, 255));
 		button_73.setBounds(49, 353, 25, 23);
 		frame.getContentPane().add(button_73);
 		
 		JButton button_74 = new JButton("");
+		button_74.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if ( button_74.getBackground().equals(new Color(50,220,50))) {
+					 button_74.setBackground(new Color(255,255,255));
+				} else {
+					 button_74.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_74.setBackground(new Color(255, 255, 255));
 		button_74.setBounds(49, 384, 25, 23);
 		frame.getContentPane().add(button_74);
 		
 		JButton button_75 = new JButton("");
+		button_75.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_75.getBackground().equals(new Color(50,220,50))) {
+					button_75.setBackground(new Color(255,255,255));
+				} else {
+					button_75.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_75.setBackground(new Color(255, 255, 255));
 		button_75.setBounds(49, 418, 25, 23);
 		frame.getContentPane().add(button_75);
 		
 		JButton button_76 = new JButton("");
+		button_76.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_76.getBackground().equals(new Color(50,220,50))) {
+					button_76.setBackground(new Color(255,255,255));
+				} else {
+					button_76.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_76.setBackground(new Color(255, 255, 255));
 		button_76.setBounds(49, 452, 25, 23);
 		frame.getContentPane().add(button_76);
 		
@@ -457,22 +927,72 @@ public class VComprar {
 		frame.getContentPane().add(button_77);
 		
 		JButton button_78 = new JButton("");
+		button_78.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_78.getBackground().equals(new Color(50,220,50))) {
+					button_78.setBackground(new Color(255,255,255));
+				} else {
+					button_78.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_78.setBackground(new Color(255, 255, 255));
 		button_78.setBounds(49, 520, 25, 23);
 		frame.getContentPane().add(button_78);
 		
 		JButton button_79 = new JButton("");
+		button_79.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_79.getBackground().equals(new Color(50,220,50))) {
+					button_79.setBackground(new Color(255,255,255));
+				} else {
+					button_79.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_79.setBackground(new Color(255, 255, 255));
 		button_79.setBounds(352, 285, 25, 23);
 		frame.getContentPane().add(button_79);
 		
 		JButton button_80 = new JButton("");
+		button_80.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_80.getBackground().equals(new Color(50,220,50))) {
+					button_80.setBackground(new Color(255,255,255));
+				} else {
+					button_80.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_80.setBackground(new Color(255, 255, 255));
 		button_80.setBounds(352, 319, 25, 23);
 		frame.getContentPane().add(button_80);
 		
 		JButton button_81 = new JButton("");
+		button_81.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_81.getBackground().equals(new Color(50,220,50))) {
+					button_81.setBackground(new Color(255,255,255));
+				} else {
+					button_81.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_81.setBackground(new Color(255, 255, 255));
 		button_81.setBounds(352, 353, 25, 23);
 		frame.getContentPane().add(button_81);
 		
 		JButton button_82 = new JButton("");
+		button_82.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_82.getBackground().equals(new Color(50,220,50))) {
+					button_82.setBackground(new Color(255,255,255));
+				} else {
+					button_82.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_82.setBackground(new Color(255, 255, 255));
 		button_82.setBounds(352, 384, 25, 23);
 		frame.getContentPane().add(button_82);
 		
@@ -482,10 +1002,30 @@ public class VComprar {
 		frame.getContentPane().add(button_83);
 		
 		JButton button_84 = new JButton("");
+		button_84.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_84.getBackground().equals(new Color(50,220,50))) {
+					button_84.setBackground(new Color(255,255,255));
+				} else {
+					button_84.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_84.setBackground(new Color(255, 255, 255));
 		button_84.setBounds(352, 452, 25, 23);
 		frame.getContentPane().add(button_84);
 		
 		JButton button_85 = new JButton("");
+		button_85.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (button_85.getBackground().equals(new Color(50,220,50))) {
+					button_85.setBackground(new Color(255,255,255));
+				} else {
+					button_85.setBackground(new Color(50,220,50));
+				}
+			}
+		});
+		button_85.setBackground(new Color(255, 255, 255));
 		button_85.setBounds(352, 486, 25, 23);
 		frame.getContentPane().add(button_85);
 		
