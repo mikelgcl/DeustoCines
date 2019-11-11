@@ -79,19 +79,19 @@ public class VComprar {
 		btnAtras.setBounds(30, 608, 95, 23);
 		frame.getContentPane().add(btnAtras);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton b1 = new JButton("");
+		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (btnNewButton_1.getBackground().equals(new Color(50,220,50))) {
-					btnNewButton_1.setBackground(new Color(255,255,255));
+				if (b1.getBackground().equals(new Color(50,220,50))) {
+					b1.setBackground(new Color(255,255,255));
 				} else {
-					btnNewButton_1.setBackground(new Color(50,220,50));
+					b1.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setBounds(84, 251, 25, 23);
-		frame.getContentPane().add(btnNewButton_1);
+		b1.setBackground(new Color(255, 255, 255));
+		b1.setBounds(84, 251, 25, 23);
+		frame.getContentPane().add(b1);
 		
 		JLabel lblAyuda = new JLabel("Zombieland 2");
 		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -139,905 +139,905 @@ public class VComprar {
 		label.setBounds(33, 141, 132, 43);
 		frame.getContentPane().add(label);
 		
-		JButton button = new JButton("");
-		button.addActionListener(new ActionListener() {
+		JButton b2 = new JButton("");
+		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button.getBackground().equals(new Color(50,220,50))) {
-					button.setBackground(new Color(255,255,255));
+				if (b2.getBackground().equals(new Color(50,220,50))) {
+					b2.setBackground(new Color(255,255,255));
 				} else {
-					button.setBackground(new Color(50,220,50));
+					b2.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button.setBackground(new Color(255, 255, 255));
-		button.setBounds(116, 251, 25, 23);
-		frame.getContentPane().add(button);
+		b2.setBackground(new Color(255, 255, 255));
+		b2.setBounds(116, 251, 25, 23);
+		frame.getContentPane().add(b2);
 		
-		JButton button_1 = new JButton("");
-		button_1.addActionListener(new ActionListener() {
+		JButton b4 = new JButton("");
+		b4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_1.getBackground().equals(new Color(50,220,50))) {
-					button_1.setBackground(new Color(255,255,255));
+				if (b4.getBackground().equals(new Color(50,220,50))) {
+					b4.setBackground(new Color(255,255,255));
 				} else {
-					button_1.setBackground(new Color(50,220,50));
+					b4.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_1.setBackground(new Color(255, 255, 255));
-		button_1.setBounds(183, 251, 25, 23);
-		frame.getContentPane().add(button_1);
+		b4.setBackground(new Color(255, 255, 255));
+		b4.setBounds(183, 251, 25, 23);
+		frame.getContentPane().add(b4);
 		
-		JButton button_2 = new JButton("");
-		button_2.addActionListener(new ActionListener() {
+		JButton b3 = new JButton("");
+		b3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_2.getBackground().equals(new Color(50,220,50))) {
-					button_2.setBackground(new Color(255,255,255));
+				if (b3.getBackground().equals(new Color(50,220,50))) {
+					b3.setBackground(new Color(255,255,255));
 				} else {
-					button_2.setBackground(new Color(50,220,50));
+					b3.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_2.setBackground(new Color(255, 255, 255));
-		button_2.setBounds(151, 251, 25, 23);
-		frame.getContentPane().add(button_2);
+		b3.setBackground(new Color(255, 255, 255));
+		b3.setBounds(151, 251, 25, 23);
+		frame.getContentPane().add(b3);
 		
-		JButton button_3 = new JButton("");
-		button_3.addActionListener(new ActionListener() {
+		JButton b8 = new JButton("");
+		b8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_3.getBackground().equals(new Color(50,220,50))) {
-					button_3.setBackground(new Color(255,255,255));
+				if (b8.getBackground().equals(new Color(50,220,50))) {
+					b8.setBackground(new Color(255,255,255));
 				} else {
-					button_3.setBackground(new Color(50,220,50));
+					b8.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_3.setBackground(new Color(255, 255, 255));
-		button_3.setBounds(317, 251, 25, 23);
-		frame.getContentPane().add(button_3);
+		b8.setBackground(new Color(255, 255, 255));
+		b8.setBounds(317, 251, 25, 23);
+		frame.getContentPane().add(b8);
 		
-		JButton button_4 = new JButton("");
-		button_4.addActionListener(new ActionListener() {
+		JButton b7 = new JButton("");
+		b7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_4.getBackground().equals(new Color(50,220,50))) {
-					button_4.setBackground(new Color(255,255,255));
+				if (b7.getBackground().equals(new Color(50,220,50))) {
+					b7.setBackground(new Color(255,255,255));
 				} else {
-					button_4.setBackground(new Color(50,220,50));
+					b7.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_4.setBackground(new Color(255, 255, 255));
-		button_4.setBounds(285, 251, 25, 23);
-		frame.getContentPane().add(button_4);
+		b7.setBackground(new Color(255, 255, 255));
+		b7.setBounds(285, 251, 25, 23);
+		frame.getContentPane().add(b7);
 		
-		JButton button_5 = new JButton("");
-		button_5.addActionListener(new ActionListener() {
+		JButton b6 = new JButton("");
+		b6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_5.getBackground().equals(new Color(50,220,50))) {
-					button_5.setBackground(new Color(255,255,255));
+				if (b6.getBackground().equals(new Color(50,220,50))) {
+					b6.setBackground(new Color(255,255,255));
 				} else {
-					button_5.setBackground(new Color(50,220,50));
+					b6.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_5.setBackground(new Color(255, 255, 255));
-		button_5.setBounds(250, 251, 25, 23);
-		frame.getContentPane().add(button_5);
+		b6.setBackground(new Color(255, 255, 255));
+		b6.setBounds(250, 251, 25, 23);
+		frame.getContentPane().add(b6);
 		
-		JButton button_6 = new JButton("");
-		button_6.addActionListener(new ActionListener() {
+		JButton b5 = new JButton("");
+		b5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_6.getBackground().equals(new Color(50,220,50))) {
-					button_6.setBackground(new Color(255,255,255));
+				if (b5.getBackground().equals(new Color(50,220,50))) {
+					b5.setBackground(new Color(255,255,255));
 				} else {
-					button_6.setBackground(new Color(50,220,50));
+					b5.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_6.setBackground(new Color(255, 255, 255));
-		button_6.setBounds(218, 251, 25, 23);
-		frame.getContentPane().add(button_6);
+		b5.setBackground(new Color(255, 255, 255));
+		b5.setBounds(218, 251, 25, 23);
+		frame.getContentPane().add(b5);
 		
-		JButton button_7 = new JButton("");
-		button_7.addActionListener(new ActionListener() {
+		JButton b10 = new JButton("");
+		b10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_7.getBackground().equals(new Color(50,220,50))) {
-					button_7.setBackground(new Color(255,255,255));
+				if (b10.getBackground().equals(new Color(50,220,50))) {
+					b10.setBackground(new Color(255,255,255));
 				} else {
-					button_7.setBackground(new Color(50,220,50));
+					b10.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_7.setBackground(new Color(255, 255, 255));
-		button_7.setBounds(84, 285, 25, 23);
-		frame.getContentPane().add(button_7);
+		b10.setBackground(new Color(255, 255, 255));
+		b10.setBounds(84, 285, 25, 23);
+		frame.getContentPane().add(b10);
 		
-		JButton button_8 = new JButton("");
-		button_8.setBackground(new Color(255, 255, 255));
-		button_8.addActionListener(new ActionListener() {
+		JButton b11 = new JButton("");
+		b11.setBackground(new Color(255, 255, 255));
+		b11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (button_8.getBackground().equals(new Color(50,220,50))) {
-					button_8.setBackground(new Color(255,255,255));
+				if (b11.getBackground().equals(new Color(50,220,50))) {
+					b11.setBackground(new Color(255,255,255));
 				} else {
-					button_8.setBackground(new Color(50,220,50));
+					b11.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_8.setBounds(116, 285, 25, 23);
-		frame.getContentPane().add(button_8);
+		b11.setBounds(116, 285, 25, 23);
+		frame.getContentPane().add(b11);
 		
-		JButton button_9 = new JButton("");
-		button_9.addActionListener(new ActionListener() {
+		JButton b13 = new JButton("");
+		b13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_9.getBackground().equals(new Color(50,220,50))) {
-					button_9.setBackground(new Color(255,255,255));
+				if (b13.getBackground().equals(new Color(50,220,50))) {
+					b13.setBackground(new Color(255,255,255));
 				} else {
-					button_9.setBackground(new Color(50,220,50));
+					b13.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_9.setBackground(new Color(255, 255, 255));
-		button_9.setBounds(183, 285, 25, 23);
-		frame.getContentPane().add(button_9);
+		b13.setBackground(new Color(255, 255, 255));
+		b13.setBounds(183, 285, 25, 23);
+		frame.getContentPane().add(b13);
 		
-		JButton button_10 = new JButton("");
-		button_10.addActionListener(new ActionListener() {
+		JButton b12 = new JButton("");
+		b12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_10.getBackground().equals(new Color(50,220,50))) {
-					button_10.setBackground(new Color(255,255,255));
+				if (b12.getBackground().equals(new Color(50,220,50))) {
+					b12.setBackground(new Color(255,255,255));
 				} else {
-					button_10.setBackground(new Color(50,220,50));
+					b12.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_10.setBackground(new Color(255, 255, 255));
-		button_10.setBounds(151, 285, 25, 23);
-		frame.getContentPane().add(button_10);
+		b12.setBackground(new Color(255, 255, 255));
+		b12.setBounds(151, 285, 25, 23);
+		frame.getContentPane().add(b12);
 		
-		JButton button_11 = new JButton("");
-		button_11.addActionListener(new ActionListener() {
+		JButton b15 = new JButton("");
+		b15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_11.getBackground().equals(new Color(50,220,50))) {
-					button_11.setBackground(new Color(255,255,255));
+				if (b15.getBackground().equals(new Color(50,220,50))) {
+					b15.setBackground(new Color(255,255,255));
 				} else {
-					button_11.setBackground(new Color(50,220,50));
+					b15.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_11.setBackground(new Color(255, 255, 255));
-		button_11.setBounds(250, 285, 25, 23);
-		frame.getContentPane().add(button_11);
+		b15.setBackground(new Color(255, 255, 255));
+		b15.setBounds(250, 285, 25, 23);
+		frame.getContentPane().add(b15);
 		
-		JButton button_12 = new JButton("");
-		button_12.addActionListener(new ActionListener() {
+		JButton b14 = new JButton("");
+		b14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_12.getBackground().equals(new Color(50,220,50))) {
-					button_12.setBackground(new Color(255,255,255));
+				if (b14.getBackground().equals(new Color(50,220,50))) {
+					b14.setBackground(new Color(255,255,255));
 				} else {
-					button_12.setBackground(new Color(50,220,50));
+					b14.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_12.setBackground(new Color(255, 255, 255));
-		button_12.setBounds(218, 285, 25, 23);
-		frame.getContentPane().add(button_12);
+		b14.setBackground(new Color(255, 255, 255));
+		b14.setBounds(218, 285, 25, 23);
+		frame.getContentPane().add(b14);
 		
-		JButton button_13 = new JButton("");
-		button_13.addActionListener(new ActionListener() {
+		JButton b17 = new JButton("");
+		b17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_13.getBackground().equals(new Color(50,220,50))) {
-					button_13.setBackground(new Color(255,255,255));
+				if (b17.getBackground().equals(new Color(50,220,50))) {
+					b17.setBackground(new Color(255,255,255));
 				} else {
-					button_13.setBackground(new Color(50,220,50));
+					b17.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_13.setBackground(new Color(255, 255, 255));
-		button_13.setBounds(317, 285, 25, 23);
-		frame.getContentPane().add(button_13);
+		b17.setBackground(new Color(255, 255, 255));
+		b17.setBounds(317, 285, 25, 23);
+		frame.getContentPane().add(b17);
 		
-		JButton button_14 = new JButton("");
-		button_14.addActionListener(new ActionListener() {
+		JButton b16 = new JButton("");
+		b16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_14.getBackground().equals(new Color(50,220,50))) {
-					button_14.setBackground(new Color(255,255,255));
+				if (b16.getBackground().equals(new Color(50,220,50))) {
+					b16.setBackground(new Color(255,255,255));
 				} else {
-					button_14.setBackground(new Color(50,220,50));
+					b16.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_14.setBackground(new Color(255, 255, 255));
-		button_14.setBounds(285, 285, 25, 23);
-		frame.getContentPane().add(button_14);
+		b16.setBackground(new Color(255, 255, 255));
+		b16.setBounds(285, 285, 25, 23);
+		frame.getContentPane().add(b16);
 		
-		JButton button_15 = new JButton("");
-		button_15.addActionListener(new ActionListener() {
+		JButton b37 = new JButton("");
+		b37.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_15.getBackground().equals(new Color(50,220,50))) {
-					button_15.setBackground(new Color(255,255,255));
+				if (b37.getBackground().equals(new Color(50,220,50))) {
+					b37.setBackground(new Color(255,255,255));
 				} else {
-					button_15.setBackground(new Color(50,220,50));
+					b37.setBackground(new Color(50,220,50));
 				}
 			}
 		
 		});
-		button_15.setBackground(new Color(255, 255, 255));
-		button_15.setBounds(317, 353, 25, 23);
-		frame.getContentPane().add(button_15);
+		b37.setBackground(new Color(255, 255, 255));
+		b37.setBounds(317, 353, 25, 23);
+		frame.getContentPane().add(b37);
 		
-		JButton button_16 = new JButton("");
-		button_16.addActionListener(new ActionListener() {
+		JButton b20 = new JButton("");
+		b20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_16.getBackground().equals(new Color(50,220,50))) {
-					button_16.setBackground(new Color(255,255,255));
+				if (b20.getBackground().equals(new Color(50,220,50))) {
+					b20.setBackground(new Color(255,255,255));
 				} else {
-					button_16.setBackground(new Color(50,220,50));
+					b20.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_16.setBackground(new Color(255, 255, 255));
-		button_16.setBounds(84, 319, 25, 23);
-		frame.getContentPane().add(button_16);
+		b20.setBackground(new Color(255, 255, 255));
+		b20.setBounds(84, 319, 25, 23);
+		frame.getContentPane().add(b20);
 		
-		JButton button_17 = new JButton("");
-		button_17.addActionListener(new ActionListener() {
+		JButton b21 = new JButton("");
+		b21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_17.getBackground().equals(new Color(50,220,50))) {
-					button_17.setBackground(new Color(255,255,255));
+				if (b21.getBackground().equals(new Color(50,220,50))) {
+					b21.setBackground(new Color(255,255,255));
 				} else {
-					button_17.setBackground(new Color(50,220,50));
+					b21.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_17.setBackground(new Color(255, 255, 255));
-		button_17.setBounds(116, 319, 25, 23);
-		frame.getContentPane().add(button_17);
+		b21.setBackground(new Color(255, 255, 255));
+		b21.setBounds(116, 319, 25, 23);
+		frame.getContentPane().add(b21);
 		
-		JButton button_18 = new JButton("");
-		button_18.addActionListener(new ActionListener() {
+		JButton b30 = new JButton("");
+		b30.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_18.getBackground().equals(new Color(50,220,50))) {
-					button_18.setBackground(new Color(255,255,255));
+				if (b30.getBackground().equals(new Color(50,220,50))) {
+					b30.setBackground(new Color(255,255,255));
 				} else {
-					button_18.setBackground(new Color(50,220,50));
+					b30.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_18.setBackground(new Color(255, 255, 255));
-		button_18.setBounds(84, 353, 25, 23);
-		frame.getContentPane().add(button_18);
+		b30.setBackground(new Color(255, 255, 255));
+		b30.setBounds(84, 353, 25, 23);
+		frame.getContentPane().add(b30);
 		
-		JButton button_19 = new JButton("");
-		button_19.setBackground(new Color(255, 51, 51));
-		button_19.setBounds(116, 353, 25, 23);
-		frame.getContentPane().add(button_19);
+		JButton b31 = new JButton("");
+		b31.setBackground(new Color(255, 51, 51));
+		b31.setBounds(116, 353, 25, 23);
+		frame.getContentPane().add(b31);
 		
-		JButton button_20 = new JButton("");
-		button_20.setBackground(new Color(255, 51, 51));
-		button_20.setBounds(151, 319, 25, 23);
-		frame.getContentPane().add(button_20);
+		JButton b22 = new JButton("");
+		b22.setBackground(new Color(255, 51, 51));
+		b22.setBounds(151, 319, 25, 23);
+		frame.getContentPane().add(b22);
 		
-		JButton button_21 = new JButton("");
-		button_21.setBackground(new Color(255, 51, 51));
-		button_21.setForeground(new Color(255, 51, 51));
-		button_21.setBounds(151, 353, 25, 23);
-		frame.getContentPane().add(button_21);
+		JButton b32 = new JButton("");
+		b32.setBackground(new Color(255, 51, 51));
+		b32.setForeground(new Color(255, 51, 51));
+		b32.setBounds(151, 353, 25, 23);
+		frame.getContentPane().add(b32);
 		
-		JButton button_22 = new JButton("");
-		button_22.setBackground(new Color(255, 51, 51));
-		button_22.setBounds(183, 319, 25, 23);
-		frame.getContentPane().add(button_22);
+		JButton b23 = new JButton("");
+		b23.setBackground(new Color(255, 51, 51));
+		b23.setBounds(183, 319, 25, 23);
+		frame.getContentPane().add(b23);
 		
-		JButton button_23 = new JButton("");
-		button_23.setBackground(new Color(255, 51, 51));
-		button_23.setBounds(183, 353, 25, 23);
-		frame.getContentPane().add(button_23);
+		JButton b33 = new JButton("");
+		b33.setBackground(new Color(255, 51, 51));
+		b33.setBounds(183, 353, 25, 23);
+		frame.getContentPane().add(b33);
 		
-		JButton button_24 = new JButton("");
-		button_24.setBackground(new Color(255, 51, 51));
-		button_24.setBounds(218, 319, 25, 23);
-		frame.getContentPane().add(button_24);
+		JButton b24 = new JButton("");
+		b24.setBackground(new Color(255, 51, 51));
+		b24.setBounds(218, 319, 25, 23);
+		frame.getContentPane().add(b24);
 		
-		JButton button_25 = new JButton("");
-		button_25.setBackground(new Color(255, 51, 51));
-		button_25.setBounds(218, 353, 25, 23);
-		frame.getContentPane().add(button_25);
+		JButton b34 = new JButton("");
+		b34.setBackground(new Color(255, 51, 51));
+		b34.setBounds(218, 353, 25, 23);
+		frame.getContentPane().add(b34);
 		
-		JButton button_26 = new JButton("");
-		button_26.setBackground(new Color(255, 51, 51));
-		button_26.setBounds(250, 319, 25, 23);
-		frame.getContentPane().add(button_26);
+		JButton b25 = new JButton("");
+		b25.setBackground(new Color(255, 51, 51));
+		b25.setBounds(250, 319, 25, 23);
+		frame.getContentPane().add(b25);
 		
-		JButton button_27 = new JButton("");
-		button_27.setBackground(new Color(255, 51, 51));
-		button_27.setBounds(250, 353, 25, 23);
-		frame.getContentPane().add(button_27);
+		JButton b35 = new JButton("");
+		b35.setBackground(new Color(255, 51, 51));
+		b35.setBounds(250, 353, 25, 23);
+		frame.getContentPane().add(b35);
 		
-		JButton button_28 = new JButton("");
-		button_28.addActionListener(new ActionListener() {
+		JButton b36 = new JButton("");
+		b36.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_28.getBackground().equals(new Color(50,220,50))) {
-					button_28.setBackground(new Color(255,255,255));
+				if (b36.getBackground().equals(new Color(50,220,50))) {
+					b36.setBackground(new Color(255,255,255));
 				} else {
-					button_28.setBackground(new Color(50,220,50));
+					b36.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_28.setBackground(new Color(255, 255, 255));
-		button_28.setBounds(285, 353, 25, 23);
-		frame.getContentPane().add(button_28);
+		b36.setBackground(new Color(255, 255, 255));
+		b36.setBounds(285, 353, 25, 23);
+		frame.getContentPane().add(b36);
 		
-		JButton button_29 = new JButton("");
-		button_29.addActionListener(new ActionListener() {
+		JButton b26 = new JButton("");
+		b26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_29.getBackground().equals(new Color(50,220,50))) {
-					button_29.setBackground(new Color(255,255,255));
+				if (b26.getBackground().equals(new Color(50,220,50))) {
+					b26.setBackground(new Color(255,255,255));
 				} else {
-					button_29.setBackground(new Color(50,220,50));
+					b26.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_29.setBackground(new Color(255, 255, 255));
-		button_29.setBounds(285, 319, 25, 23);
-		frame.getContentPane().add(button_29);
+		b26.setBackground(new Color(255, 255, 255));
+		b26.setBounds(285, 319, 25, 23);
+		frame.getContentPane().add(b26);
 		
-		JButton button_30 = new JButton("");
-		button_30.addActionListener(new ActionListener() {
+		JButton b27 = new JButton("");
+		b27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_30.getBackground().equals(new Color(50,220,50))) {
-					button_30.setBackground(new Color(255,255,255));
+				if (b27.getBackground().equals(new Color(50,220,50))) {
+					b27.setBackground(new Color(255,255,255));
 				} else {
-					button_30.setBackground(new Color(50,220,50));
+					b27.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_30.setBackground(new Color(255, 255, 255));
-		button_30.setBounds(317, 319, 25, 23);
-		frame.getContentPane().add(button_30);
+		b27.setBackground(new Color(255, 255, 255));
+		b27.setBounds(317, 319, 25, 23);
+		frame.getContentPane().add(b27);
 		
-		JButton button_31 = new JButton("");
-		button_31.addActionListener(new ActionListener() {
+		JButton b70 = new JButton("");
+		b70.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_31.getBackground().equals(new Color(50,220,50))) {
-					button_31.setBackground(new Color(255,255,255));
+				if (b70.getBackground().equals(new Color(50,220,50))) {
+					b70.setBackground(new Color(255,255,255));
 				} else {
-					button_31.setBackground(new Color(50,220,50));
+					b70.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_31.setBackground(new Color(255, 255, 255));
-		button_31.setBounds(317, 486, 25, 23);
-		frame.getContentPane().add(button_31);
+		b70.setBackground(new Color(255, 255, 255));
+		b70.setBounds(317, 486, 25, 23);
+		frame.getContentPane().add(b70);
 		
-		JButton button_32 = new JButton("");
-		button_32.addActionListener(new ActionListener() {
+		JButton b69 = new JButton("");
+		b69.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_32.getBackground().equals(new Color(50,220,50))) {
-					button_32.setBackground(new Color(255,255,255));
+				if (b69.getBackground().equals(new Color(50,220,50))) {
+					b69.setBackground(new Color(255,255,255));
 				} else {
-					button_32.setBackground(new Color(50,220,50));
+					b69.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_32.setBackground(new Color(255, 255, 255));
-		button_32.setBounds(285, 486, 25, 23);
-		frame.getContentPane().add(button_32);
+		b69.setBackground(new Color(255, 255, 255));
+		b69.setBounds(285, 486, 25, 23);
+		frame.getContentPane().add(b69);
 		
-		JButton button_33 = new JButton("");
-		button_33.setBackground(new Color(255, 255, 255));
-		button_33.addActionListener(new ActionListener() {
+		JButton b68 = new JButton("");
+		b68.setBackground(new Color(255, 255, 255));
+		b68.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (button_33.getBackground().equals(new Color(50,220,50))) {
-					button_33.setBackground(new Color(255,255,255));
+				if (b68.getBackground().equals(new Color(50,220,50))) {
+					b68.setBackground(new Color(255,255,255));
 				} else {
-					button_33.setBackground(new Color(50,220,50));
+					b68.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_33.setBounds(250, 486, 25, 23);
-		frame.getContentPane().add(button_33);
+		b68.setBounds(250, 486, 25, 23);
+		frame.getContentPane().add(b68);
 		
-		JButton button_34 = new JButton("");
-		button_34.setBackground(new Color(255, 51, 51));
-		button_34.setBounds(250, 452, 25, 23);
-		frame.getContentPane().add(button_34);
+		JButton b58 = new JButton("");
+		b58.setBackground(new Color(255, 51, 51));
+		b58.setBounds(250, 452, 25, 23);
+		frame.getContentPane().add(b58);
 		
-		JButton button_35 = new JButton("");
-		button_35.setBackground(new Color(255, 51, 51));
-		button_35.setBounds(218, 452, 25, 23);
-		frame.getContentPane().add(button_35);
+		JButton b57 = new JButton("");
+		b57.setBackground(new Color(255, 51, 51));
+		b57.setBounds(218, 452, 25, 23);
+		frame.getContentPane().add(b57);
 		
-		JButton button_36 = new JButton("");
-		button_36.setBackground(new Color(255, 255, 255));
-		button_36.addActionListener(new ActionListener() {
+		JButton b67 = new JButton("");
+		b67.setBackground(new Color(255, 255, 255));
+		b67.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (button_36.getBackground().equals(new Color(50,220,50))) {
-					button_36.setBackground(new Color(255,255,255));
+				if (b67.getBackground().equals(new Color(50,220,50))) {
+					b67.setBackground(new Color(255,255,255));
 				} else {
-					button_36.setBackground(new Color(50,220,50));
+					b67.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_36.setBounds(218, 486, 25, 23);
-		frame.getContentPane().add(button_36);
+		b67.setBounds(218, 486, 25, 23);
+		frame.getContentPane().add(b67);
 		
-		JButton button_37 = new JButton("");
-		button_37.setBackground(new Color(255, 51, 51));
-		button_37.setBounds(285, 452, 25, 23);
-		frame.getContentPane().add(button_37);
+		JButton b59 = new JButton("");
+		b59.setBackground(new Color(255, 51, 51));
+		b59.setBounds(285, 452, 25, 23);
+		frame.getContentPane().add(b59);
 		
-		JButton button_38 = new JButton("");
-		button_38.addActionListener(new ActionListener() {
+		JButton b60 = new JButton("");
+		b60.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_38.getBackground().equals(new Color(50,220,50))) {
-					button_38.setBackground(new Color(255,255,255));
+				if (b60.getBackground().equals(new Color(50,220,50))) {
+					b60.setBackground(new Color(255,255,255));
 				} else {
-					button_38.setBackground(new Color(50,220,50));
+					b60.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_38.setBackground(new Color(255, 255, 255));
-		button_38.setBounds(317, 452, 25, 23);
-		frame.getContentPane().add(button_38);
+		b60.setBackground(new Color(255, 255, 255));
+		b60.setBounds(317, 452, 25, 23);
+		frame.getContentPane().add(b60);
 		
-		JButton button_39 = new JButton("");
-		button_39.setBackground(new Color(255, 51, 51));
-		button_39.setBounds(317, 418, 25, 23);
-		frame.getContentPane().add(button_39);
+		JButton b50 = new JButton("");
+		b50.setBackground(new Color(255, 51, 51));
+		b50.setBounds(317, 418, 25, 23);
+		frame.getContentPane().add(b50);
 		
-		JButton button_40 = new JButton("");
-		button_40.addActionListener(new ActionListener() {
+		JButton b43 = new JButton("");
+		b43.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_40.getBackground().equals(new Color(50,220,50))) {
-					button_40.setBackground(new Color(255,255,255));
+				if (b43.getBackground().equals(new Color(50,220,50))) {
+					b43.setBackground(new Color(255,255,255));
 				} else {
-					button_40.setBackground(new Color(50,220,50));
+					b43.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_40.setBackground(new Color(255, 255, 255));
-		button_40.setBounds(317, 384, 25, 23);
-		frame.getContentPane().add(button_40);
+		b43.setBackground(new Color(255, 255, 255));
+		b43.setBounds(317, 384, 25, 23);
+		frame.getContentPane().add(b43);
 		
-		JButton button_41 = new JButton("");
-		button_41.setBackground(new Color(255, 51, 51));
-		button_41.setBounds(285, 384, 25, 23);
-		frame.getContentPane().add(button_41);
+		JButton b42 = new JButton("");
+		b42.setBackground(new Color(255, 51, 51));
+		b42.setBounds(285, 384, 25, 23);
+		frame.getContentPane().add(b42);
 		
-		JButton button_42 = new JButton("");
-		button_42.setBackground(new Color(255, 51, 51));
-		button_42.setBounds(285, 418, 25, 23);
-		frame.getContentPane().add(button_42);
+		JButton b49 = new JButton("");
+		b49.setBackground(new Color(255, 51, 51));
+		b49.setBounds(285, 418, 25, 23);
+		frame.getContentPane().add(b49);
 		
-		JButton button_51 = new JButton("");
-		button_51.addActionListener(new ActionListener() {
+		JButton b41 = new JButton("");
+		b41.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_51.getBackground().equals(new Color(50,220,50))) {
-					button_51.setBackground(new Color(255,255,255));
+				if (b41.getBackground().equals(new Color(50,220,50))) {
+					b41.setBackground(new Color(255,255,255));
 				} else {
-					button_51.setBackground(new Color(50,220,50));
+					b41.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_51.setBackground(new Color(255, 255, 255));
-		button_51.setBounds(116, 384, 25, 23);
-		frame.getContentPane().add(button_51);
+		b41.setBackground(new Color(255, 255, 255));
+		b41.setBounds(116, 384, 25, 23);
+		frame.getContentPane().add(b41);
 		
-		JButton button_52 = new JButton("");
-		button_52.setBackground(new Color(255, 51, 51));
-		button_52.setBounds(116, 418, 25, 23);
-		frame.getContentPane().add(button_52);
+		JButton b48 = new JButton("");
+		b48.setBackground(new Color(255, 51, 51));
+		b48.setBounds(116, 418, 25, 23);
+		frame.getContentPane().add(b48);
 		
-		JButton button_53 = new JButton("");
-		button_53.setBackground(new Color(255, 51, 51));
-		button_53.setBounds(84, 418, 25, 23);
-		frame.getContentPane().add(button_53);
+		JButton b47 = new JButton("");
+		b47.setBackground(new Color(255, 51, 51));
+		b47.setBounds(84, 418, 25, 23);
+		frame.getContentPane().add(b47);
 		
-		JButton button_54 = new JButton("");
-		button_54.addActionListener(new ActionListener() {
+		JButton b40 = new JButton("");
+		b40.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_54.getBackground().equals(new Color(50,220,50))) {
-					button_54.setBackground(new Color(255,255,255));
+				if (b40.getBackground().equals(new Color(50,220,50))) {
+					b40.setBackground(new Color(255,255,255));
 				} else {
-					button_54.setBackground(new Color(50,220,50));
+					b40.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_54.setBackground(new Color(255, 255, 255));
-		button_54.setBounds(84, 384, 25, 23);
-		frame.getContentPane().add(button_54);
+		b40.setBackground(new Color(255, 255, 255));
+		b40.setBounds(84, 384, 25, 23);
+		frame.getContentPane().add(b40);
 		
-		JButton button_55 = new JButton("");
-		button_55.addActionListener(new ActionListener() {
+		JButton b53 = new JButton("");
+		b53.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_55.getBackground().equals(new Color(50,220,50))) {
-					button_55.setBackground(new Color(255,255,255));
+				if (b53.getBackground().equals(new Color(50,220,50))) {
+					b53.setBackground(new Color(255,255,255));
 				} else {
-					button_55.setBackground(new Color(50,220,50));
+					b53.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_55.setBackground(new Color(255, 255, 255));
-		button_55.setBounds(84, 452, 25, 23);
-		frame.getContentPane().add(button_55);
+		b53.setBackground(new Color(255, 255, 255));
+		b53.setBounds(84, 452, 25, 23);
+		frame.getContentPane().add(b53);
 		
-		JButton button_56 = new JButton("");
-		button_56.setBackground(new Color(255, 51, 51));
-		button_56.setBounds(84, 486, 25, 23);
-		frame.getContentPane().add(button_56);
+		JButton b63 = new JButton("");
+		b63.setBackground(new Color(255, 51, 51));
+		b63.setBounds(84, 486, 25, 23);
+		frame.getContentPane().add(b63);
 		
-		JButton button_57 = new JButton("");
-		button_57.addActionListener(new ActionListener() {
+		JButton b64 = new JButton("");
+		b64.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_57.getBackground().equals(new Color(50,220,50))) {
-					button_57.setBackground(new Color(255,255,255));
+				if (b64.getBackground().equals(new Color(50,220,50))) {
+					b64.setBackground(new Color(255,255,255));
 				} else {
-					button_57.setBackground(new Color(50,220,50));
+					b64.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_57.setBackground(new Color(255, 255, 255));
-		button_57.setBounds(116, 486, 25, 23);
-		frame.getContentPane().add(button_57);
+		b64.setBackground(new Color(255, 255, 255));
+		b64.setBounds(116, 486, 25, 23);
+		frame.getContentPane().add(b64);
 		
-		JButton button_58 = new JButton("");
-		button_58.addActionListener(new ActionListener() {
+		JButton b54 = new JButton("");
+		b54.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_58.getBackground().equals(new Color(50,220,50))) {
-					button_58.setBackground(new Color(255,255,255));
+				if (b54.getBackground().equals(new Color(50,220,50))) {
+					b54.setBackground(new Color(255,255,255));
 				} else {
-					button_58.setBackground(new Color(50,220,50));
+					b54.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_58.setBackground(new Color(255, 255, 255));
-		button_58.setBounds(116, 452, 25, 23);
-		frame.getContentPane().add(button_58);
+		b54.setBackground(new Color(255, 255, 255));
+		b54.setBounds(116, 452, 25, 23);
+		frame.getContentPane().add(b54);
 		
-		JButton button_59 = new JButton("");
-		button_59.setBackground(new Color(255, 51, 51));
-		button_59.setBounds(151, 452, 25, 23);
-		frame.getContentPane().add(button_59);
+		JButton b55 = new JButton("");
+		b55.setBackground(new Color(255, 51, 51));
+		b55.setBounds(151, 452, 25, 23);
+		frame.getContentPane().add(b55);
 		
-		JButton button_60 = new JButton("");
-		button_60.setBackground(new Color(255, 255, 255));
-		button_60.setBounds(151, 486, 25, 23);
-		button_60.addActionListener(new ActionListener() {
+		JButton b65 = new JButton("");
+		b65.setBackground(new Color(255, 255, 255));
+		b65.setBounds(151, 486, 25, 23);
+		b65.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				if (button_60.getBackground().equals(new Color(50,220,50))) {
-					button_60.setBackground(new Color(255,255,255));
+				if (b65.getBackground().equals(new Color(50,220,50))) {
+					b65.setBackground(new Color(255,255,255));
 				} else {
-					button_60.setBackground(new Color(50,220,50));
+					b65.setBackground(new Color(50,220,50));
 				}
 					
 			}
 		});
 		
-		frame.getContentPane().add(button_60);
+		frame.getContentPane().add(b65);
 		
-		JButton button_61 = new JButton("");
-		button_61.setBackground(new Color(255, 51, 51));
-		button_61.setBounds(183, 452, 25, 23);
-		frame.getContentPane().add(button_61);
+		JButton b56 = new JButton("");
+		b56.setBackground(new Color(255, 51, 51));
+		b56.setBounds(183, 452, 25, 23);
+		frame.getContentPane().add(b56);
 		
-		JButton button_62 = new JButton("");
-		button_62.setBackground(new Color(255, 255, 255));
-		button_62.addActionListener(new ActionListener() {
+		JButton b66 = new JButton("");
+		b66.setBackground(new Color(255, 255, 255));
+		b66.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (button_62.getBackground().equals(new Color(50,220,50))) {
-					button_62.setBackground(new Color(255,255,255));
+				if (b66.getBackground().equals(new Color(50,220,50))) {
+					b66.setBackground(new Color(255,255,255));
 				} else {
-					button_62.setBackground(new Color(50,220,50));
+					b66.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_62.setBounds(183, 486, 25, 23);
-		frame.getContentPane().add(button_62);
+		b66.setBounds(183, 486, 25, 23);
+		frame.getContentPane().add(b66);
 		
-		JButton button_63 = new JButton("");
-		button_63.addActionListener(new ActionListener() {
+		JButton b73 = new JButton("");
+		b73.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_63.getBackground().equals(new Color(50,220,50))) {
-					button_63.setBackground(new Color(255,255,255));
+				if (b73.getBackground().equals(new Color(50,220,50))) {
+					b73.setBackground(new Color(255,255,255));
 				} else {
-					button_63.setBackground(new Color(50,220,50));
+					b73.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_63.setBackground(new Color(255, 255, 255));
-		button_63.setBounds(84, 520, 25, 23);
-		frame.getContentPane().add(button_63);
+		b73.setBackground(new Color(255, 255, 255));
+		b73.setBounds(84, 520, 25, 23);
+		frame.getContentPane().add(b73);
 		
-		JButton button_64 = new JButton("");
-		button_64.addActionListener(new ActionListener() {
+		JButton b74 = new JButton("");
+		b74.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_64.getBackground().equals(new Color(50,220,50))) {
-					button_64.setBackground(new Color(255,255,255));
+				if (b74.getBackground().equals(new Color(50,220,50))) {
+					b74.setBackground(new Color(255,255,255));
 				} else {
-					button_64.setBackground(new Color(50,220,50));
+					b74.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_64.setBackground(new Color(255, 255, 255));
-		button_64.setBounds(116, 520, 25, 23);
-		frame.getContentPane().add(button_64);
+		b74.setBackground(new Color(255, 255, 255));
+		b74.setBounds(116, 520, 25, 23);
+		frame.getContentPane().add(b74);
 		
-		JButton button_65 = new JButton("");
-		button_65.addActionListener(new ActionListener() {
+		JButton b75 = new JButton("");
+		b75.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_65.getBackground().equals(new Color(50,220,50))) {
-					button_65.setBackground(new Color(255,255,255));
+				if (b75.getBackground().equals(new Color(50,220,50))) {
+					b75.setBackground(new Color(255,255,255));
 				} else {
-					button_65.setBackground(new Color(50,220,50));
+					b75.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_65.setBackground(new Color(255, 255, 255));
-		button_65.setBounds(151, 520, 25, 23);
-		frame.getContentPane().add(button_65);
+		b75.setBackground(new Color(255, 255, 255));
+		b75.setBounds(151, 520, 25, 23);
+		frame.getContentPane().add(b75);
 		
-		JButton button_66 = new JButton("");
-		button_66.addActionListener(new ActionListener() {
+		JButton b76 = new JButton("");
+		b76.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_66.getBackground().equals(new Color(50,220,50))) {
-					button_66.setBackground(new Color(255,255,255));
+				if (b76.getBackground().equals(new Color(50,220,50))) {
+					b76.setBackground(new Color(255,255,255));
 				} else {
-					button_66.setBackground(new Color(50,220,50));
+					b76.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_66.setBackground(new Color(255, 255, 255));
-		button_66.setBounds(183, 520, 25, 23);
-		frame.getContentPane().add(button_66);
+		b76.setBackground(new Color(255, 255, 255));
+		b76.setBounds(183, 520, 25, 23);
+		frame.getContentPane().add(b76);
 		
-		JButton button_67 = new JButton("");
-		button_67.addActionListener(new ActionListener() {
+		JButton b77 = new JButton("");
+		b77.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_67.getBackground().equals(new Color(50,220,50))) {
-					button_67.setBackground(new Color(255,255,255));
+				if (b77.getBackground().equals(new Color(50,220,50))) {
+					b77.setBackground(new Color(255,255,255));
 				} else {
-					button_67.setBackground(new Color(50,220,50));
+					b77.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_67.setBackground(new Color(255, 255, 255));
-		button_67.setBounds(218, 520, 25, 23);
-		frame.getContentPane().add(button_67);
+		b77.setBackground(new Color(255, 255, 255));
+		b77.setBounds(218, 520, 25, 23);
+		frame.getContentPane().add(b77);
 		
-		JButton button_68 = new JButton("");
-		button_68.addActionListener(new ActionListener() {
+		JButton b78 = new JButton("");
+		b78.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_68.getBackground().equals(new Color(50,220,50))) {
-					button_68.setBackground(new Color(255,255,255));
+				if (b78.getBackground().equals(new Color(50,220,50))) {
+					b78.setBackground(new Color(255,255,255));
 				} else {
-					button_68.setBackground(new Color(50,220,50));
+					b78.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_68.setBackground(new Color(255, 255, 255));
-		button_68.setBounds(250, 520, 25, 23);
-		frame.getContentPane().add(button_68);
+		b78.setBackground(new Color(255, 255, 255));
+		b78.setBounds(250, 520, 25, 23);
+		frame.getContentPane().add(b78);
 		
-		JButton button_69 = new JButton("");
-		button_69.addActionListener(new ActionListener() {
+		JButton b79 = new JButton("");
+		b79.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_69.getBackground().equals(new Color(50,220,50))) {
-					button_69.setBackground(new Color(255,255,255));
+				if (b79.getBackground().equals(new Color(50,220,50))) {
+					b79.setBackground(new Color(255,255,255));
 				} else {
-					button_69.setBackground(new Color(50,220,50));
+					b79.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_69.setBackground(new Color(255, 255, 255));
-		button_69.setBounds(285, 520, 25, 23);
-		frame.getContentPane().add(button_69);
+		b79.setBackground(new Color(255, 255, 255));
+		b79.setBounds(285, 520, 25, 23);
+		frame.getContentPane().add(b79);
 		
-		JButton button_70 = new JButton("");
-		button_70.setBackground(new Color(255, 51, 51));
-		button_70.setBounds(317, 520, 25, 23);
-		frame.getContentPane().add(button_70);
+		JButton b80 = new JButton("");
+		b80.setBackground(new Color(255, 51, 51));
+		b80.setBounds(317, 520, 25, 23);
+		frame.getContentPane().add(b80);
 		
-		JButton button_71 = new JButton("");
-		button_71.addActionListener(new ActionListener() {
+		JButton b9 = new JButton("");
+		b9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_71.getBackground().equals(new Color(50,220,50))) {
-					button_71.setBackground(new Color(255,255,255));
+				if (b9.getBackground().equals(new Color(50,220,50))) {
+					b9.setBackground(new Color(255,255,255));
 				} else {
-					button_71.setBackground(new Color(50,220,50));
+					b9.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_71.setBackground(new Color(255, 255, 255));
-		button_71.setBounds(49, 285, 25, 23);
-		frame.getContentPane().add(button_71);
+		b9.setBackground(new Color(255, 255, 255));
+		b9.setBounds(49, 285, 25, 23);
+		frame.getContentPane().add(b9);
 		
-		JButton button_72 = new JButton("");
-		button_72.addActionListener(new ActionListener() {
+		JButton b19 = new JButton("");
+		b19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_72.getBackground().equals(new Color(50,220,50))) {
-					button_72.setBackground(new Color(255,255,255));
+				if (b19.getBackground().equals(new Color(50,220,50))) {
+					b19.setBackground(new Color(255,255,255));
 				} else {
-					button_72.setBackground(new Color(50,220,50));
+					b19.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_72.setBackground(new Color(255, 255, 255));
-		button_72.setBounds(49, 319, 25, 23);
-		frame.getContentPane().add(button_72);
+		b19.setBackground(new Color(255, 255, 255));
+		b19.setBounds(49, 319, 25, 23);
+		frame.getContentPane().add(b19);
 		
-		JButton button_73 = new JButton("");
-		button_73.addActionListener(new ActionListener() {
+		JButton b29 = new JButton("");
+		b29.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_73.getBackground().equals(new Color(50,220,50))) {
-					button_73.setBackground(new Color(255,255,255));
+				if (b29.getBackground().equals(new Color(50,220,50))) {
+					b29.setBackground(new Color(255,255,255));
 				} else {
-					button_73.setBackground(new Color(50,220,50));
+					b29.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_73.setBackground(new Color(255, 255, 255));
-		button_73.setBounds(49, 353, 25, 23);
-		frame.getContentPane().add(button_73);
+		b29.setBackground(new Color(255, 255, 255));
+		b29.setBounds(49, 353, 25, 23);
+		frame.getContentPane().add(b29);
 		
-		JButton button_74 = new JButton("");
-		button_74.addActionListener(new ActionListener() {
+		JButton b39 = new JButton("");
+		b39.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if ( button_74.getBackground().equals(new Color(50,220,50))) {
-					 button_74.setBackground(new Color(255,255,255));
+				if ( b39.getBackground().equals(new Color(50,220,50))) {
+					 b39.setBackground(new Color(255,255,255));
 				} else {
-					 button_74.setBackground(new Color(50,220,50));
+					 b39.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_74.setBackground(new Color(255, 255, 255));
-		button_74.setBounds(49, 384, 25, 23);
-		frame.getContentPane().add(button_74);
+		b39.setBackground(new Color(255, 255, 255));
+		b39.setBounds(49, 384, 25, 23);
+		frame.getContentPane().add(b39);
 		
-		JButton button_75 = new JButton("");
-		button_75.addActionListener(new ActionListener() {
+		JButton b45 = new JButton("");
+		b45.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_75.getBackground().equals(new Color(50,220,50))) {
-					button_75.setBackground(new Color(255,255,255));
+				if (b45.getBackground().equals(new Color(50,220,50))) {
+					b45.setBackground(new Color(255,255,255));
 				} else {
-					button_75.setBackground(new Color(50,220,50));
+					b45.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_75.setBackground(new Color(255, 255, 255));
-		button_75.setBounds(49, 418, 25, 23);
-		frame.getContentPane().add(button_75);
+		b45.setBackground(new Color(255, 255, 255));
+		b45.setBounds(49, 418, 25, 23);
+		frame.getContentPane().add(b45);
 		
-		JButton button_76 = new JButton("");
-		button_76.addActionListener(new ActionListener() {
+		JButton b52 = new JButton("");
+		b52.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_76.getBackground().equals(new Color(50,220,50))) {
-					button_76.setBackground(new Color(255,255,255));
+				if (b52.getBackground().equals(new Color(50,220,50))) {
+					b52.setBackground(new Color(255,255,255));
 				} else {
-					button_76.setBackground(new Color(50,220,50));
+					b52.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_76.setBackground(new Color(255, 255, 255));
-		button_76.setBounds(49, 452, 25, 23);
-		frame.getContentPane().add(button_76);
+		b52.setBackground(new Color(255, 255, 255));
+		b52.setBounds(49, 452, 25, 23);
+		frame.getContentPane().add(b52);
 		
-		JButton button_77 = new JButton("");
-		button_77.setBackground(new Color(255, 51, 51));
-		button_77.setBounds(49, 486, 25, 23);
-		frame.getContentPane().add(button_77);
+		JButton b62 = new JButton("");
+		b62.setBackground(new Color(255, 51, 51));
+		b62.setBounds(49, 486, 25, 23);
+		frame.getContentPane().add(b62);
 		
-		JButton button_78 = new JButton("");
-		button_78.addActionListener(new ActionListener() {
+		JButton b72 = new JButton("");
+		b72.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_78.getBackground().equals(new Color(50,220,50))) {
-					button_78.setBackground(new Color(255,255,255));
+				if (b72.getBackground().equals(new Color(50,220,50))) {
+					b72.setBackground(new Color(255,255,255));
 				} else {
-					button_78.setBackground(new Color(50,220,50));
+					b72.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_78.setBackground(new Color(255, 255, 255));
-		button_78.setBounds(49, 520, 25, 23);
-		frame.getContentPane().add(button_78);
+		b72.setBackground(new Color(255, 255, 255));
+		b72.setBounds(49, 520, 25, 23);
+		frame.getContentPane().add(b72);
 		
-		JButton button_79 = new JButton("");
-		button_79.addActionListener(new ActionListener() {
+		JButton b18 = new JButton("");
+		b18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_79.getBackground().equals(new Color(50,220,50))) {
-					button_79.setBackground(new Color(255,255,255));
+				if (b18.getBackground().equals(new Color(50,220,50))) {
+					b18.setBackground(new Color(255,255,255));
 				} else {
-					button_79.setBackground(new Color(50,220,50));
+					b18.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_79.setBackground(new Color(255, 255, 255));
-		button_79.setBounds(352, 285, 25, 23);
-		frame.getContentPane().add(button_79);
+		b18.setBackground(new Color(255, 255, 255));
+		b18.setBounds(352, 285, 25, 23);
+		frame.getContentPane().add(b18);
 		
-		JButton button_80 = new JButton("");
-		button_80.addActionListener(new ActionListener() {
+		JButton b28 = new JButton("");
+		b28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_80.getBackground().equals(new Color(50,220,50))) {
-					button_80.setBackground(new Color(255,255,255));
+				if (b28.getBackground().equals(new Color(50,220,50))) {
+					b28.setBackground(new Color(255,255,255));
 				} else {
-					button_80.setBackground(new Color(50,220,50));
+					b28.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_80.setBackground(new Color(255, 255, 255));
-		button_80.setBounds(352, 319, 25, 23);
-		frame.getContentPane().add(button_80);
+		b28.setBackground(new Color(255, 255, 255));
+		b28.setBounds(352, 319, 25, 23);
+		frame.getContentPane().add(b28);
 		
-		JButton button_81 = new JButton("");
-		button_81.addActionListener(new ActionListener() {
+		JButton b38 = new JButton("");
+		b38.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_81.getBackground().equals(new Color(50,220,50))) {
-					button_81.setBackground(new Color(255,255,255));
+				if (b38.getBackground().equals(new Color(50,220,50))) {
+					b38.setBackground(new Color(255,255,255));
 				} else {
-					button_81.setBackground(new Color(50,220,50));
+					b38.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_81.setBackground(new Color(255, 255, 255));
-		button_81.setBounds(352, 353, 25, 23);
-		frame.getContentPane().add(button_81);
+		b38.setBackground(new Color(255, 255, 255));
+		b38.setBounds(352, 353, 25, 23);
+		frame.getContentPane().add(b38);
 		
-		JButton button_82 = new JButton("");
-		button_82.addActionListener(new ActionListener() {
+		JButton b44 = new JButton("");
+		b44.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_82.getBackground().equals(new Color(50,220,50))) {
-					button_82.setBackground(new Color(255,255,255));
+				if (b44.getBackground().equals(new Color(50,220,50))) {
+					b44.setBackground(new Color(255,255,255));
 				} else {
-					button_82.setBackground(new Color(50,220,50));
+					b44.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_82.setBackground(new Color(255, 255, 255));
-		button_82.setBounds(352, 384, 25, 23);
-		frame.getContentPane().add(button_82);
+		b44.setBackground(new Color(255, 255, 255));
+		b44.setBounds(352, 384, 25, 23);
+		frame.getContentPane().add(b44);
 		
-		JButton button_83 = new JButton("");
-		button_83.setBackground(new Color(255, 51, 51));
-		button_83.setBounds(352, 418, 25, 23);
-		frame.getContentPane().add(button_83);
+		JButton b51 = new JButton("");
+		b51.setBackground(new Color(255, 51, 51));
+		b51.setBounds(352, 418, 25, 23);
+		frame.getContentPane().add(b51);
 		
-		JButton button_84 = new JButton("");
-		button_84.addActionListener(new ActionListener() {
+		JButton b61 = new JButton("");
+		b61.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_84.getBackground().equals(new Color(50,220,50))) {
-					button_84.setBackground(new Color(255,255,255));
+				if (b61.getBackground().equals(new Color(50,220,50))) {
+					b61.setBackground(new Color(255,255,255));
 				} else {
-					button_84.setBackground(new Color(50,220,50));
+					b61.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_84.setBackground(new Color(255, 255, 255));
-		button_84.setBounds(352, 452, 25, 23);
-		frame.getContentPane().add(button_84);
+		b61.setBackground(new Color(255, 255, 255));
+		b61.setBounds(352, 452, 25, 23);
+		frame.getContentPane().add(b61);
 		
-		JButton button_85 = new JButton("");
-		button_85.addActionListener(new ActionListener() {
+		JButton b71 = new JButton("");
+		b71.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (button_85.getBackground().equals(new Color(50,220,50))) {
-					button_85.setBackground(new Color(255,255,255));
+				if (b71.getBackground().equals(new Color(50,220,50))) {
+					b71.setBackground(new Color(255,255,255));
 				} else {
-					button_85.setBackground(new Color(50,220,50));
+					b71.setBackground(new Color(50,220,50));
 				}
 			}
 		});
-		button_85.setBackground(new Color(255, 255, 255));
-		button_85.setBounds(352, 486, 25, 23);
-		frame.getContentPane().add(button_85);
+		b71.setBackground(new Color(255, 255, 255));
+		b71.setBounds(352, 486, 25, 23);
+		frame.getContentPane().add(b71);
 		
 		JLabel lblNewLabel_1 = new JLabel("        PANTALLA");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 26));
 		lblNewLabel_1.setBounds(84, 206, 258, 43);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		JButton button_86 = new JButton("");
-		button_86.setBackground(new Color(255, 51, 51));
-		button_86.setBounds(352, 520, 25, 23);
-		frame.getContentPane().add(button_86);
+		JButton b81 = new JButton("");
+		b81.setBackground(new Color(255, 51, 51));
+		b81.setBounds(352, 520, 25, 23);
+		frame.getContentPane().add(b81);
 		
 		JLabel lblNewLabel_2 = new JLabel("1");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
