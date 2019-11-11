@@ -12,6 +12,7 @@ import javax.swing.UIManager;
 
 
 import java.awt.SystemColor;
+import java.awt.Button;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
@@ -116,6 +117,19 @@ public class VComprar {
 		JButton btnContinuar = new JButton("Continuar");
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				int totalentradas = 0;
+				
+				for (int i = 1; i < 82; i++) {
+					String boton = "b" + "i";
+					
+					//Hacer que el bucle pase por todos los botones y si está en verde que sume 1 al total entradas :)
+					
+					//Button String("b" + "i") = new Button();
+					//if (b.getBackground().equals(new Color(50,220,50)) ) {	
+					//}
+				}
+				
+				
 				int seleccion = JOptionPane.showOptionDialog(null,"Subtotal de 24.40 euros, ¿Desea continuar?", "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
 					if(seleccion==1 ){
 					//Que no pase nah
