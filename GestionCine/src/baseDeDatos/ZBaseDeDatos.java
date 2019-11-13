@@ -95,11 +95,11 @@ public class ZBaseDeDatos {
 			stmt.setString(2, res.getCine());
 			stmt.setString(3, res.getPelicula());
 			stmt.setLong(4, res.getFecha().getTime());
-			stmt.setLong(5,res.getHora().getTime());
+			stmt.setString(5,res.getHora());
 			stmt.setInt(6, res.getNumasientos());
 			stmt.setInt(7, res.getAsiento());
 			stmt.setDouble(8, res.getPrecio());
-			stmt.setInt(9,res.getTarjeta());
+			stmt.setString(9,res.getTarjeta());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

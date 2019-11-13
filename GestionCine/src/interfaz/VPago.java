@@ -9,12 +9,14 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-
+import baseDeDatos.Reserva;
+import baseDeDatos.Usuario;
 
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
@@ -27,6 +29,8 @@ public class VPago {
 	private JTextField textNumero;
 	private JPasswordField textCodigo;
 	private JPasswordField textCodigo2;
+	
+	private static String tar;
 
 	/**
 	 * Launch the application.
@@ -202,8 +206,21 @@ public class VPago {
 					//Que no pase nah
 					}
 					else{
+						tar=lblNewLabel.getText();
+						Reserva v = null;
+						Usuario p=VInicio.sta;
+						String cine=VLugar.cine;
+						String pelicula=VCartelera.peli;
+						Date fecha=VCartelera.fecha;
+						String hora=VCartelera.hora;
+						int numasientos=VComprar.conmum;
+						int asiento=VComprar.asiento;
+						double precio=v.calcularprecio(numasientos);
+						
+						v=new Reserva(p.getCorreo(), cine, pelicula, fecha, hora, numasientos, asiento, precio, tar); 
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
 						//Prueba
+						
 						VCartelera nuevaVentana = new VCartelera(); 
 						nuevaVentana.frame.setVisible(true);	
 						frame.dispose();

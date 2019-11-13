@@ -12,6 +12,7 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
@@ -19,7 +20,10 @@ import javax.swing.ImageIcon;
 public class VCartelera {
 
 	public JFrame frame;
-
+	public static Date fecha;
+	public static String hora;
+	public static String peli;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -109,7 +113,8 @@ public class VCartelera {
 		JButton btnNewButton_1 = new JButton("16:40");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				hora=btnNewButton_1.getText();
+				peli=lblZombieland. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -183,7 +188,7 @@ public class VCartelera {
 		comboBox.addItem("27/10/2019");
 		comboBox.addItem("28/10/2019");
 		comboBox.addItem("29/10/2019");
-		
+		fecha=(Date) comboBox.getSelectedItem();
 		frame.getContentPane().add(comboBox);
 		
 		JLabel lblDa = new JLabel("D\u00EDa:");

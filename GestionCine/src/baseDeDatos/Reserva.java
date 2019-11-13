@@ -7,14 +7,14 @@ private String usu;
 private String cine;
 private String pelicula;
 private Date fecha;
-private Date hora;
+private String hora;
 private int numasientos;
 private int asiento;
 private double precio;
-private int tarjeta;
+private String tarjeta;
 
-public Reserva(String usu, String cine, String pelicula, Date fecha, Date hora, int numasientos, int asiento,
-		double precio, int tarjeta) {
+public Reserva(String usu, String cine, String pelicula, Date fecha, String hora, int numasientos, int asiento,
+		double precio, String tarjeta) {
 	super();
 	this.usu = usu;
 	this.cine = cine;
@@ -59,11 +59,11 @@ public void setFecha(Date fecha) {
 	this.fecha = fecha;
 }
 
-public Date getHora() {
+public String getHora() {
 	return hora;
 }
 
-public void setHora(Date hora) {
+public void setHora(String hora) {
 	this.hora = hora;
 }
 
@@ -91,15 +91,19 @@ public void setPrecio(double precio) {
 	this.precio = precio;
 }
 
-public int getTarjeta() {
+public String getTarjeta() {
 	return tarjeta;
 }
 
-public void setTarjeta(int tarjeta) {
+public void setTarjeta(String tarjeta) {
 	this.tarjeta = tarjeta;
 }
 
-
+public double calcularprecio(int numsasientos) {
+	double p=0;
+	p=p+(6+numsasientos);
+	return p;
+}
 
 
 

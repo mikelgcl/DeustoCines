@@ -24,7 +24,8 @@ import javax.swing.ImageIcon;
 public class VComprar {
 
 	public JFrame frame;
-
+	public static int asiento;
+	public static int conmum=0;
 	/**
 	 * Launch the application.
 	 */
@@ -160,6 +161,8 @@ public class VComprar {
 					b2.setBackground(new Color(255,255,255));
 				} else {
 					b2.setBackground(new Color(50,220,50));
+					asiento=1;
+					conmum=conmum+1;
 				}
 			}
 		});

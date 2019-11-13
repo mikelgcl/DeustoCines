@@ -21,6 +21,7 @@ import javax.swing.ImageIcon;
 public class VLugar {
 
 	public JFrame frame;
+	public static String cine;
 
 	/**
 	 * Launch the application.
@@ -80,7 +81,7 @@ public class VLugar {
 		comboBox.addItem("Barakaldo");
 		comboBox.addItem("Basauri");
 	
-		
+		cine=(String) comboBox.getSelectedItem();
 		frame.getContentPane().add(comboBox);
 		
 		//Prueba
