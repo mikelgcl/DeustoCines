@@ -203,7 +203,7 @@ public class VPago {
 					}
 					else{
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
-						
+						//Prueba
 						VCartelera nuevaVentana = new VCartelera(); 
 						nuevaVentana.frame.setVisible(true);	
 						frame.dispose();
