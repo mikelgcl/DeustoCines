@@ -87,6 +87,24 @@ public class ZBaseDeDatos {
 			e.printStackTrace();
 		}
 	}
+	
+	public void insertDatosReserva(Connection con,Reserva res) {
+		try {
+			PreparedStatement stmt=con.prepareStatement("Insert into Reserva values(?,?,?,?,?,?,?,?,?)");
+			stmt.setString(1, res.getUsu());
+			stmt.setString(2, res.getCine());
+			stmt.setString(3, res.getPelicula());
+			stmt.setLong(4, res.getFecha().getTime());
+			stmt.setLong(5,res.getHora().getTime());
+			stmt.setInt(6, res.getNumasientos());
+			stmt.setInt(7, res.getAsiento());
+			stmt.setDouble(8, res.getPrecio());
+			stmt.setInt(9,res.getTarjeta());
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public Usuario iniciarSesion(Connection con,String correo) {
 		Usuario u=new Usuario();
 		try {
