@@ -23,10 +23,10 @@ import javax.swing.ImageIcon;
 public class VPago {
 
 	public JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
+	private JTextField textTitular;
+	private JTextField textNumero;
+	private JPasswordField textCodigo;
+	private JPasswordField textCodigo2;
 
 	/**
 	 * Launch the application.
@@ -104,19 +104,19 @@ public class VPago {
 		lblTitularDeLa.setBounds(46, 143, 139, 14);
 		frame.getContentPane().add(lblTitularDeLa);
 		
-		textField = new JTextField();
-		textField.setBounds(173, 140, 216, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		textTitular = new JTextField();
+		textTitular.setBounds(173, 140, 216, 20);
+		frame.getContentPane().add(textTitular);
+		textTitular.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("N\u00FAmero de tarjeta:");
 		lblNewLabel_1.setBounds(46, 179, 139, 14);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(173, 176, 216, 20);
-		frame.getContentPane().add(textField_1);
+		textNumero = new JTextField();
+		textNumero.setColumns(10);
+		textNumero.setBounds(173, 176, 216, 20);
+		frame.getContentPane().add(textNumero);
 		
 		JLabel lblNewLabel_2 = new JLabel("C\u00F3digo de seguridad:");
 		lblNewLabel_2.setBounds(46, 213, 139, 14);
@@ -126,34 +126,98 @@ public class VPago {
 		lblConfirmarCdigo.setBounds(46, 244, 127, 23);
 		frame.getContentPane().add(lblConfirmarCdigo);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(173, 210, 48, 20);
-		frame.getContentPane().add(passwordField);
+		textCodigo = new JPasswordField();
+		textCodigo.setBounds(173, 210, 48, 20);
+		frame.getContentPane().add(textCodigo);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(173, 245, 48, 20);
-		frame.getContentPane().add(passwordField_1);
+		textCodigo2 = new JPasswordField();
+		textCodigo2.setBounds(173, 245, 48, 20);
+		frame.getContentPane().add(textCodigo2);
+		
+		// Etiquetas de error
+
+		JLabel lblErrorTitular = new JLabel("Titular de la tarjeta no v\u00E1lido");
+		lblErrorTitular.setForeground(Color.RED);
+		lblErrorTitular.setBounds(173, 161, 205, 14);
+		lblErrorTitular.setVisible(false);
+		frame.getContentPane().add(lblErrorTitular);
+
+		JLabel lblErrorNumero = new JLabel("N\u00FAmero de tarjeta no v\u00E1lido");
+		lblErrorNumero.setForeground(Color.RED);
+		lblErrorNumero.setBounds(173, 196, 205, 14);
+		lblErrorNumero.setVisible(false);
+		frame.getContentPane().add(lblErrorNumero);
+
+		JLabel lblErrorCodigo = new JLabel("C\u00F3digo no v\u00E1lido");
+		lblErrorCodigo.setForeground(Color.RED);
+		lblErrorCodigo.setBounds(173, 230, 205, 14);
+		lblErrorCodigo.setVisible(false);
+		frame.getContentPane().add(lblErrorCodigo);
+
+		JLabel lblErrorCodigo2 = new JLabel("Los c\u00F3digos no coinciden");
+		lblErrorCodigo2.setForeground(Color.RED);
+		lblErrorCodigo2.setBounds(173, 265, 205, 14);
+		lblErrorCodigo2.setVisible(false);
+		frame.getContentPane().add(lblErrorCodigo2);
 		
 		JButton btnConfirmarCompra = new JButton("Confirmar compra");
 		btnConfirmarCompra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int seleccion = JOptionPane.showOptionDialog(null,"¿Está seguro de que desea realizar su compra?", "",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
-				if(seleccion==1 ){
-				//Que no pase nah
+				
+				char[] conc = textCodigo.getPassword(); 
+				String con = " ";
+				char[] conc1 = textCodigo2.getPassword(); 
+				String con1 = " ";
+				
+				con = String.valueOf(conc);
+				con1 = String.valueOf(conc1);
+				
+				if (textTitular.getText().length()>1) {
+					lblErrorTitular.setVisible(false);
+				} else {
+					lblErrorTitular.setVisible(true);
 				}
-				else{
-					JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
-					
-					VCartelera nuevaVentana = new VCartelera(); 
-					nuevaVentana.frame.setVisible(true);	
-					frame.dispose();
+				
+				if (textNumero.getText().length()==16) {
+					lblErrorNumero.setVisible(false);
+				} else {
+					lblErrorNumero.setVisible(true);
 				}
+				
+				if (con.length()==3) {
+					lblErrorCodigo.setVisible(false);
+				} else {
+					lblErrorCodigo.setVisible(true);
+				}
+				
+				if (con1.equals(con)) {
+					lblErrorCodigo2.setVisible(false);
+				} else {
+					lblErrorCodigo2.setVisible(true);
+				}
+				
+				if (con1.equals(con) && con.length() == 3 && textNumero.getText().length() == 16 && textTitular.getText().length() >1) {
+					int seleccion = JOptionPane.showOptionDialog(null,"¿Está seguro de que desea realizar su compra?", "",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
+					if(seleccion==1 ){
+					//Que no pase nah
+					}
+					else{
+						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
+						
+						VCartelera nuevaVentana = new VCartelera(); 
+						nuevaVentana.frame.setVisible(true);	
+						frame.dispose();
+					}
+				}
+				
 			}
 		});
 		 btnConfirmarCompra.setForeground(new Color(255, 255, 255));
 		btnConfirmarCompra.setBackground(new Color(0, 0, 204));
 		btnConfirmarCompra.setBounds(243, 295, 146, 20);
 		frame.getContentPane().add(btnConfirmarCompra);
+		
+		
 		
 		frame.setLocationRelativeTo(null);
 	}

@@ -222,7 +222,7 @@ public class VRegistro extends JFrame {
 						&& con.length()<=20 && con.length()>5
 						&& textNom.getText().length()<=45 && textNom.getText().length()>1 
 						&& textApel.getText().length()<=45 && textApel.getText().length()>1
-						&& textTD.getText().length()==8) {
+						&& textTD.getText().length()==8 && con.equals(con1))  {
 					
 					
 					Usuario p1=new Usuario(cor, con, nom, apl, tdb);
