@@ -11,11 +11,13 @@ import javax.swing.UIManager;
 
 import baseDeDatos.Reserva;
 import baseDeDatos.Usuario;
+import baseDeDatos.ZBaseDeDatos;
 
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -30,7 +32,7 @@ public class VPago {
 	private JPasswordField textCodigo;
 	private JPasswordField textCodigo2;
 	
-	private static String tar;
+	public static String tar;
 
 	/**
 	 * Launch the application.
@@ -59,6 +61,7 @@ public class VPago {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		ZBaseDeDatos c=new ZBaseDeDatos();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 460, 383);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -165,6 +168,7 @@ public class VPago {
 		frame.getContentPane().add(lblErrorCodigo2);
 		
 		JButton btnConfirmarCompra = new JButton("Confirmar compra");
+		Connection conn=c.initBD("DeustoCines");
 		btnConfirmarCompra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -218,6 +222,7 @@ public class VPago {
 						double precio=v.calcularprecio(numasientos);
 						
 						v=new Reserva(p.getCorreo(), cine, pelicula, fecha, hora, numasientos, asiento, precio, tar); 
+						c.insertDatosReserva(conn, v);
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
 						//Prueba
 						
