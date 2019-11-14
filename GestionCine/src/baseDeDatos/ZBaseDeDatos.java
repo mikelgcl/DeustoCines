@@ -63,12 +63,13 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosPelicula(Connection con,Pelicula pel) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?,?)");
 			stmt.setString(1, pel.getTitulo());
 			stmt.setString(2, pel.getDuracion());
 			stmt.setString(3, pel.getEdad());
 			stmt.setString(4, pel.getHoras());
 			stmt.setInt(5, pel.getCartelera());
+			stmt.setString(6, pel.getImagen());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
