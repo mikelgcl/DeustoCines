@@ -1,7 +1,10 @@
 package baseDeDatos;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 
 
@@ -123,7 +126,28 @@ public class ZBaseDeDatos {
 		logger.log(Level.INFO, "Usuario:"+u);
 		return u;
 	}
-	
+	public Usuario getusuario(Connection con,String correo)  {
+		Usuario u = new Usuario();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select correo,contraseña,nombre,apellido,tarjetadeusto from usuario where correo=?");
+			stmt.setString(1,correo);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				
+				u.setCorreo(rs.getString("correo"));
+				u.setContrasenya(rs.getString("contraseña"));
+				u.setNombre(rs.getString("nombre"));
+				u.setApellido(rs.getString("apellido"));
+				u.setTarjetadeusto(rs.getString("tarjetadeusto"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return u;
+		}
+			
+
+			
 
 
 	public static void main(String[] args) {
