@@ -26,7 +26,7 @@ public class VInicio {
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private final JLabel label_1 = new JLabel("");
-	public static Usuario sta;
+	public static String correo ;
 	/**
 	 * Launch the application.
 	 */
@@ -104,9 +104,10 @@ public class VInicio {
 				if (u.getCorreo().equals(cor) && u.getContrasenya().equals(pass)) {
 					VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);
-					 sta.setCorreo(u.getCorreo());
+					 
 					 
 					frame.dispose();
+					correo=cor;
 				} else {
 					lblError.setVisible(true);
 					passwordField.setText("");

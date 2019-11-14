@@ -99,11 +99,14 @@ public void setTarjeta(String tarjeta) {
 	this.tarjeta = tarjeta;
 }
 
-public double calcularprecio(int numsasientos) {
-	double p=0;
-	p=p+(6+numsasientos);
-	return p;
+@Override
+public String toString() {
+	return "Reserva [usu=" + usu + ", cine=" + cine + ", pelicula=" + pelicula + ", fecha=" + fecha + ", hora=" + hora
+			+ ", numasientos=" + numasientos + ", asiento=" + asiento + ", precio=" + precio + ", tarjeta=" + tarjeta
+			+ "]";
 }
+
+
 
 
 

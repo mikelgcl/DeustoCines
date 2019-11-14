@@ -12,6 +12,8 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -188,7 +190,15 @@ public class VCartelera {
 		comboBox.addItem("27/10/2019");
 		comboBox.addItem("28/10/2019");
 		comboBox.addItem("29/10/2019");
-		fecha=(Date) comboBox.getSelectedItem();
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String c=(String) comboBox.getSelectedItem();
+		try {
+			fecha=sdf.parse(c);
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		frame.getContentPane().add(comboBox);
 		
 		JLabel lblDa = new JLabel("D\u00EDa:");

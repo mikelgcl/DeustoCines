@@ -32,7 +32,7 @@ public class VPago {
 	private JPasswordField textCodigo;
 	private JPasswordField textCodigo2;
 	
-	public static String tar;
+	
 
 	/**
 	 * Launch the application.
@@ -170,6 +170,8 @@ public class VPago {
 		JButton btnConfirmarCompra = new JButton("Confirmar compra");
 		Connection conn=c.initBD("DeustoCines");
 		btnConfirmarCompra.addActionListener(new ActionListener() {
+			private Reserva v;
+
 			public void actionPerformed(ActionEvent arg0) {
 				
 				char[] conc = textCodigo.getPassword(); 
@@ -210,19 +212,23 @@ public class VPago {
 					//Que no pase nah
 					}
 					else{
-						tar=lblNewLabel.getText();
-						Reserva v = null;
-						Usuario p=VInicio.sta;
+						String tar=textNumero.getText();
+						Reserva r = null;
+						String cor=VInicio.correo;
 						String cine=VLugar.cine;
 						String pelicula=VCartelera.peli;
 						Date fecha=VCartelera.fecha;
 						String hora=VCartelera.hora;
 						int numasientos=VComprar.conmum;
 						int asiento=VComprar.asiento;
-						double precio=v.calcularprecio(numasientos);
+						double p=0;
+						p=p+(8*numasientos);
 						
-						v=new Reserva(p.getCorreo(), cine, pelicula, fecha, hora, numasientos, asiento, precio, tar); 
-						c.insertDatosReserva(conn, v);
+
+						
+						r=new Reserva(cor, cine, pelicula, fecha, hora, numasientos, asiento, p, tar); 
+						c.insertDatosReserva(conn, r);
+						System.out.println(r.toString());
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
 						//Prueba
 						
