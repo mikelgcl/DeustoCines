@@ -149,7 +149,7 @@ public class ZBaseDeDatos {
 	public Cartelera getcartelera(Connection con,int codigo)  {
 		Cartelera c = new Cartelera();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cod_cartelera,cod_cine,cod_pelicula,fecha from usuario where cod_cartelera=?");
+			PreparedStatement stmt=con.prepareStatement("Select cod_cartelera,cod_cine,cod_pelicula,fecha from cartelera where cod_cartelera=?");
 			stmt.setInt(1,codigo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
@@ -167,7 +167,7 @@ public class ZBaseDeDatos {
 	public Cine getcine(Connection con,String nombre)  {
 		Cine c = new Cine();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cinnombre,cinloc,cod_cartelera,numsalas from usuario where nombre=?");
+			PreparedStatement stmt=con.prepareStatement("Select cinnombre,cinloc,cod_cartelera,numsalas from cine where cinnombre=?");
 			stmt.setString(1,nombre);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
@@ -185,7 +185,7 @@ public class ZBaseDeDatos {
 	public Pelicula getpelicula(Connection con,int codigo)  {
 		Pelicula p = new Pelicula();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen from usuario where nombre=?");
+			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen from pelicula where cod_pelicula=?");
 			stmt.setInt(1,codigo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
@@ -206,7 +206,7 @@ public class ZBaseDeDatos {
 	public Reserva getreserva(Connection con,int codigo)  {
 		Reserva r = new Reserva();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cod_res,usuario,cine,pelicula,fecha,hora,numasientos,asiento,precio,tarjeta from usuario where nombre=?");
+			PreparedStatement stmt=con.prepareStatement("Select cod_res,usuario,cine,pelicula,fecha,hora,numasientos,asiento,precio,tarjeta from reserva where cod_res=?");
 			stmt.setInt(1,codigo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
