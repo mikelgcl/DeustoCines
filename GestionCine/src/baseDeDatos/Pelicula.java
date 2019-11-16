@@ -1,6 +1,7 @@
 package baseDeDatos;
 
 public class Pelicula {
+private static int count = 0; 
 private int Cod_Pelicula;
 private String titulo;
 private String duracion;
@@ -12,16 +13,33 @@ private String imagen;
 
 
 
-public Pelicula(int cod_Pelicula, String titulo, String duracion, String edad, String horas, int cartelera,
+public Pelicula(String titulo, String duracion, String edad, String horas, int cartelera,
 		String imagen) {
 	super();
-	Cod_Pelicula = cod_Pelicula;
+	this.Cod_Pelicula = count++;
 	this.titulo = titulo;
 	this.duracion = duracion;
 	this.edad = edad;
 	this.horas = horas;
 	this.cartelera = cartelera;
 	this.imagen = imagen;
+}
+public Pelicula() {
+	super();
+	this.Cod_Pelicula = 0;
+	this.titulo = "";
+	this.duracion = "";
+	this.edad = "";
+	this.horas = "";
+	this.cartelera = 0;
+	this.imagen = "";
+}
+public int getCod_Pelicula() {
+	return Cod_Pelicula;
+}
+
+public void setCod_Pelicula(int cod_Pelicula) {
+	Cod_Pelicula = cod_Pelicula;
 }
 
 public String getTitulo() {

@@ -94,16 +94,17 @@ public class ZBaseDeDatos {
 	
 	public void insertDatosReserva(Connection con,Reserva res) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Reserva values(?,?,?,?,?,?,?,?,?)");
-			stmt.setString(1, res.getUsu());
-			stmt.setString(2, res.getCine());
-			stmt.setString(3, res.getPelicula());
-			stmt.setLong(4, res.getFecha().getTime());
-			stmt.setString(5,res.getHora());
-			stmt.setInt(6, res.getNumasientos());
-			stmt.setInt(7, res.getAsiento());
-			stmt.setDouble(8, res.getPrecio());
-			stmt.setString(9,res.getTarjeta());
+			PreparedStatement stmt=con.prepareStatement("Insert into Reserva values(?,?,?,?,?,?,?,?,?,?)");
+			stmt.setInt(1, res.getCod_res());
+			stmt.setString(2, res.getUsu());
+			stmt.setString(3, res.getCine());
+			stmt.setString(4, res.getPelicula());
+			stmt.setLong(5, res.getFecha().getTime());
+			stmt.setString(6,res.getHora());
+			stmt.setInt(7, res.getNumasientos());
+			stmt.setInt(8, res.getAsiento());
+			stmt.setDouble(9, res.getPrecio());
+			stmt.setString(10,res.getTarjeta());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -145,6 +146,87 @@ public class ZBaseDeDatos {
 		}
 		return u;
 		}
+	public Cartelera getcartelera(Connection con,int codigo)  {
+		Cartelera c = new Cartelera();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cod_cartelera,cod_cine,cod_pelicula,fecha from usuario where cod_cartelera=?");
+			stmt.setInt(1,codigo);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				
+				c.setCod_Cartelera(rs.getInt("cod_cartelera"));
+				c.setCod_Cine(rs.getInt("cod_cine"));
+				c.setCod_Pelicula(rs.getInt("cod_pelicula"));
+				c.setFecha(rs.getString("fecha"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return c;
+		}
+	public Cine getcine(Connection con,String nombre)  {
+		Cine c = new Cine();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cinnombre,cinloc,cod_cartelera,numsalas from usuario where nombre=?");
+			stmt.setString(1,nombre);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				
+				c.setNombre(rs.getString("cinnombre"));
+				c.setLocalizacion(rs.getString("cinloc"));
+				c.setCartelera(rs.getInt("cod_cartelera"));
+				c.setNumsalas(rs.getInt("numsalas"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return c;
+		}
+	public Pelicula getpelicula(Connection con,int codigo)  {
+		Pelicula p = new Pelicula();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen from usuario where nombre=?");
+			stmt.setInt(1,codigo);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				p.setCod_Pelicula(rs.getInt("cod_pelicula"));
+				p.setTitulo(rs.getString("titulo"));
+				p.setDuracion(rs.getString("duracion"));
+				p.setEdad(rs.getString("edad"));
+				p.setHoras(rs.getString("horas"));
+				p.setCartelera(rs.getInt("cartelera"));
+				p.setImagen(rs.getString("imagen"));
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
+		}
+	public Reserva getreserva(Connection con,int codigo)  {
+		Reserva r = new Reserva();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cod_res,usuario,cine,pelicula,fecha,hora,numasientos,asiento,precio,tarjeta from usuario where nombre=?");
+			stmt.setInt(1,codigo);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				r.setCod_res(rs.getInt("cod_res"));
+				r.setUsu(rs.getString("usuario"));
+				r.setCine(rs.getString("cine"));
+				r.setPelicula(rs.getString("pelicula"));
+				r.setFecha(rs.getDate("fecha"));
+				r.setHora(rs.getString("hora"));
+				r.setNumasientos(rs.getInt("numasientos"));
+				r.setAsiento(rs.getInt("asiento"));
+				r.setPrecio(rs.getDouble("precio"));
+				r.setTarjeta(rs.getString("tarjeta"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return r;
+		}
+	
 			
 
 			

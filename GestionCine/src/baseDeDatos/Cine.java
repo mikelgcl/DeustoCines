@@ -13,6 +13,13 @@ public class Cine {
 		this.Cod_cartelera = cartelera;
 		this.numsalas = numsalas;
 	}
+	 public Cine() {
+			super();
+			this.nombre = "";
+			this.localizacion = "";
+			this.Cod_cartelera = 0;
+			this.numsalas = 0;
+		}
 
 	public String getNombre() {
 		return nombre;

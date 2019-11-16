@@ -3,6 +3,8 @@ package baseDeDatos;
 import java.util.Date;
 
 public class Reserva {
+private static int count = 0; 
+private int Cod_res;
 private String usu;
 private String cine;
 private String pelicula;
@@ -16,6 +18,7 @@ private String tarjeta;
 public Reserva(String usu, String cine, String pelicula, Date fecha, String hora, int numasientos, int asiento,
 		double precio, String tarjeta) {
 	super();
+	this.Cod_res=count++;
 	this.usu = usu;
 	this.cine = cine;
 	this.pelicula = pelicula;
@@ -25,6 +28,28 @@ public Reserva(String usu, String cine, String pelicula, Date fecha, String hora
 	this.asiento = asiento;
 	this.precio = precio;
 	this.tarjeta = tarjeta;
+}
+
+public Reserva() {
+	super();
+	this.Cod_res=0;
+	this.usu = "";
+	this.cine = "";
+	this.pelicula = "";
+	this.fecha = null;
+	this.hora = "";
+	this.numasientos = 0;
+	this.asiento = 0;
+	this.precio = 0;
+	this.tarjeta = "";
+}
+
+public int getCod_res() {
+	return Cod_res;
+}
+
+public void setCod_res(int cod_res) {
+	Cod_res = cod_res;
 }
 
 public String getUsu() {
