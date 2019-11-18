@@ -64,8 +64,8 @@ public class VComprar {
 		lblCinesDeusto.setBounds(84, 11, 294, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
-		JButton btnAtras = new JButton("Cerrar");
-		btnAtras.addActionListener(new ActionListener() {
+		JButton btnCerrar = new JButton("Cerrar");
+		btnCerrar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -76,10 +76,10 @@ public class VComprar {
 					
 			}
 		});
-		btnAtras.setForeground(new Color(0, 0, 0));
-		btnAtras.setBackground(new Color(204, 0, 0));
-		btnAtras.setBounds(30, 608, 95, 23);
-		frame.getContentPane().add(btnAtras);
+		btnCerrar.setForeground(new Color(0, 0, 0));
+		btnCerrar.setBackground(new Color(204, 0, 0));
+		btnCerrar.setBounds(30, 608, 95, 23);
+		frame.getContentPane().add(btnCerrar);
 		
 		JButton b1 = new JButton("");
 		b1.addActionListener(new ActionListener() {

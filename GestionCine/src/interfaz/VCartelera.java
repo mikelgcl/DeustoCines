@@ -54,14 +54,14 @@ public class VCartelera {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 576, 624);
+		frame.setBounds(100, 100, 642, 624);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblCinesDeusto = new JLabel("Cines Deusto");
 		lblCinesDeusto.setForeground(UIManager.getColor("ColorChooser.background"));
 		lblCinesDeusto.setFont(new Font("Yu Gothic UI", Font.BOLD, 50));
-		lblCinesDeusto.setBounds(149, 11, 301, 71);
+		lblCinesDeusto.setBounds(171, 11, 301, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
 		JLabel lblNombre = new JLabel("Cine Barakaldo:");
@@ -69,8 +69,8 @@ public class VCartelera {
 		lblNombre.setBounds(50, 100, 121, 32);
 		frame.getContentPane().add(lblNombre);
 		
-		JButton btnAtrs = new JButton("Atr\u00E1s");
-		btnAtrs.addActionListener(new ActionListener() {
+		JButton btnAtras = new JButton("Atr\u00E1s");
+		btnAtras.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				VLugar nuevaVentana = new VLugar(); 
@@ -80,10 +80,10 @@ public class VCartelera {
 				
 			}
 		});
-		btnAtrs.setForeground(Color.WHITE);
-		btnAtrs.setBackground(new Color(0, 0, 153));
-		btnAtrs.setBounds(28, 531, 100, 32);
-		frame.getContentPane().add(btnAtrs);
+		btnAtras.setForeground(Color.WHITE);
+		btnAtras.setBackground(new Color(0, 0, 153));
+		btnAtras.setBounds(28, 531, 100, 32);
+		frame.getContentPane().add(btnAtras);
 		
 		JButton btnPelcula_1 = new JButton("");
 		btnPelcula_1.addActionListener(new ActionListener() {
@@ -101,7 +101,8 @@ public class VCartelera {
 		frame.getContentPane().add(btnPelcula_1);
 		
 		JLabel lblZombieland = new JLabel("Zombieland 2");
-		lblZombieland.setBounds(149, 191, 79, 14);
+		lblZombieland.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblZombieland.setBounds(149, 191, 99, 14);
 		frame.getContentPane().add(lblZombieland);
 		
 		JLabel lblM = new JLabel("M18");
@@ -112,10 +113,11 @@ public class VCartelera {
 		label.setBounds(182, 210, 46, 14);
 		frame.getContentPane().add(label);
 		
-		JButton btnNewButton_1 = new JButton("16:40");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btn1420 = new JButton("16:40");
+		btn1420.setFont(new Font("Tahoma", Font.BOLD, 9));
+		btn1420.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				hora=btnNewButton_1.getText();
+				hora=btn1420.getText();
 				peli=lblZombieland. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -123,57 +125,26 @@ public class VCartelera {
 				
 			}
 		});
-		btnNewButton_1.setBounds(149, 231, 34, 20);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		JButton button = new JButton("16:40");
-		button.setBounds(192, 230, 34, 20);
-		frame.getContentPane().add(button);
-		
-		JButton button_2 = new JButton("16:40");
-		button_2.setBounds(236, 230, 34, 20);
-		frame.getContentPane().add(button_2);
-		
-		JButton button_4 = new JButton("16:40");
-		button_4.setBounds(192, 262, 34, 20);
-		frame.getContentPane().add(button_4);
-		
-		JButton button_5 = new JButton("16:40");
-		button_5.setBounds(149, 263, 34, 20);
-		frame.getContentPane().add(button_5);
+		btn1420.setBounds(149, 232, 65, 32);
+		frame.getContentPane().add(btn1420);
 		
 		JLabel lblJoker = new JLabel("Joker");
-		lblJoker.setBounds(411, 190, 79, 14);
+		lblJoker.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblJoker.setBounds(438, 191, 79, 14);
 		frame.getContentPane().add(lblJoker);
 		
 		JLabel label_5 = new JLabel("M18");
-		label_5.setBounds(411, 209, 34, 14);
+		label_5.setBounds(438, 210, 34, 14);
 		frame.getContentPane().add(label_5);
 		
 		JLabel label_6 = new JLabel("121'");
-		label_6.setBounds(444, 209, 46, 14);
+		label_6.setBounds(471, 210, 46, 14);
 		frame.getContentPane().add(label_6);
 		
-		JButton button_12 = new JButton("16:40");
-		button_12.setBounds(411, 230, 34, 20);
-		frame.getContentPane().add(button_12);
-		
-		JButton button_13 = new JButton("16:40");
-		button_13.setBounds(454, 229, 34, 20);
-		frame.getContentPane().add(button_13);
-		
-		JButton button_14 = new JButton("16:40");
-		button_14.setBounds(498, 229, 34, 20);
-		frame.getContentPane().add(button_14);
-		
-		JButton button_15 = new JButton("16:40");
-		button_15.setBounds(411, 262, 34, 20);
-		frame.getContentPane().add(button_15);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.addActionListener(new ActionListener() {
+		JComboBox comboBoxFecha = new JComboBox();
+		comboBoxFecha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (comboBox.getSelectedItem() == "28/10/2019") {
+				if (comboBoxFecha.getSelectedItem() == "28/10/2019") {
 					
 					VCarteleraFalsa nuevaVentana = new VCarteleraFalsa(); 
 					nuevaVentana.frame.setVisible(true);
@@ -182,32 +153,32 @@ public class VCartelera {
 				}
 			}
 		});
-		comboBox.setBounds(86, 140, 114, 20);
-		comboBox.addItem("23/10/2019");
-		comboBox.addItem("24/10/2019");
-		comboBox.addItem("25/10/2019");
-		comboBox.addItem("26/10/2019");
-		comboBox.addItem("27/10/2019");
-		comboBox.addItem("28/10/2019");
-		comboBox.addItem("29/10/2019");
+		comboBoxFecha.setBounds(86, 140, 114, 20);
+		comboBoxFecha.addItem("23/10/2019");
+		comboBoxFecha.addItem("24/10/2019");
+		comboBoxFecha.addItem("25/10/2019");
+		comboBoxFecha.addItem("26/10/2019");
+		comboBoxFecha.addItem("27/10/2019");
+		comboBoxFecha.addItem("28/10/2019");
+		comboBoxFecha.addItem("29/10/2019");
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String c=(String) comboBox.getSelectedItem();
+		String c=(String) comboBoxFecha.getSelectedItem();
 		try {
 			fecha=sdf.parse(c);
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		frame.getContentPane().add(comboBox);
+		frame.getContentPane().add(comboBoxFecha);
 		
 		JLabel lblDa = new JLabel("D\u00EDa:");
 		lblDa.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblDa.setBounds(50, 135, 121, 26);
 		frame.getContentPane().add(lblDa);
 		
-		JButton btnNewButton_2 = new JButton("Ayuda");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton btnAyuda = new JButton("Ayuda");
+		btnAyuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				
@@ -219,11 +190,11 @@ public class VCartelera {
 			
 			}
 		});
-		btnNewButton_2.setBounds(149, 531, 99, 32);
-		frame.getContentPane().add(btnNewButton_2);
+		btnAyuda.setBounds(149, 531, 99, 32);
+		frame.getContentPane().add(btnAyuda);
 		
-		JButton btnNewButton_3 = new JButton("Cerrar sesi\u00F3n");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton btnCerrar = new JButton("Cerrar sesi\u00F3n");
+		btnCerrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				
@@ -233,16 +204,16 @@ public class VCartelera {
 				
 			}
 		});
-		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnNewButton_3.setBackground(new Color(204, 0, 0));
-		btnNewButton_3.setForeground(Color.BLACK);
-		btnNewButton_3.setBounds(411, 531, 121, 32);
-		frame.getContentPane().add(btnNewButton_3);
+		btnCerrar.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnCerrar.setBackground(new Color(204, 0, 0));
+		btnCerrar.setForeground(Color.BLACK);
+		btnCerrar.setBounds(438, 531, 139, 32);
+		frame.getContentPane().add(btnCerrar);
 		
 		JButton button_24 = new JButton("");
 		button_24.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli1buena.jpg")));
 		button_24.setBackground(Color.LIGHT_GRAY);
-		button_24.setBounds(290, 180, 99, 143);
+		button_24.setBounds(318, 180, 99, 143);
 		frame.getContentPane().add(button_24);
 		
 		JButton button_6 = new JButton("");
@@ -251,76 +222,46 @@ public class VCartelera {
 		button_6.setBounds(29, 359, 99, 143);
 		frame.getContentPane().add(button_6);
 		
-		JButton button_8 = new JButton("16:40");
-		button_8.setBounds(149, 414, 34, 20);
-		frame.getContentPane().add(button_8);
-		
 		JLabel lblM_1 = new JLabel("M7");
 		lblM_1.setBounds(149, 393, 34, 14);
 		frame.getContentPane().add(lblM_1);
 		
 		JLabel lblAdAstra = new JLabel("Ad Astra");
+		lblAdAstra.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblAdAstra.setBounds(149, 374, 79, 14);
 		frame.getContentPane().add(lblAdAstra);
-		
-		JButton button_9 = new JButton("16:40");
-		button_9.setBounds(192, 413, 34, 20);
-		frame.getContentPane().add(button_9);
-		
-		JButton button_10 = new JButton("16:40");
-		button_10.setBounds(236, 413, 34, 20);
-		frame.getContentPane().add(button_10);
 		
 		JButton button_19 = new JButton("");
 		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
 		button_19.setBackground(Color.LIGHT_GRAY);
-		button_19.setBounds(290, 359, 99, 143);
+		button_19.setBounds(318, 359, 99, 143);
 		frame.getContentPane().add(button_19);
 		
-		JButton button_20 = new JButton("16:40");
-		button_20.setBounds(411, 409, 34, 20);
-		frame.getContentPane().add(button_20);
-		
 		JLabel lblTp = new JLabel("TP");
-		lblTp.setBounds(411, 388, 34, 14);
+		lblTp.setBounds(438, 389, 34, 14);
 		frame.getContentPane().add(lblTp);
 		
 		JLabel lblDoraYLa = new JLabel("Dora y la ciudad perdida");
-		lblDoraYLa.setBounds(411, 369, 155, 14);
+		lblDoraYLa.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblDoraYLa.setBounds(438, 370, 155, 14);
 		frame.getContentPane().add(lblDoraYLa);
 		
 		JLabel label_7 = new JLabel("102'");
-		label_7.setBounds(444, 388, 46, 14);
+		label_7.setBounds(471, 389, 46, 14);
 		frame.getContentPane().add(label_7);
-		
-		JButton button_21 = new JButton("16:40");
-		button_21.setBounds(454, 408, 34, 20);
-		frame.getContentPane().add(button_21);
-		
-		JButton button_22 = new JButton("16:40");
-		button_22.setBounds(498, 408, 34, 20);
-		frame.getContentPane().add(button_22);
-		
-		JButton button_25 = new JButton("16:40");
-		button_25.setBounds(454, 440, 34, 20);
-		frame.getContentPane().add(button_25);
-		
-		JButton button_26 = new JButton("16:40");
-		button_26.setBounds(411, 441, 34, 20);
-		frame.getContentPane().add(button_26);
 		
 		JLabel label_1 = new JLabel("124'");
 		label_1.setBounds(180, 393, 46, 14);
 		frame.getContentPane().add(label_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(new Color(0, 0, 153));
-		lblNewLabel.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/fondo1bueno.jpg")));
-		lblNewLabel.setBounds(0, 0, 566, 93);
+		lblNewLabel.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/fondo1grande.jpg")));
+		lblNewLabel.setBackground(Color.BLUE);
+		lblNewLabel.setBounds(0, 0, 626, 93);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton(">>");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnSiguiente = new JButton(">>");
+		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				//Abrir siguiente página de cartelera 
@@ -330,9 +271,64 @@ public class VCartelera {
 				
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		btnNewButton.setBounds(335, 531, 54, 32);
-		frame.getContentPane().add(btnNewButton);
+		btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnSiguiente.setBounds(363, 531, 54, 32);
+		frame.getContentPane().add(btnSiguiente);
+		
+		JButton button = new JButton("18:45");
+		button.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button.setBounds(224, 232, 65, 32);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton("20:30");
+		button_1.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_1.setBounds(149, 275, 65, 32);
+		frame.getContentPane().add(button_1);
+		
+		JButton button_2 = new JButton("22:00");
+		button_2.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_2.setBounds(224, 275, 65, 32);
+		frame.getContentPane().add(button_2);
+		
+		JButton button_3 = new JButton("17:30");
+		button_3.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_3.setBounds(438, 238, 65, 32);
+		frame.getContentPane().add(button_3);
+		
+		JButton button_4 = new JButton("18:00");
+		button_4.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_4.setBounds(512, 238, 65, 32);
+		frame.getContentPane().add(button_4);
+		
+		JButton button_5 = new JButton("19:45");
+		button_5.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_5.setBounds(438, 281, 65, 32);
+		frame.getContentPane().add(button_5);
+		
+		JButton button_7 = new JButton("15:30");
+		button_7.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_7.setBounds(149, 414, 65, 32);
+		frame.getContentPane().add(button_7);
+		
+		JButton button_8 = new JButton("17:00");
+		button_8.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_8.setBounds(224, 414, 65, 32);
+		frame.getContentPane().add(button_8);
+		
+		JButton button_9 = new JButton("20:50");
+		button_9.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_9.setBounds(149, 457, 65, 32);
+		frame.getContentPane().add(button_9);
+		
+		JButton button_10 = new JButton("16:00");
+		button_10.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_10.setBounds(438, 414, 65, 32);
+		frame.getContentPane().add(button_10);
+		
+		JButton button_11 = new JButton("18:15");
+		button_11.setFont(new Font("Tahoma", Font.BOLD, 9));
+		button_11.setBounds(512, 414, 65, 32);
+		frame.getContentPane().add(button_11);
 		
 		frame.setLocationRelativeTo(null);
 	}

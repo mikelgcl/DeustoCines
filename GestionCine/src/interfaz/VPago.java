@@ -167,9 +167,9 @@ public class VPago {
 		lblErrorCodigo2.setVisible(false);
 		frame.getContentPane().add(lblErrorCodigo2);
 		
-		JButton btnConfirmarCompra = new JButton("Confirmar compra");
+		JButton btnConfirmar = new JButton("Confirmar compra");
 		Connection conn=c.initBD("DeustoCines");
-		btnConfirmarCompra.addActionListener(new ActionListener() {
+		btnConfirmar.addActionListener(new ActionListener() {
 			private Reserva v;
 
 			public void actionPerformed(ActionEvent arg0) {
@@ -240,10 +240,10 @@ public class VPago {
 				
 			}
 		});
-		 btnConfirmarCompra.setForeground(new Color(255, 255, 255));
-		btnConfirmarCompra.setBackground(new Color(0, 0, 204));
-		btnConfirmarCompra.setBounds(243, 295, 146, 20);
-		frame.getContentPane().add(btnConfirmarCompra);
+		 btnConfirmar.setForeground(new Color(255, 255, 255));
+		btnConfirmar.setBackground(new Color(0, 0, 204));
+		btnConfirmar.setBounds(243, 295, 146, 20);
+		frame.getContentPane().add(btnConfirmar);
 		
 		
 		

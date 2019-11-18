@@ -73,16 +73,16 @@ public class VLugar {
 		lblNombre.setBounds(84, 115, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.addItem("Deusto");
-		comboBox.setBounds(84, 146, 255, 27);
-		comboBox.addItem("Santurtzi");
-		comboBox.addItem("Getxo");
-		comboBox.addItem("Barakaldo");
-		comboBox.addItem("Basauri");
+		JComboBox comboBoxLugar = new JComboBox();
+		comboBoxLugar.addItem("Deusto");
+		comboBoxLugar.setBounds(84, 146, 255, 27);
+		comboBoxLugar.addItem("Santurtzi");
+		comboBoxLugar.addItem("Getxo");
+		comboBoxLugar.addItem("Barakaldo");
+		comboBoxLugar.addItem("Basauri");
 	
-		cine=(String) comboBox.getSelectedItem();
-		frame.getContentPane().add(comboBox);
+		
+		frame.getContentPane().add(comboBoxLugar);
 		
 		//Prueba
 		JButton btnEmpezar = new JButton("Empezar");
@@ -104,6 +104,7 @@ public class VLugar {
 							System.out.println();
 							progressBar.setValue(progreso);
 							if (progreso == 100) {
+								//cine=(String) comboBox.getSelectedItem();
 								VCartelera nuevaVentana = new VCartelera(); 
 								nuevaVentana.frame.setVisible(true);
 								frame.dispose();
@@ -125,8 +126,8 @@ public class VLugar {
 		lblNewLabel.setBounds(0, 0, 417, 95);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JButton button = new JButton("Cerrar sesi\u00F3n");
-		button.addActionListener(new ActionListener() {
+		JButton buttonCerrar = new JButton("Cerrar sesi\u00F3n");
+		buttonCerrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				VInicio nuevaVentanaInicio = new VInicio(); 
@@ -134,11 +135,11 @@ public class VLugar {
 				frame.dispose();
 			}
 		});
-		button.setForeground(Color.BLACK);
-		button.setFont(new Font("Tahoma", Font.BOLD, 11));
-		button.setBackground(new Color(204, 0, 0));
-		button.setBounds(189, 201, 150, 32);
-		frame.getContentPane().add(button);
+		buttonCerrar.setForeground(Color.BLACK);
+		buttonCerrar.setFont(new Font("Tahoma", Font.BOLD, 11));
+		buttonCerrar.setBackground(new Color(204, 0, 0));
+		buttonCerrar.setBounds(189, 201, 150, 32);
+		frame.getContentPane().add(buttonCerrar);
 		
 		frame.setLocationRelativeTo(null);
 	}

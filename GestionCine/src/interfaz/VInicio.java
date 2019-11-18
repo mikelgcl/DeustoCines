@@ -23,8 +23,8 @@ public class VInicio {
 	
 	
 	public JFrame frame;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField textUsuario;
+	private JPasswordField passwordContraseña;
 	private final JLabel label_1 = new JLabel("");
 	public static String correo ;
 	/**
@@ -67,10 +67,10 @@ public class VInicio {
 		lblCinesDeusto.setBounds(61, 11, 320, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
-		textField = new JTextField();
-		textField.setBounds(132, 132, 215, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		textUsuario = new JTextField();
+		textUsuario.setBounds(132, 132, 215, 20);
+		frame.getContentPane().add(textUsuario);
+		textUsuario.setColumns(10);
 		
 		JLabel lblNombre = new JLabel("Usuario:");
 		lblNombre.setFont(new Font("Tahoma", Font.BOLD, 13));
@@ -82,9 +82,9 @@ public class VInicio {
 		lblContrasea.setBounds(39, 182, 160, 14);
 		frame.getContentPane().add(lblContrasea);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(132, 180, 215, 20);
-		frame.getContentPane().add(passwordField);
+		passwordContraseña = new JPasswordField();
+		passwordContraseña.setBounds(132, 180, 215, 20);
+		frame.getContentPane().add(passwordContraseña);
 		
 		JLabel lblError = new JLabel("Usuario y/o contrase\u00F1a incorrectos");
 		lblError.setForeground(Color.RED);
@@ -93,13 +93,13 @@ public class VInicio {
 		lblError.setVisible(false);
 		frame.getContentPane().add(lblError);
 		
-		JButton button = new JButton("Entrar");
+		JButton buttonEntrar = new JButton("Entrar");
 		Connection conn=c.initBD("DeustoCines");
-		button.addActionListener(new ActionListener() {
+		buttonEntrar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				String pass = new String(passwordField.getPassword());
-				String cor=new String(textField.getText());
+				String pass = new String(passwordContraseña.getPassword());
+				String cor=new String(textUsuario.getText());
 				Usuario u=c.iniciarSesion(conn, cor);
 				if (u.getCorreo().equals(cor) && u.getContrasenya().equals(pass)) {
 					VLugar nuevaVentana = new VLugar(); 
@@ -110,7 +110,7 @@ public class VInicio {
 					correo=cor;
 				} else {
 					lblError.setVisible(true);
-					passwordField.setText("");
+					passwordContraseña.setText("");
 				}
 				
 				
@@ -118,13 +118,13 @@ public class VInicio {
 			}
 			
 		});
-		button.setForeground(Color.WHITE);
-		button.setBackground(new Color(0, 0, 153));
-		button.setBounds(39, 244, 121, 20);
-		frame.getContentPane().add(button);
+		buttonEntrar.setForeground(Color.WHITE);
+		buttonEntrar.setBackground(new Color(0, 0, 153));
+		buttonEntrar.setBounds(39, 244, 121, 20);
+		frame.getContentPane().add(buttonEntrar);
 		
-		JButton button_2 = new JButton("Nuevo Usuario");
-		button_2.addActionListener(new ActionListener() {
+		JButton buttonNuevoUsu = new JButton("Nuevo Usuario");
+		buttonNuevoUsu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				VRegistro nuevaVentana = new VRegistro(); 
@@ -133,9 +133,9 @@ public class VInicio {
 				
 			}
 		});
-		button_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		button_2.setBounds(176, 244, 171, 20);
-		frame.getContentPane().add(button_2);
+		buttonNuevoUsu.setFont(new Font("Tahoma", Font.BOLD, 11));
+		buttonNuevoUsu.setBounds(176, 244, 171, 20);
+		frame.getContentPane().add(buttonNuevoUsu);
 		
 	
 		
