@@ -86,8 +86,11 @@ public class VComprar {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b1.getBackground().equals(new Color(50,220,50))) {
 					b1.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b1.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
+					
 				}
 			}
 		});
@@ -118,32 +121,30 @@ public class VComprar {
 		JButton btnContinuar = new JButton("Continuar");
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int totalentradas = 0;
-				
-				for (int i = 1; i < 82; i++) {
-					String boton = "b" + "i";
+						
+				if (conmum <= 8) {
+					String frase = "Subtotal de "+ conmum*8.4 +"0 euros, ¿Desea continuar?";
 					
-					//Hacer que el bucle pase por todos los botones y si está en verde que sume 1 al total entradas :)
-					
-					//Button String("b" + "i") = new Button();
-					//if (b.getBackground().equals(new Color(50,220,50)) ) {	
-					//}
+					int seleccion = JOptionPane.showOptionDialog(null,frase, "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
+						if(seleccion==1 ){
+						//Que no pase nah
+						}
+						else{
+							VPago nuevaVentana = new VPago(); 
+							nuevaVentana.frame.setVisible(true);
+							
+							frame.dispose();
+						}
+				} else {
+					JOptionPane.showMessageDialog(frame, "Solo puedes comprar 8 entradas a la vez ");
 				}
 				
-				
-				int seleccion = JOptionPane.showOptionDialog(null,"Subtotal de 24.40 euros, ¿Desea continuar?", "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
-					if(seleccion==1 ){
-					//Que no pase nah
-					}
-					else{
-						VPago nuevaVentana = new VPago(); 
-						nuevaVentana.frame.setVisible(true);
-						
-						frame.dispose();
-					}
 			}	
 			
 		});
+		
+		
+		
 		btnContinuar.setForeground(Color.WHITE);
 		btnContinuar.setBackground(new Color(0, 0, 153));
 		btnContinuar.setBounds(295, 608, 100, 23);
@@ -159,6 +160,7 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b2.getBackground().equals(new Color(50,220,50))) {
 					b2.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b2.setBackground(new Color(50,220,50));
 					asiento=1;
@@ -175,8 +177,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b4.getBackground().equals(new Color(50,220,50))) {
 					b4.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b4.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -189,8 +193,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b3.getBackground().equals(new Color(50,220,50))) {
 					b3.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b3.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -203,8 +209,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b8.getBackground().equals(new Color(50,220,50))) {
 					b8.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b8.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -218,8 +226,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b7.getBackground().equals(new Color(50,220,50))) {
 					b7.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b7.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -232,8 +242,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b6.getBackground().equals(new Color(50,220,50))) {
 					b6.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b6.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -246,8 +258,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b5.getBackground().equals(new Color(50,220,50))) {
 					b5.setBackground(new Color(255,255,255));
+					conmum=conmum-1;conmum=conmum-1;
 				} else {
 					b5.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -260,8 +274,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b10.getBackground().equals(new Color(50,220,50))) {
 					b10.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b10.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -275,8 +291,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b11.getBackground().equals(new Color(50,220,50))) {
 					b11.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b11.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -288,8 +306,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b13.getBackground().equals(new Color(50,220,50))) {
 					b13.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b13.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -302,8 +322,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b12.getBackground().equals(new Color(50,220,50))) {
 					b12.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b12.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -316,8 +338,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b15.getBackground().equals(new Color(50,220,50))) {
 					b15.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b15.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -330,8 +354,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b14.getBackground().equals(new Color(50,220,50))) {
 					b14.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b14.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -344,8 +370,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b17.getBackground().equals(new Color(50,220,50))) {
 					b17.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b17.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -358,8 +386,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b16.getBackground().equals(new Color(50,220,50))) {
 					b16.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b16.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -372,8 +402,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b37.getBackground().equals(new Color(50,220,50))) {
 					b37.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b37.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		
@@ -387,8 +419,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b20.getBackground().equals(new Color(50,220,50))) {
 					b20.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b20.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -401,8 +435,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b21.getBackground().equals(new Color(50,220,50))) {
 					b21.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b21.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -415,8 +451,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b30.getBackground().equals(new Color(50,220,50))) {
 					b30.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b30.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -475,8 +513,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b36.getBackground().equals(new Color(50,220,50))) {
 					b36.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b36.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -489,8 +529,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b26.getBackground().equals(new Color(50,220,50))) {
 					b26.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b26.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -503,8 +545,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b27.getBackground().equals(new Color(50,220,50))) {
 					b27.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b27.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -517,8 +561,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b70.getBackground().equals(new Color(50,220,50))) {
 					b70.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b70.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -531,8 +577,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent e) {
 				if (b69.getBackground().equals(new Color(50,220,50))) {
 					b69.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b69.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -546,8 +594,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b68.getBackground().equals(new Color(50,220,50))) {
 					b68.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b68.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -570,8 +620,10 @@ public class VComprar {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b67.getBackground().equals(new Color(50,220,50))) {
 					b67.setBackground(new Color(255,255,255));
+					conmum=conmum-1;
 				} else {
 					b67.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -587,9 +639,10 @@ public class VComprar {
 		b60.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b60.getBackground().equals(new Color(50,220,50))) {
-					b60.setBackground(new Color(255,255,255));
+					b60.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b60.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -606,9 +659,10 @@ public class VComprar {
 		b43.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b43.getBackground().equals(new Color(50,220,50))) {
-					b43.setBackground(new Color(255,255,255));
+					b43.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b43.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -630,9 +684,10 @@ public class VComprar {
 		b41.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b41.getBackground().equals(new Color(50,220,50))) {
-					b41.setBackground(new Color(255,255,255));
+					b41.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b41.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -654,9 +709,10 @@ public class VComprar {
 		b40.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b40.getBackground().equals(new Color(50,220,50))) {
-					b40.setBackground(new Color(255,255,255));
+					b40.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b40.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -668,9 +724,10 @@ public class VComprar {
 		b53.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b53.getBackground().equals(new Color(50,220,50))) {
-					b53.setBackground(new Color(255,255,255));
+					b53.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b53.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -687,9 +744,10 @@ public class VComprar {
 		b64.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b64.getBackground().equals(new Color(50,220,50))) {
-					b64.setBackground(new Color(255,255,255));
+					b64.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b64.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -701,9 +759,10 @@ public class VComprar {
 		b54.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b54.getBackground().equals(new Color(50,220,50))) {
-					b54.setBackground(new Color(255,255,255));
+					b54.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b54.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -723,9 +782,10 @@ public class VComprar {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				if (b65.getBackground().equals(new Color(50,220,50))) {
-					b65.setBackground(new Color(255,255,255));
+					b65.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b65.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 					
 			}
@@ -743,9 +803,10 @@ public class VComprar {
 		b66.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b66.getBackground().equals(new Color(50,220,50))) {
-					b66.setBackground(new Color(255,255,255));
+					b66.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b66.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -756,9 +817,10 @@ public class VComprar {
 		b73.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b73.getBackground().equals(new Color(50,220,50))) {
-					b73.setBackground(new Color(255,255,255));
+					b73.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b73.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -770,9 +832,10 @@ public class VComprar {
 		b74.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b74.getBackground().equals(new Color(50,220,50))) {
-					b74.setBackground(new Color(255,255,255));
+					b74.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b74.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -784,9 +847,10 @@ public class VComprar {
 		b75.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b75.getBackground().equals(new Color(50,220,50))) {
-					b75.setBackground(new Color(255,255,255));
+					b75.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b75.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -798,9 +862,10 @@ public class VComprar {
 		b76.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b76.getBackground().equals(new Color(50,220,50))) {
-					b76.setBackground(new Color(255,255,255));
+					b76.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b76.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -812,9 +877,10 @@ public class VComprar {
 		b77.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b77.getBackground().equals(new Color(50,220,50))) {
-					b77.setBackground(new Color(255,255,255));
+					b77.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b77.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -826,9 +892,10 @@ public class VComprar {
 		b78.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b78.getBackground().equals(new Color(50,220,50))) {
-					b78.setBackground(new Color(255,255,255));
+					b78.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b78.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -840,9 +907,10 @@ public class VComprar {
 		b79.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b79.getBackground().equals(new Color(50,220,50))) {
-					b79.setBackground(new Color(255,255,255));
+					b79.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b79.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -859,9 +927,10 @@ public class VComprar {
 		b9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b9.getBackground().equals(new Color(50,220,50))) {
-					b9.setBackground(new Color(255,255,255));
+					b9.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b9.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -873,9 +942,10 @@ public class VComprar {
 		b19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b19.getBackground().equals(new Color(50,220,50))) {
-					b19.setBackground(new Color(255,255,255));
+					b19.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b19.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -887,9 +957,10 @@ public class VComprar {
 		b29.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b29.getBackground().equals(new Color(50,220,50))) {
-					b29.setBackground(new Color(255,255,255));
+					b29.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b29.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -901,9 +972,10 @@ public class VComprar {
 		b39.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ( b39.getBackground().equals(new Color(50,220,50))) {
-					 b39.setBackground(new Color(255,255,255));
+					 b39.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					 b39.setBackground(new Color(50,220,50));
+					 conmum=conmum+1;
 				}
 			}
 		});
@@ -915,9 +987,10 @@ public class VComprar {
 		b45.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b45.getBackground().equals(new Color(50,220,50))) {
-					b45.setBackground(new Color(255,255,255));
+					b45.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b45.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -929,9 +1002,10 @@ public class VComprar {
 		b52.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b52.getBackground().equals(new Color(50,220,50))) {
-					b52.setBackground(new Color(255,255,255));
+					b52.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b52.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -948,9 +1022,10 @@ public class VComprar {
 		b72.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b72.getBackground().equals(new Color(50,220,50))) {
-					b72.setBackground(new Color(255,255,255));
+					b72.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b72.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -962,9 +1037,10 @@ public class VComprar {
 		b18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b18.getBackground().equals(new Color(50,220,50))) {
-					b18.setBackground(new Color(255,255,255));
+					b18.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b18.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -976,9 +1052,10 @@ public class VComprar {
 		b28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b28.getBackground().equals(new Color(50,220,50))) {
-					b28.setBackground(new Color(255,255,255));
+					b28.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b28.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -990,9 +1067,10 @@ public class VComprar {
 		b38.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b38.getBackground().equals(new Color(50,220,50))) {
-					b38.setBackground(new Color(255,255,255));
+					b38.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b38.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -1004,9 +1082,10 @@ public class VComprar {
 		b44.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b44.getBackground().equals(new Color(50,220,50))) {
-					b44.setBackground(new Color(255,255,255));
+					b44.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b44.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -1023,9 +1102,10 @@ public class VComprar {
 		b61.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b61.getBackground().equals(new Color(50,220,50))) {
-					b61.setBackground(new Color(255,255,255));
+					b61.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b61.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
@@ -1037,9 +1117,10 @@ public class VComprar {
 		b71.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b71.getBackground().equals(new Color(50,220,50))) {
-					b71.setBackground(new Color(255,255,255));
+					b71.setBackground(new Color(255,255,255));conmum=conmum-1;
 				} else {
 					b71.setBackground(new Color(50,220,50));
+					conmum=conmum+1;
 				}
 			}
 		});
