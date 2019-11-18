@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import baseDeDatos.Cartelera;
 import baseDeDatos.Cine;
+import baseDeDatos.Pelicula;
 import baseDeDatos.Usuario;
 import baseDeDatos.ZBaseDeDatos;
 
@@ -43,6 +44,18 @@ class TestRegistro {
 		z.insertDatosCine(con, c);
 		Cine prueba=z.getcine(con, "f");
 		assertEquals("f", prueba.getNombre());
+		
+		
+	}
+	
+	@Test
+	void testpelicula() {
+		Pelicula p=new Pelicula("g", "", "", "", 1, "");
+		ZBaseDeDatos z=new ZBaseDeDatos();
+		Connection con=z.initBD("DeustoCines");
+		z.insertDatosPelicula(con, p);
+		Pelicula prueba=z.getpelicula(con, 0);
+		assertEquals(0, prueba.getCod_Pelicula());
 		
 		
 	}
