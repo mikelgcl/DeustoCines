@@ -208,6 +208,7 @@ public class VComprar {
 				}
 			}
 		});
+		
 		b8.setBackground(new Color(255, 255, 255));
 		b8.setBounds(317, 251, 25, 23);
 		frame.getContentPane().add(b8);
