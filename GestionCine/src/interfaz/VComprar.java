@@ -123,7 +123,7 @@ public class VComprar {
 			public void actionPerformed(ActionEvent arg0) {
 						
 				if (conmum <= 8) {
-					String frase = "Subtotal de "+ conmum*8.4 +"0 euros, ¿Desea continuar?";
+					String frase = "Subtotal de "+ conmum*8 +".00 euros, ¿Desea continuar?";
 					
 					int seleccion = JOptionPane.showOptionDialog(null,frase, "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
 						if(seleccion==1 ){
