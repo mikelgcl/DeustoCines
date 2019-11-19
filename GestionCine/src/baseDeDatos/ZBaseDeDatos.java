@@ -66,13 +66,14 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosPelicula(Connection con,Pelicula pel) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?,?,?)");
 			stmt.setString(1, pel.getTitulo());
 			stmt.setString(2, pel.getDuracion());
 			stmt.setString(3, pel.getEdad());
 			stmt.setString(4, pel.getHoras());
 			stmt.setInt(5, pel.getCartelera());
 			stmt.setString(6, pel.getImagen());
+			stmt.setString(7, pel.getDescripcion());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -185,7 +186,7 @@ public class ZBaseDeDatos {
 	public Pelicula getpelicula(Connection con,int codigo)  {
 		Pelicula p = new Pelicula();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen from pelicula where cod_pelicula=?");
+			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen,descripcion from pelicula where cod_pelicula=?");
 			stmt.setInt(1,codigo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
@@ -196,6 +197,7 @@ public class ZBaseDeDatos {
 				p.setHoras(rs.getString("horas"));
 				p.setCartelera(rs.getInt("cartelera"));
 				p.setImagen(rs.getString("imagen"));
+				p.setDescripcion(rs.getString("descripcion"));
 				
 			}
 		} catch (Exception e) {

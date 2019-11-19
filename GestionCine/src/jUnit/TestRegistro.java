@@ -50,7 +50,7 @@ class TestRegistro {
 	
 	@Test
 	void testpelicula() {
-		Pelicula p=new Pelicula("g", "", "", "", 1, "");
+		Pelicula p=new Pelicula("g", "", "", "", 1, "","");
 		ZBaseDeDatos z=new ZBaseDeDatos();
 		Connection con=z.initBD("DeustoCines");
 		z.insertDatosPelicula(con, p);
