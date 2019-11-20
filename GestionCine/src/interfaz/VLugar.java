@@ -20,6 +20,7 @@ import javax.swing.ImageIcon;
 
 public class VLugar {
 
+	public static String nomLugar;
 	public JFrame frame;
 	public static String cine;
 
@@ -91,6 +92,7 @@ public class VLugar {
 		btnEmpezar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				nomLugar = comboBoxLugar.getSelectedItem().toString();
 				
 				Thread hilito = new Thread(new Runnable() {
 

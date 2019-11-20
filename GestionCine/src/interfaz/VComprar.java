@@ -98,7 +98,7 @@ public class VComprar {
 		b1.setBounds(84, 251, 25, 23);
 		frame.getContentPane().add(b1);
 		
-		JLabel lblAyuda = new JLabel("Zombieland 2");
+		JLabel lblAyuda = new JLabel(VCartelera.peli);
 		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblAyuda.setBounds(33, 111, 132, 14);
 		frame.getContentPane().add(lblAyuda);
@@ -108,7 +108,7 @@ public class VComprar {
 		lblNewLabel.setBounds(0, 0, 444, 93);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblCineBarakaldo = new JLabel("Cine Barakaldo");
+		JLabel lblCineBarakaldo = new JLabel(VLugar.nomLugar);
 		lblCineBarakaldo.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblCineBarakaldo.setBounds(33, 125, 106, 32);
 		frame.getContentPane().add(lblCineBarakaldo);
@@ -122,19 +122,25 @@ public class VComprar {
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 						
-				if (conmum <= 8) {
+				if (conmum <= 8 && conmum != 0) {
 					String frase = "Subtotal de "+ conmum*8 +".00 euros, ¿Desea continuar?";
 					
 					int seleccion = JOptionPane.showOptionDialog(null,frase, "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
 						if(seleccion==1 ){
-						//Que no pase nah
+							
+						//Que no pase nada
+						
 						}
 						else{
+							
 							VPago nuevaVentana = new VPago(); 
 							nuevaVentana.frame.setVisible(true);
+							conmum = 0;
 							
 							frame.dispose();
 						}
+				} else if (conmum == 0) {
+					JOptionPane.showMessageDialog(frame, "Tienes que elegir al menos un asiento ");
 				} else {
 					JOptionPane.showMessageDialog(frame, "Solo puedes comprar 8 entradas a la vez ");
 				}
@@ -150,7 +156,7 @@ public class VComprar {
 		btnContinuar.setBounds(295, 608, 100, 23);
 		frame.getContentPane().add(btnContinuar);
 		
-		JLabel label = new JLabel("16:20");
+		JLabel label = new JLabel(VCartelera.hora);
 		label.setFont(new Font("Tahoma", Font.BOLD, 13));
 		label.setBounds(33, 141, 132, 43);
 		frame.getContentPane().add(label);

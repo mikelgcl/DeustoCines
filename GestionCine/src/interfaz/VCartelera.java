@@ -14,7 +14,9 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
@@ -25,6 +27,8 @@ public class VCartelera {
 	public static Date fecha;
 	public static String hora;
 	public static String peli;
+	
+	
 	
 	/**
 	 * Launch the application.
@@ -64,7 +68,7 @@ public class VCartelera {
 		lblCinesDeusto.setBounds(171, 11, 301, 71);
 		frame.getContentPane().add(lblCinesDeusto);
 		
-		JLabel lblNombre = new JLabel("Cine Barakaldo:");
+		JLabel lblNombre = new JLabel("Cine "+ VLugar.nomLugar + ":");
 		lblNombre.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNombre.setBounds(50, 100, 121, 32);
 		frame.getContentPane().add(lblNombre);
@@ -153,14 +157,27 @@ public class VCartelera {
 				}
 			}
 		});
+		
+	
+		//////Hacer que las fechas que aparecen en el ComboBox sean la reales
+		
+		/*Calendar c1 = Calendar.getInstance();
+		Calendar c2 = new GregorianCalendar();
+		
+		String dia = Integer.toString(c2.get(Calendar.DATE));
+		String mes = Integer.toString(c2.get(Calendar.MONTH));
+		String annio = Integer.toString(c2.get(Calendar.YEAR));
+		
+		System.out.println(dia + "/" + mes + "/" + annio);*/
+		
 		comboBoxFecha.setBounds(86, 140, 114, 20);
-		comboBoxFecha.addItem("23/10/2019");
-		comboBoxFecha.addItem("24/10/2019");
-		comboBoxFecha.addItem("25/10/2019");
-		comboBoxFecha.addItem("26/10/2019");
-		comboBoxFecha.addItem("27/10/2019");
-		comboBoxFecha.addItem("28/10/2019");
-		comboBoxFecha.addItem("29/10/2019");
+		comboBoxFecha.addItem("24/11/2019");
+		comboBoxFecha.addItem("25/11/2019");
+		comboBoxFecha.addItem("26/11/2019");
+		comboBoxFecha.addItem("27/11/2019");
+		comboBoxFecha.addItem("28/11/2019");
+		comboBoxFecha.addItem("29/11/2019");
+		comboBoxFecha.addItem("30/11/2019");
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		String c=(String) comboBoxFecha.getSelectedItem();
@@ -276,56 +293,154 @@ public class VCartelera {
 		frame.getContentPane().add(btnSiguiente);
 		
 		JButton button = new JButton("18:45");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				hora=button.getText();
+				peli=lblZombieland. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button.setBounds(224, 232, 65, 32);
 		frame.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("20:30");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button_1.getText();
+				peli=lblZombieland. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_1.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_1.setBounds(149, 275, 65, 32);
 		frame.getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("22:00");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button_2.getText();
+				peli=lblZombieland. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_2.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_2.setBounds(224, 275, 65, 32);
 		frame.getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("17:30");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblJoker. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_3.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_3.setBounds(438, 238, 65, 32);
 		frame.getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("18:00");
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblJoker. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_4.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_4.setBounds(512, 238, 65, 32);
 		frame.getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("19:45");
+		button_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblJoker. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_5.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_5.setBounds(438, 281, 65, 32);
 		frame.getContentPane().add(button_5);
 		
 		JButton button_7 = new JButton("15:30");
+		button_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblAdAstra. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_7.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_7.setBounds(149, 414, 65, 32);
 		frame.getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("17:00");
+		button_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblAdAstra. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_8.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_8.setBounds(224, 414, 65, 32);
 		frame.getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("20:50");
+		button_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblAdAstra. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_9.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_9.setBounds(149, 457, 65, 32);
 		frame.getContentPane().add(button_9);
 		
 		JButton button_10 = new JButton("16:00");
+		button_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {hora=button.getText();
+			peli=lblDoraYLa. getText();
+			VComprar nuevaVentana = new VComprar(); 
+			nuevaVentana.frame.setVisible(true);
+			frame.dispose();
+			}
+		});
 		button_10.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_10.setBounds(438, 414, 65, 32);
 		frame.getContentPane().add(button_10);
 		
 		JButton button_11 = new JButton("18:15");
+		button_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hora=button.getText();
+				peli=lblDoraYLa. getText();
+				VComprar nuevaVentana = new VComprar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 		button_11.setFont(new Font("Tahoma", Font.BOLD, 9));
 		button_11.setBounds(512, 414, 65, 32);
 		frame.getContentPane().add(button_11);
