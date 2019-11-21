@@ -337,7 +337,7 @@ public class VCartelera {
 		JButton button_3 = new JButton("17:30");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_3.getText();
 				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -351,7 +351,7 @@ public class VCartelera {
 		JButton button_4 = new JButton("18:00");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_4.getText();
 				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -365,7 +365,7 @@ public class VCartelera {
 		JButton button_5 = new JButton("19:45");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_5.getText();
 				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -379,7 +379,7 @@ public class VCartelera {
 		JButton button_7 = new JButton("15:30");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_7.getText();
 				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -393,7 +393,7 @@ public class VCartelera {
 		JButton button_8 = new JButton("17:00");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_8.getText();
 				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -407,7 +407,7 @@ public class VCartelera {
 		JButton button_9 = new JButton("20:50");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_9.getText();
 				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
@@ -420,7 +420,8 @@ public class VCartelera {
 		
 		JButton button_10 = new JButton("16:00");
 		button_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {hora=button.getText();
+			public void actionPerformed(ActionEvent e) {
+			hora=button_10.getText();
 			peli=lblDoraYLa. getText();
 			VComprar nuevaVentana = new VComprar(); 
 			nuevaVentana.frame.setVisible(true);
@@ -434,7 +435,7 @@ public class VCartelera {
 		JButton button_11 = new JButton("18:15");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hora=button.getText();
+				hora=button_11.getText();
 				peli=lblDoraYLa. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);

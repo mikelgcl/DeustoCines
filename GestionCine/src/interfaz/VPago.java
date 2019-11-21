@@ -84,6 +84,7 @@ public class VPago {
 				else{
 					VCartelera nuevaVentana = new VCartelera(); 
 					nuevaVentana.frame.setVisible(true);
+					VComprar.conmum = 0;
 					
 					frame.dispose();
 				}
@@ -215,7 +216,7 @@ public class VPago {
 						String tar=textNumero.getText();
 						Reserva r = null;
 						String cor=VInicio.correo;
-						String cine=VLugar.cine;
+						String cine=VLugar.nomLugar;
 						String pelicula=VCartelera.peli;
 						Date fecha=VCartelera.fecha;
 						String hora=VCartelera.hora;
@@ -230,7 +231,8 @@ public class VPago {
 						c.insertDatosReserva(conn, r);
 						System.out.println(r.toString());
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
-						//Prueba
+						
+						System.out.println(VComprar.conmum);
 						
 						VCartelera nuevaVentana = new VCartelera(); 
 						nuevaVentana.frame.setVisible(true);	

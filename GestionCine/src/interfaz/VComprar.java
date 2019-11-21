@@ -100,7 +100,7 @@ public class VComprar {
 		
 		JLabel lblAyuda = new JLabel(VCartelera.peli);
 		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblAyuda.setBounds(33, 111, 132, 14);
+		lblAyuda.setBounds(33, 111, 309, 19);
 		frame.getContentPane().add(lblAyuda);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -128,14 +128,15 @@ public class VComprar {
 					int seleccion = JOptionPane.showOptionDialog(null,frase, "Confirmar selección",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
 						if(seleccion==1 ){
 							
-						//Que no pase nada
+						conmum = 0;
 						
 						}
 						else{
 							
 							VPago nuevaVentana = new VPago(); 
 							nuevaVentana.frame.setVisible(true);
-							conmum = 0;
+							
+							
 							
 							frame.dispose();
 						}
