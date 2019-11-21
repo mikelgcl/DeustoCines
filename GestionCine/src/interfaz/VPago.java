@@ -23,6 +23,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.ImageIcon;
+import javax.swing.JSeparator;
 
 public class VPago {
 
@@ -63,7 +64,7 @@ public class VPago {
 	private void initialize() {
 		ZBaseDeDatos c=new ZBaseDeDatos();
 		frame = new JFrame();
-		frame.setBounds(100, 100, 460, 383);
+		frame.setBounds(100, 100, 460, 632);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -95,12 +96,12 @@ public class VPago {
 		});
 		btnAtras.setForeground(new Color(0, 0, 0));
 		btnAtras.setBackground(new Color(204, 0, 0));
-		btnAtras.setBounds(46, 295, 95, 20);
+		btnAtras.setBounds(47, 547, 95, 20);
 		frame.getContentPane().add(btnAtras);
 		
 		JLabel lblAyuda = new JLabel("Introduzca sus datos:");
 		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblAyuda.setBounds(46, 114, 343, 14);
+		lblAyuda.setBounds(47, 366, 343, 14);
 		frame.getContentPane().add(lblAyuda);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -109,62 +110,62 @@ public class VPago {
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblTitularDeLa = new JLabel("Titular de la tarjeta:");
-		lblTitularDeLa.setBounds(46, 143, 139, 14);
+		lblTitularDeLa.setBounds(47, 395, 139, 14);
 		frame.getContentPane().add(lblTitularDeLa);
 		
 		textTitular = new JTextField();
-		textTitular.setBounds(173, 140, 216, 20);
+		textTitular.setBounds(174, 392, 216, 20);
 		frame.getContentPane().add(textTitular);
 		textTitular.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("N\u00FAmero de tarjeta:");
-		lblNewLabel_1.setBounds(46, 179, 139, 14);
+		lblNewLabel_1.setBounds(47, 431, 139, 14);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		textNumero = new JTextField();
 		textNumero.setColumns(10);
-		textNumero.setBounds(173, 176, 216, 20);
+		textNumero.setBounds(174, 428, 216, 20);
 		frame.getContentPane().add(textNumero);
 		
 		JLabel lblNewLabel_2 = new JLabel("C\u00F3digo de seguridad:");
-		lblNewLabel_2.setBounds(46, 213, 139, 14);
+		lblNewLabel_2.setBounds(47, 465, 139, 14);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblConfirmarCdigo = new JLabel("Confirmar c\u00F3digo:");
-		lblConfirmarCdigo.setBounds(46, 244, 127, 23);
+		lblConfirmarCdigo.setBounds(47, 496, 127, 23);
 		frame.getContentPane().add(lblConfirmarCdigo);
 		
 		textCodigo = new JPasswordField();
-		textCodigo.setBounds(173, 210, 48, 20);
+		textCodigo.setBounds(174, 462, 48, 20);
 		frame.getContentPane().add(textCodigo);
 		
 		textCodigo2 = new JPasswordField();
-		textCodigo2.setBounds(173, 245, 48, 20);
+		textCodigo2.setBounds(174, 497, 48, 20);
 		frame.getContentPane().add(textCodigo2);
 		
 		// Etiquetas de error
 
 		JLabel lblErrorTitular = new JLabel("Titular de la tarjeta no v\u00E1lido");
 		lblErrorTitular.setForeground(Color.RED);
-		lblErrorTitular.setBounds(173, 161, 205, 14);
+		lblErrorTitular.setBounds(174, 413, 205, 14);
 		lblErrorTitular.setVisible(false);
 		frame.getContentPane().add(lblErrorTitular);
 
 		JLabel lblErrorNumero = new JLabel("N\u00FAmero de tarjeta no v\u00E1lido");
 		lblErrorNumero.setForeground(Color.RED);
-		lblErrorNumero.setBounds(173, 196, 205, 14);
+		lblErrorNumero.setBounds(174, 448, 205, 14);
 		lblErrorNumero.setVisible(false);
 		frame.getContentPane().add(lblErrorNumero);
 
 		JLabel lblErrorCodigo = new JLabel("C\u00F3digo no v\u00E1lido");
 		lblErrorCodigo.setForeground(Color.RED);
-		lblErrorCodigo.setBounds(173, 230, 205, 14);
+		lblErrorCodigo.setBounds(174, 482, 205, 14);
 		lblErrorCodigo.setVisible(false);
 		frame.getContentPane().add(lblErrorCodigo);
 
 		JLabel lblErrorCodigo2 = new JLabel("Los c\u00F3digos no coinciden");
 		lblErrorCodigo2.setForeground(Color.RED);
-		lblErrorCodigo2.setBounds(173, 265, 205, 14);
+		lblErrorCodigo2.setBounds(174, 517, 205, 14);
 		lblErrorCodigo2.setVisible(false);
 		frame.getContentPane().add(lblErrorCodigo2);
 		
@@ -244,8 +245,64 @@ public class VPago {
 		});
 		 btnConfirmar.setForeground(new Color(255, 255, 255));
 		btnConfirmar.setBackground(new Color(0, 0, 204));
-		btnConfirmar.setBounds(243, 295, 146, 20);
+		btnConfirmar.setBounds(244, 547, 146, 20);
 		frame.getContentPane().add(btnConfirmar);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(47, 343, 343, 2);
+		frame.getContentPane().add(separator);
+		
+		JLabel lblDetalles = new JLabel("Detalles:");
+		lblDetalles.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblDetalles.setBounds(47, 124, 343, 14);
+		frame.getContentPane().add(lblDetalles);
+		
+		JLabel lblCine = new JLabel("Cine:");
+		lblCine.setBounds(47, 194, 139, 14);
+		frame.getContentPane().add(lblCine);
+		
+		JLabel lblPelcula = new JLabel("Pel\u00EDcula:");
+		lblPelcula.setBounds(47, 229, 139, 14);
+		frame.getContentPane().add(lblPelcula);
+		
+		JLabel lblHora = new JLabel("Hora:");
+		lblHora.setBounds(47, 264, 139, 14);
+		frame.getContentPane().add(lblHora);
+		
+		JLabel lblNmAsientos = new JLabel("N\u00FAm. Asientos:");
+		lblNmAsientos.setBounds(47, 301, 139, 14);
+		frame.getContentPane().add(lblNmAsientos);
+		
+		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setBounds(47, 162, 71, 14);
+		frame.getContentPane().add(lblEmail);
+		
+		JLabel labelEmail = new JLabel(VInicio.correo);
+		labelEmail.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelEmail.setBounds(174, 162, 197, 14);
+		frame.getContentPane().add(labelEmail);
+		
+		JLabel labelCine = new JLabel(VLugar.nomLugar);
+		labelCine.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelCine.setBounds(174, 194, 197, 14);
+		frame.getContentPane().add(labelCine);
+		
+		JLabel labelPelicula = new JLabel(VCartelera.peli);
+		labelPelicula.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelPelicula.setBounds(174, 229, 197, 14);
+		frame.getContentPane().add(labelPelicula);
+		
+		JLabel labelHora = new JLabel(VCartelera.hora);
+		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelHora.setBounds(174, 264, 197, 14);
+		frame.getContentPane().add(labelHora);
+		
+		String numEntradas = "" + VComprar.conmum;
+		
+		JLabel labelNum = new JLabel(numEntradas);
+		labelNum.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelNum.setBounds(174, 301, 197, 14);
+		frame.getContentPane().add(labelNum);
 		
 		
 		
