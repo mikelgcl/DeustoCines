@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
@@ -17,14 +19,16 @@ public class VRegistro extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextField textCorreo;
-	private JPasswordField textContra;
-	private JPasswordField textContra1;
-	private JTextField textNom;
-	private JTextField textApel;
-	private JTextField textTD;
+	private static JTextField textCorreo;
+	private static JPasswordField textContra;
+	private static JPasswordField textContra1;
+	private static JTextField textNom;
+	private static JTextField textApel;
+	private static JTextField textTD;
 	ZBaseDeDatos c=new ZBaseDeDatos();
  
+	Logger logger=Logger.getLogger(VRegistro.class.getName());
+	
 	public VRegistro() {
 		Connection conn=c.initBD("DeustoCines");
 		this.setSize(360, 585);
@@ -224,9 +228,16 @@ public class VRegistro extends JFrame {
 						&& textApel.getText().length()<=45 && textApel.getText().length()>1
 						&& textTD.getText().length()==8 && con.equals(con1))  {
 					
+					System.out.println("");
+					logger.log(Level.INFO, "Se ha registrado correctamente, los detalles de su usuario son: \n"
+							+ "	Nombre: "  + textNom.getText()
+							+ "\n 	Apellidos: " + textApel.getText()
+							+ "\n 	Correo: " + textCorreo.getText()
+							+ "\n 	Tarjeta Deusto: " + textTD.getText() );
+					System.out.println("");
 					
 					Usuario p1=new Usuario(cor, con, nom, apl, tdb);
-					System.out.println(p1);
+					//System.out.println(p1);
 					c.insertDatosUsuario(conn, p1);
 					VInicio nuevaVentana = new VInicio(); 
 					nuevaVentana.frame.setVisible(true);

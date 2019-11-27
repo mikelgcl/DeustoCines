@@ -45,7 +45,7 @@ public class ZBaseDeDatos {
 			stmt.setString(4, user.getApellido());
 			stmt.setString(5, user.getTarjetadeusto());
 			stmt.executeUpdate();
-			logger.log(Level.INFO, "Acierto al registrar"+user.getNombre());
+			//logger.log(Level.INFO, "Acierto al registrar"+user.getNombre());
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.log(Level.SEVERE, "Fallo al registrar"+user.getNombre());
