@@ -85,6 +85,8 @@ public class VLugar {
 		
 		frame.getContentPane().add(comboBoxLugar);
 		
+		
+		
 		//Prueba
 		JButton btnEmpezar = new JButton("Empezar");
 		btnEmpezar.setForeground(SystemColor.text);

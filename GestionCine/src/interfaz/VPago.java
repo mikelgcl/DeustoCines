@@ -265,6 +265,8 @@ public class VPago {
 								+ "\n	Hora: " + VCartelera.hora
 								+ "\n 	Número de asientos: " + numEntradas);
 						
+						//CrearArchivo.crearArchivo();
+						
 						r=new Reserva(cor, cine, pelicula, fecha, hora, numasientos, asiento, p, tar); 
 						c.insertDatosReserva(conn, r);
 						//System.out.println(r.toString());
