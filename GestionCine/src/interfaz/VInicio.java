@@ -15,7 +15,11 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Connection;
+import java.util.Properties;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
@@ -48,6 +52,7 @@ public class VInicio {
 	 */
 	public VInicio() {
 		initialize();
+		
 	}
 
 	/**
@@ -71,11 +76,13 @@ public class VInicio {
 		textUsuario.setBounds(132, 132, 215, 20);
 		frame.getContentPane().add(textUsuario);
 		textUsuario.setColumns(10);
+		textUsuario.setText(devolvercorreo());
 		
 		JLabel lblNombre = new JLabel("Usuario:");
 		lblNombre.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblNombre.setBounds(39, 131, 121, 20);
 		frame.getContentPane().add(lblNombre);
+		
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
 		lblContrasea.setFont(new Font("Tahoma", Font.BOLD, 13));
@@ -105,8 +112,9 @@ public class VInicio {
 					VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);
 					 
-					 
+					guardarcorreo(cor);
 					frame.dispose();
+					
 					correo=cor;
 				} else {
 					lblError.setVisible(true);
@@ -147,7 +155,35 @@ public class VInicio {
 		frame.getContentPane().add(label_1);
 		
 		frame.setLocationRelativeTo(null);
+		
+		Properties properties=new Properties();
+		String cor=new String(textUsuario.getText());
+		properties.setProperty("Correo", cor);
+		
 	}
-
+	public static void guardarcorreo(String valor) {
+		Properties properties=new Properties();
+		properties.setProperty("Correo", valor);
+		try {
+			properties.storeToXML(new FileOutputStream("ultimo.xml"), "Ultimo Correo");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public String devolvercorreo() {
+		Properties properties=new Properties();
+		properties.clear();
+		try {
+			properties.loadFromXML(new FileInputStream("ultimo.xml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return properties.getProperty("Correo");
+		
+	}
 	
+
 }

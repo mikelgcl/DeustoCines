@@ -3,12 +3,14 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
+import baseDeDatos.Reserva;
+
 public class CrearArchivo {
 	
-	public static void crearArchivo() {
+	public static void crearArchivo(String factura) {
 		try {
-            String ruta = "/ficheros/reservas.txt";
-            String contenido = "Contenido de ejemplo";
+            String ruta = "reservas.txt";
+            String contenido = factura;
             File file = new File(ruta);
             
             // Si el archivo no existe es creado

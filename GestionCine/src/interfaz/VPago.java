@@ -255,20 +255,21 @@ public class VPago {
 						int asiento=VComprar.asiento;
 						double p=0;
 						p=p+(8*numasientos);
-						System.out.println("");
-						logger.log(Level.INFO, "Compra procesada correctamente, los detalles de su reserva son: \n"
+						String factura="Compra procesada correctamente, los detalles de su reserva son: \n"
 								+ "	Titular de la reserva: " + VPago.textTitular.getText() 
 								+ "\n 	Número de tarjeta: " + VPago.textNumero.getText()
 								+ "\n 	Correo: " + VInicio.correo
 								+ "\n 	Cine: " + VLugar.nomLugar
 								+ "\n	Película: " + VCartelera.peli
 								+ "\n	Hora: " + VCartelera.hora
-								+ "\n 	Número de asientos: " + numEntradas);
+								+ "\n 	Número de asientos: " + numEntradas;
+						logger.log(Level.INFO, factura);
 						
-						//CrearArchivo.crearArchivo();
+						
 						
 						r=new Reserva(cor, cine, pelicula, fecha, hora, numasientos, asiento, p, tar); 
 						c.insertDatosReserva(conn, r);
+						CrearArchivo.crearArchivo(factura);
 						//System.out.println(r.toString());
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
 						
