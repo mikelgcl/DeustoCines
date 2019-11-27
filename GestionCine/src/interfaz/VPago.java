@@ -19,6 +19,8 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
@@ -28,11 +30,12 @@ import javax.swing.JSeparator;
 public class VPago {
 
 	public JFrame frame;
-	private JTextField textTitular;
-	private JTextField textNumero;
-	private JPasswordField textCodigo;
-	private JPasswordField textCodigo2;
+	private static JTextField textTitular;
+	private static JTextField textNumero;
+	private static JPasswordField textCodigo;
+	private static JPasswordField textCodigo2;
 	
+	Logger logger=Logger.getLogger(VPago.class.getName());
 	
 
 	/**
@@ -169,6 +172,33 @@ public class VPago {
 		lblErrorCodigo2.setVisible(false);
 		frame.getContentPane().add(lblErrorCodigo2);
 		
+		JLabel labelEmail = new JLabel(VInicio.correo);
+		labelEmail.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelEmail.setBounds(174, 162, 197, 14);
+		frame.getContentPane().add(labelEmail);
+		
+		JLabel labelCine = new JLabel(VLugar.nomLugar);
+		labelCine.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelCine.setBounds(174, 194, 197, 14);
+		frame.getContentPane().add(labelCine);
+		
+		JLabel labelPelicula = new JLabel(VCartelera.peli);
+		labelPelicula.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelPelicula.setBounds(174, 229, 197, 14);
+		frame.getContentPane().add(labelPelicula);
+		
+		JLabel labelHora = new JLabel(VCartelera.hora);
+		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelHora.setBounds(174, 264, 197, 14);
+		frame.getContentPane().add(labelHora);
+		
+		String numEntradas = "" + VComprar.conmum;
+		
+		JLabel labelNum = new JLabel(numEntradas);
+		labelNum.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		labelNum.setBounds(174, 301, 197, 14);
+		frame.getContentPane().add(labelNum);
+		
 		JButton btnConfirmar = new JButton("Confirmar compra");
 		Connection conn=c.initBD("DeustoCines");
 		btnConfirmar.addActionListener(new ActionListener() {
@@ -225,15 +255,22 @@ public class VPago {
 						int asiento=VComprar.asiento;
 						double p=0;
 						p=p+(8*numasientos);
-						
-
+						System.out.println("");
+						logger.log(Level.INFO, "Compra procesada correctamente, los detalles de su reserva son: \n"
+								+ "	Titular de la reserva: " + VPago.textTitular.getText() 
+								+ "\n 	Número de tarjeta: " + VPago.textNumero.getText()
+								+ "\n 	Correo: " + VInicio.correo
+								+ "\n 	Cine: " + VLugar.nomLugar
+								+ "\n	Película: " + VCartelera.peli
+								+ "\n	Hora: " + VCartelera.hora
+								+ "\n 	Número de asientos: " + numEntradas);
 						
 						r=new Reserva(cor, cine, pelicula, fecha, hora, numasientos, asiento, p, tar); 
 						c.insertDatosReserva(conn, r);
-						System.out.println(r.toString());
+						//System.out.println(r.toString());
 						JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
 						
-						System.out.println(VComprar.conmum);
+					
 						
 						VCartelera nuevaVentana = new VCartelera(); 
 						nuevaVentana.frame.setVisible(true);	
@@ -277,32 +314,7 @@ public class VPago {
 		lblEmail.setBounds(47, 162, 71, 14);
 		frame.getContentPane().add(lblEmail);
 		
-		JLabel labelEmail = new JLabel(VInicio.correo);
-		labelEmail.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		labelEmail.setBounds(174, 162, 197, 14);
-		frame.getContentPane().add(labelEmail);
 		
-		JLabel labelCine = new JLabel(VLugar.nomLugar);
-		labelCine.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		labelCine.setBounds(174, 194, 197, 14);
-		frame.getContentPane().add(labelCine);
-		
-		JLabel labelPelicula = new JLabel(VCartelera.peli);
-		labelPelicula.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		labelPelicula.setBounds(174, 229, 197, 14);
-		frame.getContentPane().add(labelPelicula);
-		
-		JLabel labelHora = new JLabel(VCartelera.hora);
-		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		labelHora.setBounds(174, 264, 197, 14);
-		frame.getContentPane().add(labelHora);
-		
-		String numEntradas = "" + VComprar.conmum;
-		
-		JLabel labelNum = new JLabel(numEntradas);
-		labelNum.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		labelNum.setBounds(174, 301, 197, 14);
-		frame.getContentPane().add(labelNum);
 		
 		
 		
