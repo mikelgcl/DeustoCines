@@ -1,0 +1,8 @@
+Compra procesada correctamente, los detalles de su reserva son: 
+	Titular de la reserva: dnkjgnkjsd
+ 	Número de tarjeta: 1234567812345678
+ 	Correo: a@gmail.com
+ 	Cine: Deusto
+	Película: Zombieland 2
+	Hora: 16:40
+ 	Número de asientos: 1
