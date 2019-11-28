@@ -161,6 +161,8 @@ public class VInicio {
 		properties.setProperty("Correo", cor);
 		
 	}
+	
+	//Guardar correo
 	public static void guardarcorreo(String valor) {
 		Properties properties=new Properties();
 		properties.setProperty("Correo", valor);
@@ -172,6 +174,8 @@ public class VInicio {
 		}
 		
 	}
+	
+	//Devolver correo
 	public String devolvercorreo() {
 		Properties properties=new Properties();
 		properties.clear();
