@@ -152,10 +152,12 @@ public class VLugar {
 	
 		
 		JButton AdminAnadir = new JButton("+++");
-		AdminAnadir.setVisible(false);
-		/*if (correo2.equals("admin@gmail.com")) {
+		//AdminAnadir.setVisible(false);
+		 if (VInicio.v== true) {
 			AdminAnadir.setVisible(true);
-		} */
+		}else {
+			AdminAnadir.setVisible(false);
+		} 
 		AdminAnadir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -167,10 +169,12 @@ public class VLugar {
 		
 		
 		JButton AdminQuitar = new JButton("---");
-		AdminQuitar.setVisible(false);
-		/*if (VInicio.correo.equals("admin@gmail.com")) {
+		//AdminQuitar.setVisible(false);
+		if (VInicio.v == true) {
 			AdminQuitar.setVisible(true);
-		} */
+		}else {
+			AdminQuitar.setVisible(false);
+		}
 		AdminQuitar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}

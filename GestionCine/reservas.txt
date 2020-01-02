@@ -1,5 +1,5 @@
 Compra procesada correctamente, los detalles de su reserva son: 
-	Titular de la reserva: ggg
+	Titular de la reserva: jon
  	Número de tarjeta: 1234567812345678
  	Correo: a@gmail.com
  	Cine: Deusto

@@ -31,6 +31,7 @@ public class VInicio {
 	private JPasswordField passwordContraseña;
 	private final JLabel label_1 = new JLabel("");
 	public static String correo ;
+	public static boolean v;
 	
 	/**
 	 * Launch the application.
@@ -115,7 +116,10 @@ public class VInicio {
 					 
 					guardarcorreo(cor);
 					frame.dispose();
-					
+					if(u.getCorreo().equals("admin@gmail.com")) {
+						v=true;
+						System.out.println("admin");
+					}
 					correo=cor;
 				} else {
 					lblError.setVisible(true);
