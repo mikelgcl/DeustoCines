@@ -31,6 +31,7 @@ public class VInicio {
 	private JPasswordField passwordContraseña;
 	private final JLabel label_1 = new JLabel("");
 	public static String correo ;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -121,8 +122,9 @@ public class VInicio {
 					passwordContraseña.setText("");
 				}
 				
+				System.out.println(correo);
 				
-			
+				
 			}
 			
 		});

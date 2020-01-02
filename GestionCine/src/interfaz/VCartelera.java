@@ -446,6 +446,21 @@ public class VCartelera {
 		button_11.setBounds(512, 414, 65, 32);
 		frame.getContentPane().add(button_11);
 		
+		JButton btnAadirPelcula = new JButton("A\u00F1adir pel\u00EDcula");
+		/*if (VInicio.correo.equals("admin@gmail.com")) {
+			btnAadirPelcula.setVisible(true);
+		} else {
+			btnAadirPelcula.setVisible(false);
+		}*/
+		btnAadirPelcula.setBackground(new Color(0, 204, 51));
+		btnAadirPelcula.setBounds(318, 107, 121, 23);
+		frame.getContentPane().add(btnAadirPelcula);
+		
+		JButton btnQuitarPelcula = new JButton("Quitar pel\u00EDcula");
+		btnQuitarPelcula.setBackground(new Color(0, 204, 51));
+		btnQuitarPelcula.setBounds(456, 107, 121, 23);
+		frame.getContentPane().add(btnQuitarPelcula);
+		
 		frame.setLocationRelativeTo(null);
 	}
 }

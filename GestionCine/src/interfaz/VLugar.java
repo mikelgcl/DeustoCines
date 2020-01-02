@@ -23,6 +23,9 @@ public class VLugar {
 	public static String nomLugar;
 	public JFrame frame;
 	public static String cine;
+	public static String correo2;
+	
+	
 
 	/**
 	 * Launch the application.
@@ -144,6 +147,38 @@ public class VLugar {
 		buttonCerrar.setBackground(new Color(204, 0, 0));
 		buttonCerrar.setBounds(189, 201, 150, 32);
 		frame.getContentPane().add(buttonCerrar);
+		
+		
+	
+		
+		JButton AdminAnadir = new JButton("+++");
+		AdminAnadir.setVisible(false);
+		/*if (correo2.equals("admin@gmail.com")) {
+			AdminAnadir.setVisible(true);
+		} */
+		AdminAnadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		AdminAnadir.setBackground(new Color(0, 204, 51));
+		AdminAnadir.setFont(new Font("Tahoma", Font.BOLD, 12));
+		AdminAnadir.setBounds(10, 148, 64, 23);
+		frame.getContentPane().add(AdminAnadir);
+		
+		
+		JButton AdminQuitar = new JButton("---");
+		AdminQuitar.setVisible(false);
+		/*if (VInicio.correo.equals("admin@gmail.com")) {
+			AdminQuitar.setVisible(true);
+		} */
+		AdminQuitar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		AdminQuitar.setFont(new Font("Tahoma", Font.BOLD, 12));
+		AdminQuitar.setBackground(new Color(0, 204, 51));
+		AdminQuitar.setBounds(349, 148, 58, 23);
+		frame.getContentPane().add(AdminQuitar);
 		
 		frame.setLocationRelativeTo(null);
 	}
