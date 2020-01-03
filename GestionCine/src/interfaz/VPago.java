@@ -319,6 +319,53 @@ public class VPago {
 		lblEmail.setBounds(47, 162, 71, 14);
 		frame.getContentPane().add(lblEmail);
 		
+		JButton btnNewButton = new JButton("Saltar paso");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Saltar directamente a la pantalla de confirmación
+				Reserva r = null;
+				String cor=VInicio.correo;
+				String cine=VLugar.nomLugar;
+				String pelicula=VCartelera.peli;
+				Date fecha=VCartelera.fecha;
+				String hora=VCartelera.hora;
+				int numasientos=VComprar.conmum;
+				int asiento=VComprar.asiento;
+				double p=0;
+				p=p+(8*numasientos);
+				String factura="Compra procesada correctamente, los detalles de su reserva son: \n"
+						+ "	Titular de la reserva: " + VPago.textTitular.getText() 
+						
+						+ "\n 	Correo: " + VInicio.correo
+						+ "\n 	Cine: " + VLugar.nomLugar
+						+ "\n	Película: " + VCartelera.peli
+						+ "\n	Hora: " + VCartelera.hora
+						+ "\n 	Número de asientos: " + numEntradas;
+				logger.log(Level.INFO, factura);
+				
+				
+				
+				r=new Reserva(cor, cine, pelicula, fecha, hora, numasientos, asiento, p, null); 
+				c.insertDatosReserva(conn, r);
+				//CrearArchivo.crearArchivo(factura);
+				//System.out.println(r.toString());
+				JOptionPane.showMessageDialog(null, "¡Gracias por su compra!");
+				
+				VCartelera nuevaVentana = new VCartelera(); 
+				nuevaVentana.frame.setVisible(true);	
+				frame.dispose();
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnNewButton.setBackground(new Color(0, 204, 51));
+		btnNewButton.setBounds(284, 516, 106, 20);
+		 if (VInicio.v== true) {
+			 btnNewButton.setVisible(true);
+			}else {
+				btnNewButton.setVisible(false);
+			} 
+		frame.getContentPane().add(btnNewButton);
+		
 		
 		
 		

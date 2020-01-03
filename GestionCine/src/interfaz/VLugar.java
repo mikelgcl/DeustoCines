@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -24,7 +25,7 @@ public class VLugar {
 	public JFrame frame;
 	public static String cine;
 	public static String correo2;
-	
+	public static boolean v;
 	
 
 	/**
@@ -152,16 +153,18 @@ public class VLugar {
 	
 		
 		JButton AdminAnadir = new JButton("+++");
+		AdminAnadir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String respuesta = JOptionPane.showInputDialog("Nombre del cine que quieres añadir:");
+			}
+		});
 		//AdminAnadir.setVisible(false);
-		 if (VInicio.v== true) {
+		 if (v== true) {
 			AdminAnadir.setVisible(true);
 		}else {
 			AdminAnadir.setVisible(false);
 		} 
-		AdminAnadir.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
+	
 		AdminAnadir.setBackground(new Color(0, 204, 51));
 		AdminAnadir.setFont(new Font("Tahoma", Font.BOLD, 12));
 		AdminAnadir.setBounds(10, 148, 64, 23);
@@ -169,16 +172,28 @@ public class VLugar {
 		
 		
 		JButton AdminQuitar = new JButton("---");
+		AdminQuitar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 String[] cines = {
+				            "Deusto",
+				            "Santurtxi",
+				            "Getxo",
+				            "Barakaldo",
+				            "Basauri"
+				        };
+				      
+				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione el cine a eliminar",
+				  "Cine", JOptionPane.DEFAULT_OPTION, null, cines, cines[0]);
+			}
+		});
 		//AdminQuitar.setVisible(false);
+		System.out.println(VInicio.v);
 		if (VInicio.v == true) {
 			AdminQuitar.setVisible(true);
 		}else {
 			AdminQuitar.setVisible(false);
 		}
-		AdminQuitar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+	
 		AdminQuitar.setFont(new Font("Tahoma", Font.BOLD, 12));
 		AdminQuitar.setBackground(new Color(0, 204, 51));
 		AdminQuitar.setBounds(349, 148, 58, 23);

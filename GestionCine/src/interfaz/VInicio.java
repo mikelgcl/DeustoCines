@@ -111,16 +111,24 @@ public class VInicio {
 				String cor=new String(textUsuario.getText());
 				Usuario u=c.iniciarSesion(conn, cor);
 				if (u.getCorreo().equals(cor) && u.getContrasenya().equals(pass)) {
+					
+					guardarcorreo(cor);
+					
+					if(u.getCorreo().equals("admin@gmail.com")) {
+						v=true;
+						VLugar.v = true;
+						System.out.println("admin");
+					} else {
+						VLugar.v = false;
+						v = false;
+					}
+					correo=cor;
+					
+					frame.dispose();
 					VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);
 					 
-					guardarcorreo(cor);
-					frame.dispose();
-					if(u.getCorreo().equals("admin@gmail.com")) {
-						v=true;
-						System.out.println("admin");
-					}
-					correo=cor;
+				
 				} else {
 					lblError.setVisible(true);
 					passwordContraseña.setText("");

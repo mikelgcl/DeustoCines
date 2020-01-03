@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -447,19 +448,107 @@ public class VCartelera {
 		frame.getContentPane().add(button_11);
 		
 		JButton btnAadirPelcula = new JButton("A\u00F1adir pel\u00EDcula");
-		/*if (VInicio.correo.equals("admin@gmail.com")) {
-			btnAadirPelcula.setVisible(true);
-		} else {
-			btnAadirPelcula.setVisible(false);
-		}*/
+		btnAadirPelcula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String respuesta = JOptionPane.showInputDialog("Nombre de la película que quieres añadir:");
+			}
+		});
+
 		btnAadirPelcula.setBackground(new Color(0, 204, 51));
 		btnAadirPelcula.setBounds(318, 107, 121, 23);
+		 if (VInicio.v== true) {
+			 btnAadirPelcula.setVisible(true);
+			}else {
+				btnAadirPelcula.setVisible(false);
+			} 
 		frame.getContentPane().add(btnAadirPelcula);
 		
 		JButton btnQuitarPelcula = new JButton("Quitar pel\u00EDcula");
+		btnQuitarPelcula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 String[] peliculas = {
+				            "Zombieland 2",
+				            "Joker",
+				            "Ad Astra",
+				            "Dora la exploradora",
+				           
+				        };
+				      
+				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
+				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
+			}
+		});
 		btnQuitarPelcula.setBackground(new Color(0, 204, 51));
 		btnQuitarPelcula.setBounds(456, 107, 121, 23);
+		 if (VInicio.v== true) {
+			 btnQuitarPelcula.setVisible(true);
+			}else {
+			 btnQuitarPelcula.setVisible(false);
+			} 
 		frame.getContentPane().add(btnQuitarPelcula);
+		
+		JButton btnAadirHora = new JButton("A\u00F1adir hora");
+		btnAadirHora.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 String[] peliculas = {
+				            "Zombieland 2",
+				            "Joker",
+				            "Ad Astra",
+				            "Dora la exploradora",
+				           
+				        };
+				      
+				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
+				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
+				  
+				  String respuesta = JOptionPane.showInputDialog("¿Qué hora quieres añadir?");
+				
+			}
+		});
+		btnAadirHora.setBackground(new Color(0, 204, 51));
+		btnAadirHora.setBounds(318, 139, 121, 23);
+		 if (VInicio.v== true) {
+			 btnAadirHora.setVisible(true);
+			}else {
+				btnAadirHora.setVisible(false);
+			} 
+		frame.getContentPane().add(btnAadirHora);
+		
+		JButton btnQuitarHora = new JButton("Quitar hora");
+		btnQuitarHora.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 String[] peliculas = {
+				            "Zombieland 2",
+				            "Joker",
+				            "Ad Astra",
+				            "Dora la exploradora",
+				           
+				        };
+				      
+				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
+				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
+				  
+					 String[] horas = {
+					            "16:40",
+					            "17:30",
+					            "19:35",
+					            "22:30",
+					           
+					        };
+					      
+					  String respo = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
+					  "Película", JOptionPane.DEFAULT_OPTION, null, horas, horas[0]);
+				
+			}
+		});
+		btnQuitarHora.setBackground(new Color(0, 204, 51));
+		btnQuitarHora.setBounds(456, 139, 121, 23);
+		 if (VInicio.v== true) {
+			 btnQuitarHora.setVisible(true);
+			}else {
+				btnQuitarHora.setVisible(false);
+			} 
+		frame.getContentPane().add(btnQuitarHora);
 		
 		frame.setLocationRelativeTo(null);
 	}
