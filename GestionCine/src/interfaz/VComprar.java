@@ -30,6 +30,7 @@ public class VComprar {
 	public JFrame frame;
 	public static int asiento;
 	public static int conmum=0;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -165,12 +166,13 @@ public class VComprar {
 		                String text = ((JButton) e.getSource()).getText();
 		                JOptionPane.showMessageDialog(null, text);
 		                ((JButton) e.getSource()).setEnabled(false);
-		                System.out.println(asiento);
+		                //System.out.println(asiento);
 		          if (((JButton) e.getSource()).getBackground().equals(new Color(50,220,50))) {
 		        	  ((JButton) e.getSource()).setBackground(new Color(255,255,255));conmum=conmum-1;
 					} else {
 						((JButton) e.getSource()).setBackground(new Color(50,220,50));
 							conmum=conmum+1;
+							System.out.println(conmum);
 						}
 		            }
 				 

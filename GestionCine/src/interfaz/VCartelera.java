@@ -32,7 +32,7 @@ public class VCartelera {
 	public static Date fecha;
 	public static String hora;
 	public static String peli;
-	ZBaseDeDatos c=new ZBaseDeDatos();
+	ZBaseDeDatos bd=new ZBaseDeDatos();
 	
 	
 	
@@ -63,8 +63,8 @@ public class VCartelera {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Connection con=c.initBD("DeustoCines");
-		Pelicula p=c.getpelicula(con, 1);
+		Connection con=bd.initBD("DeustoCines");
+		Pelicula p=bd.getpelicula(con, 1);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 642, 624);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -518,6 +518,7 @@ String part4 = parts[3];
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
 				  
 				  String respuesta = JOptionPane.showInputDialog("¿Qué hora quieres añadir?");
+				  bd.updatehoras(con, respuesta, resp);
 				
 			}
 		});
@@ -544,17 +545,10 @@ String part4 = parts[3];
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
 				  
-					 String[] horas = {
-					            "16:40",
-					            "17:30",
-					            "19:35",
-					            "22:30",
-					           
-					        };
-					      
+					
 					  String respo = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
-					  "Película", JOptionPane.DEFAULT_OPTION, null, horas, horas[0]);
-				
+					  "Película", JOptionPane.DEFAULT_OPTION, null, parts, parts[0]);
+				bd.deletehoras(con, resp, respo);
 			}
 		});
 		btnQuitarHora.setBackground(new Color(0, 204, 51));

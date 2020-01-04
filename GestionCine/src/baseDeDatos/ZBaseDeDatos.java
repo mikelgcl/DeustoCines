@@ -278,10 +278,10 @@ public class ZBaseDeDatos {
 			e.printStackTrace();
 		}
 	}			
-	public void delete(Connection con,Pelicula pelicula,String hora)  {
+	public void deletehoras(Connection con,String nombre, String hora)  {
 		try (PreparedStatement stmt = con.prepareStatement("UPDATE horas SET id_horas=? WHERE titulo=?")) {
 			stmt.setString(1, hora);
-			stmt.setString(2, pelicula.getTitulo());
+			stmt.setString(2, nombre);
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
