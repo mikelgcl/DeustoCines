@@ -1,9 +1,15 @@
 package baseDeDatos;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
+
+
 
 
 
@@ -66,14 +72,13 @@ public class ZBaseDeDatos {
 	}
 	public void insertDatosPelicula(Connection con,Pelicula pel) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Pelicula values(?,?,?,?,?,?)");
 			stmt.setString(1, pel.getTitulo());
 			stmt.setString(2, pel.getDuracion());
 			stmt.setString(3, pel.getEdad());
 			stmt.setString(4, pel.getHoras());
-			stmt.setInt(5, pel.getCartelera());
-			stmt.setString(6, pel.getImagen());
-			stmt.setString(7, pel.getDescripcion());
+			stmt.setString(5, pel.getImagen());
+			stmt.setString(6, pel.getDescripcion());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -83,7 +88,7 @@ public class ZBaseDeDatos {
 		try {
 			PreparedStatement stmt=con.prepareStatement("Insert into Cartelera values(?,?,?,?)");
 			stmt.setInt(1, car.getCod_Cartelera());
-			stmt.setInt(2, car.getCod_Cine());
+			stmt.setString(2, car.getCod_Cine());
 			stmt.setInt(3, car.getCod_Pelicula());
 			stmt.setString(4, car.getFecha());
 			
@@ -156,7 +161,7 @@ public class ZBaseDeDatos {
 			while(rs.next()) {
 				
 				c.setCod_Cartelera(rs.getInt("cod_cartelera"));
-				c.setCod_Cine(rs.getInt("cod_cine"));
+				c.setCod_Cine(rs.getString("cod_cine"));
 				c.setCod_Pelicula(rs.getInt("cod_pelicula"));
 				c.setFecha(rs.getString("fecha"));
 			}
@@ -186,7 +191,7 @@ public class ZBaseDeDatos {
 	public Pelicula getpelicula(Connection con,int codigo)  {
 		Pelicula p = new Pelicula();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,horas,cartelera,imagen,descripcion from pelicula where cod_pelicula=?");
+			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,id_horas,imagen,descripcion from pelicula where cod_pelicula=?");
 			stmt.setInt(1,codigo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
@@ -194,8 +199,7 @@ public class ZBaseDeDatos {
 				p.setTitulo(rs.getString("titulo"));
 				p.setDuracion(rs.getString("duracion"));
 				p.setEdad(rs.getString("edad"));
-				p.setHoras(rs.getString("horas"));
-				p.setCartelera(rs.getInt("cartelera"));
+				p.setHoras(rs.getString("id_horas"));
 				p.setImagen(rs.getString("imagen"));
 				p.setDescripcion(rs.getString("descripcion"));
 				
@@ -204,6 +208,29 @@ public class ZBaseDeDatos {
 			e.printStackTrace();
 		}
 		return p;
+		}
+	public List<Pelicula> getpeliculas(Connection con)  {
+		
+		List<Pelicula> peliculas=new ArrayList<Pelicula>();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cod_pelicula,titulo,duracion,edad,id_horas,imagen,descripcion from pelicula");
+			
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				Pelicula p = new Pelicula();
+				p.setCod_Pelicula(rs.getInt("cod_pelicula"));
+				p.setTitulo(rs.getString("titulo"));
+				p.setDuracion(rs.getString("duracion"));
+				p.setEdad(rs.getString("edad"));
+				p.setHoras(rs.getString("id_horas"));
+				p.setImagen(rs.getString("imagen"));
+				p.setDescripcion(rs.getString("descripcion"));
+				peliculas.add(p);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return peliculas;
 		}
 	public Reserva getreserva(Connection con,int codigo)  {
 		Reserva r = new Reserva();
@@ -228,10 +255,48 @@ public class ZBaseDeDatos {
 		}
 		return r;
 		}
-	
+	public Set<String> getcines(Connection con)  {
+		Set<String> cines=new HashSet<>();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select cinnombre from Cine ");
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				String g=rs.getString("cinnombre");
+				cines.add(g);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return cines;
+		}	
+	public void delete(Connection con,String n)  {
+		try (PreparedStatement stmt = con.prepareStatement("DELETE FROM cine WHERE cinnombre=?")) {
+			stmt.setString(1,n);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}			
+	public void delete(Connection con,Pelicula pelicula,String hora)  {
+		try (PreparedStatement stmt = con.prepareStatement("UPDATE horas SET id_horas=? WHERE titulo=?")) {
+			stmt.setString(1, hora);
+			stmt.setString(2, pelicula.getTitulo());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	public void updatehoras(Connection con,String hora,String nombre)  {
+		try (PreparedStatement stmt = con.prepareStatement("UPDATE horas SET id_horas=? WHERE titulo=?")) {
+			stmt.setString(1, hora);
+			stmt.setString(2, nombre);
 			
-
+			stmt.executeUpdate();
+		} catch (SQLException e) {
 			
+		}
+	}			
 
 
 	public static void main(String[] args) {

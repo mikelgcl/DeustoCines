@@ -9,14 +9,23 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import baseDeDatos.Cine;
+import baseDeDatos.ZBaseDeDatos;
+
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import javax.swing.ComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class VLugar {
@@ -26,7 +35,7 @@ public class VLugar {
 	public static String cine;
 	public static String correo2;
 	public static boolean v;
-	
+	public Set<String> cines=new HashSet<String>();
 
 	/**
 	 * Launch the application.
@@ -55,6 +64,8 @@ public class VLugar {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		ZBaseDeDatos bd=new ZBaseDeDatos();
+		Connection con=bd.initBD("DeustoCines");
 		frame = new JFrame();
 		frame.setBounds(100, 100, 433, 319);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -78,14 +89,21 @@ public class VLugar {
 		lblNombre.setBounds(84, 115, 121, 20);
 		frame.getContentPane().add(lblNombre);
 		
-		JComboBox comboBoxLugar = new JComboBox();
-		comboBoxLugar.addItem("Deusto");
+		cines=bd.getcines(con);
+		
+		JComboBox<String>comboBoxLugar=new JComboBox<>();	
+		for (String string : cines) {
+			comboBoxLugar.addItem(string);
+		}
+		
 		comboBoxLugar.setBounds(84, 146, 255, 27);
+		/*comboBoxLugar.addItem("Deusto");
+		
 		comboBoxLugar.addItem("Santurtzi");
 		comboBoxLugar.addItem("Getxo");
 		comboBoxLugar.addItem("Barakaldo");
 		comboBoxLugar.addItem("Basauri");
-	
+	*/
 		
 		frame.getContentPane().add(comboBoxLugar);
 		
@@ -155,7 +173,10 @@ public class VLugar {
 		JButton AdminAnadir = new JButton("+++");
 		AdminAnadir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Cine c=new Cine();
 				String respuesta = JOptionPane.showInputDialog("Nombre del cine que quieres añadir:");
+				c.setNombre(respuesta);
+				bd.insertDatosCine(con, c);
 			}
 		});
 		//AdminAnadir.setVisible(false);
@@ -174,16 +195,14 @@ public class VLugar {
 		JButton AdminQuitar = new JButton("---");
 		AdminQuitar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String[] cines = {
-				            "Deusto",
-				            "Santurtxi",
-				            "Getxo",
-				            "Barakaldo",
-				            "Basauri"
-				        };
+			 String[] cines1=new String[cines.size()];
+			 cines1=cines.toArray(cines1);
+				
+				 
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione el cine a eliminar",
-				  "Cine", JOptionPane.DEFAULT_OPTION, null, cines, cines[0]);
+				  "Cine", JOptionPane.DEFAULT_OPTION, null, cines1, cines1[0]);
+				  bd.delete(con,resp);
 			}
 		});
 		//AdminQuitar.setVisible(false);

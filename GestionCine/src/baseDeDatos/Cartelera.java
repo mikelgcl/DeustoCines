@@ -3,11 +3,11 @@ package baseDeDatos;
 public class Cartelera {
 private static int count = 0; 
 private int Cod_Cartelera;
-private int Cod_Cine;
+private String Cod_Cine;
 private int Cod_Pelicula;
 private String fecha;
 
-public Cartelera( int cod_Cine, int cod_Pelicula, String fecha) {
+public Cartelera( String cod_Cine, int cod_Pelicula, String fecha) {
 	super();
 	Cod_Cartelera = count++;
 	Cod_Cine = cod_Cine;
@@ -17,7 +17,7 @@ public Cartelera( int cod_Cine, int cod_Pelicula, String fecha) {
 public Cartelera() {
 	super();
 	Cod_Cartelera = 0;
-	Cod_Cine = 0;
+	Cod_Cine = "";
 	Cod_Pelicula = 0;
 	this.fecha ="";
 }
@@ -30,11 +30,11 @@ public void setCod_Cartelera(int cod_Cartelera) {
 	Cod_Cartelera = cod_Cartelera;
 }
 
-public int getCod_Cine() {
+public String getCod_Cine() {
 	return Cod_Cine;
 }
 
-public void setCod_Cine(int cod_Cine) {
+public void setCod_Cine(String cod_Cine) {
 	Cod_Cine = cod_Cine;
 }
 

@@ -9,10 +9,14 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import baseDeDatos.Pelicula;
+import baseDeDatos.ZBaseDeDatos;
+
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,6 +32,7 @@ public class VCartelera {
 	public static Date fecha;
 	public static String hora;
 	public static String peli;
+	ZBaseDeDatos c=new ZBaseDeDatos();
 	
 	
 	
@@ -58,6 +63,8 @@ public class VCartelera {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		Connection con=c.initBD("DeustoCines");
+		Pelicula p=c.getpelicula(con, 1);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 642, 624);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,25 +107,33 @@ public class VCartelera {
 				
 			}
 		});
-		btnPelcula_1.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli2buena.jpg")));
+		btnPelcula_1.setIcon(new ImageIcon(VCartelera.class.getResource(p.getImagen())));
 		btnPelcula_1.setBackground(Color.LIGHT_GRAY);
 		btnPelcula_1.setBounds(29, 180, 99, 143);
 		frame.getContentPane().add(btnPelcula_1);
 		
-		JLabel lblZombieland = new JLabel("Zombieland 2");
+		JLabel lblZombieland = new JLabel(p.getTitulo());
 		lblZombieland.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblZombieland.setBounds(149, 191, 99, 14);
 		frame.getContentPane().add(lblZombieland);
 		
-		JLabel lblM = new JLabel("M18");
+		JLabel lblM = new JLabel(p.getEdad());
 		lblM.setBounds(149, 210, 34, 14);
 		frame.getContentPane().add(lblM);
 		
-		JLabel label = new JLabel("98'");
+		JLabel label = new JLabel(p.getDuracion());
 		label.setBounds(182, 210, 46, 14);
 		frame.getContentPane().add(label);
-		
-		JButton btn1420 = new JButton("16:40");
+
+
+
+String string = p.getHoras();
+String[] parts = string.split(",");
+String part1 = parts[0]; 
+String part2 = parts[1]; 
+String part3 = parts[2]; 
+String part4 = parts[3]; 
+		JButton btn1420 = new JButton(part1);
 		btn1420.setFont(new Font("Tahoma", Font.BOLD, 9));
 		btn1420.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -293,7 +308,7 @@ public class VCartelera {
 		btnSiguiente.setBounds(363, 531, 54, 32);
 		frame.getContentPane().add(btnSiguiente);
 		
-		JButton button = new JButton("18:45");
+		JButton button = new JButton(part2);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				hora=button.getText();
@@ -307,7 +322,7 @@ public class VCartelera {
 		button.setBounds(224, 232, 65, 32);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton("20:30");
+		JButton button_1 = new JButton(part3);
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_1.getText();
@@ -321,7 +336,7 @@ public class VCartelera {
 		button_1.setBounds(149, 275, 65, 32);
 		frame.getContentPane().add(button_1);
 		
-		JButton button_2 = new JButton("22:00");
+		JButton button_2 = new JButton(part4);
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_2.getText();
@@ -473,7 +488,8 @@ public class VCartelera {
 				            "Dora la exploradora",
 				           
 				        };
-				      
+				   
+				  
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
 			}

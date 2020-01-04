@@ -7,14 +7,13 @@ private String titulo;
 private String duracion;
 private String edad;
 private String horas;
-private int cartelera;
 private String imagen;
 private String descripcion;
 
 
 
 
-public Pelicula(String titulo, String duracion, String edad, String horas, int cartelera,
+public Pelicula(String titulo, String duracion, String edad, String horas, 
 		String imagen,String descripcion) {
 	super();
 	this.Cod_Pelicula = count++;
@@ -22,7 +21,6 @@ public Pelicula(String titulo, String duracion, String edad, String horas, int c
 	this.duracion = duracion;
 	this.edad = edad;
 	this.horas = horas;
-	this.cartelera = cartelera;
 	this.imagen = imagen;
 	this.descripcion=descripcion;
 }
@@ -32,8 +30,8 @@ public Pelicula() {
 	this.titulo = "";
 	this.duracion = "";
 	this.edad = "";
-	this.horas = "";
-	this.cartelera = 0;
+	this.horas ="";
+	
 	this.imagen = "";
 	this.descripcion="";
 }
@@ -73,17 +71,10 @@ public String getHoras() {
 	return horas;
 }
 
-public void setHoras(String horas) {
-	this.horas = horas;
+public void setHoras(String string) {
+	this.horas = string;
 }
 
-public int getCartelera() {
-	return cartelera;
-}
-
-public void setCartelera(int cartelera) {
-	this.cartelera = cartelera;
-}
 public String getImagen() {
 	return imagen;
 }
