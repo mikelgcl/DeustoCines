@@ -265,7 +265,7 @@ String part1 = parts[0];
 		frame.getContentPane().add(lblAdAstra);
 		
 		JButton button_19 = new JButton("");
-		//button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
+		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli4buena.jpg")));
 		button_19.setBackground(Color.LIGHT_GRAY);
 		button_19.setBounds(318, 359, 99, 143);
 		frame.getContentPane().add(button_19);
