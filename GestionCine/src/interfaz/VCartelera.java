@@ -553,14 +553,16 @@ String part1 = parts[0];
 					
 					  String respo = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 					  "Película", JOptionPane.DEFAULT_OPTION, null, parts, parts[0]);
+					  String[] se=new String[parts.length-1];
 					  for (int i = 0; i < parts.length; i++) {
-				            if (parts[i] == respo) {
-				                for (int j = i; j < parts.length - 1; j++) {
-				                    parts[j] = parts[j+1];
-				                   System.out.println(parts[j]);
+				            if (parts[i] != respo) {
+				                for (int j = 0; j < se.length; j++) {
+				                    se[j] = parts[i];
+				              System.out.println(se[j]+"ff");
 				                }
 				            }}
-				String quitarh=String.join(",",parts);
+				String quitarh=String.join(",",se);
+				System.out.println(quitarh);
 				//System.out.println(quitarh);
 				bd.deletehoras(con, quitarh, resp);
 			}
