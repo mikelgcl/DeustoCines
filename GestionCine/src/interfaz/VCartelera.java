@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -128,11 +129,10 @@ public class VCartelera {
 
 
 String string = p.getHoras();
+System.out.println(p.getHoras());
 String[] parts = string.split(",");
 String part1 = parts[0]; 
-String part2 = parts[1]; 
-String part3 = parts[2]; 
-String part4 = parts[3]; 
+ 
 		JButton btn1420 = new JButton(part1);
 		btn1420.setFont(new Font("Tahoma", Font.BOLD, 9));
 		btn1420.addActionListener(new ActionListener() {
@@ -308,7 +308,7 @@ String part4 = parts[3];
 		btnSiguiente.setBounds(363, 531, 54, 32);
 		frame.getContentPane().add(btnSiguiente);
 		
-		JButton button = new JButton(part2);
+		JButton button = new JButton("part2");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				hora=button.getText();
@@ -322,7 +322,7 @@ String part4 = parts[3];
 		button.setBounds(224, 232, 65, 32);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton(part3);
+		JButton button_1 = new JButton("part3");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_1.getText();
@@ -336,7 +336,7 @@ String part4 = parts[3];
 		button_1.setBounds(149, 275, 65, 32);
 		frame.getContentPane().add(button_1);
 		
-		JButton button_2 = new JButton(part4);
+		JButton button_2 = new JButton("part4");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_2.getText();
@@ -516,9 +516,14 @@ String part4 = parts[3];
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
-				  
+				  System.out.println(resp);
 				  String respuesta = JOptionPane.showInputDialog("¿Qué hora quieres añadir?");
-				  bd.updatehoras(con, respuesta, resp);
+				if(respuesta != null) {
+					String anadirh=string +","+ respuesta;
+					 System.out.println(anadirh);
+					  bd.updatehoras(con, anadirh, resp);
+				}
+				  
 				
 			}
 		});
@@ -548,7 +553,16 @@ String part4 = parts[3];
 					
 					  String respo = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 					  "Película", JOptionPane.DEFAULT_OPTION, null, parts, parts[0]);
-				bd.deletehoras(con, resp, respo);
+					  for (int i = 0; i < parts.length; i++) {
+				            if (parts[i] == respo) {
+				                for (int j = i; j < parts.length - 1; j++) {
+				                    parts[j] = parts[j+1];
+				                   System.out.println(parts[j]);
+				                }
+				            }}
+				String quitarh=String.join(",",parts);
+				//System.out.println(quitarh);
+				bd.deletehoras(con, quitarh, resp);
 			}
 		});
 		btnQuitarHora.setBackground(new Color(0, 204, 51));

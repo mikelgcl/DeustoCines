@@ -44,7 +44,7 @@ public class ZBaseDeDatos {
 
 	public void insertDatosUsuario(Connection con,Usuario user) {
 		try {
-			PreparedStatement stmt=con.prepareStatement("Insert into Usuario (correo, contraseÃ±a, nombre, apellido, tarjetadeusto) values(?,?,?,?,?)");
+			PreparedStatement stmt=con.prepareStatement("Insert into Usuario (correo, contraseña, nombre, apellido, tarjetadeusto) values(?,?,?,?,?)");
 			stmt.setString(1, user.getCorreo());
 			stmt.setString(2, user.getContrasenya());
 			stmt.setString(3, user.getNombre());
@@ -119,13 +119,13 @@ public class ZBaseDeDatos {
 	public Usuario iniciarSesion(Connection con,String correo) {
 		Usuario u=new Usuario();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select correo,contraseÃ±a from usuario where correo=?");
+			PreparedStatement stmt=con.prepareStatement("Select correo,contraseña from usuario where correo=?");
 			stmt.setString(1, correo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
 				
 				u.setCorreo(rs.getString("correo"));
-				u.setContrasenya(rs.getString("contraseÃ±a"));
+				u.setContrasenya(rs.getString("contraseña"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -136,13 +136,13 @@ public class ZBaseDeDatos {
 	public Usuario getusuario(Connection con,String correo)  {
 		Usuario u = new Usuario();
 		try {
-			PreparedStatement stmt=con.prepareStatement("Select correo,contraseÃ±a,nombre,apellido,tarjetadeusto from usuario where correo=?");
+			PreparedStatement stmt=con.prepareStatement("Select correo,contraseña,nombre,apellido,tarjetadeusto from usuario where correo=?");
 			stmt.setString(1,correo);
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
 				
 				u.setCorreo(rs.getString("correo"));
-				u.setContrasenya(rs.getString("contraseÃ±a"));
+				u.setContrasenya(rs.getString("contraseña"));
 				u.setNombre(rs.getString("nombre"));
 				u.setApellido(rs.getString("apellido"));
 				u.setTarjetadeusto(rs.getString("tarjetadeusto"));
@@ -232,6 +232,24 @@ public class ZBaseDeDatos {
 		}
 		return peliculas;
 		}
+	
+public Set<String> getpeliculasnombres (Connection con)  {
+		
+		Set<String> peliculasn=new HashSet<String>();
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select titulo from pelicula");
+			
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+				String peli;
+				peli=rs.getString("titulo");
+				peliculasn.add(peli);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return peliculasn;
+		}
 	public Reserva getreserva(Connection con,int codigo)  {
 		Reserva r = new Reserva();
 		try {
@@ -278,8 +296,8 @@ public class ZBaseDeDatos {
 			e.printStackTrace();
 		}
 	}			
-	public void deletehoras(Connection con,String nombre, String hora)  {
-		try (PreparedStatement stmt = con.prepareStatement("UPDATE horas SET id_horas=? WHERE titulo=?")) {
+	public void deletehoras(Connection con,String hora, String nombre)  {
+		try (PreparedStatement stmt = con.prepareStatement("UPDATE pelicula SET id_horas=? WHERE titulo=?")) {
 			stmt.setString(1, hora);
 			stmt.setString(2, nombre);
 			stmt.executeUpdate();
@@ -288,7 +306,7 @@ public class ZBaseDeDatos {
 		}
 	}
 	public void updatehoras(Connection con,String hora,String nombre)  {
-		try (PreparedStatement stmt = con.prepareStatement("UPDATE horas SET id_horas=? WHERE titulo=?")) {
+		try (PreparedStatement stmt = con.prepareStatement("UPDATE pelicula SET id_horas=? WHERE titulo=?")) {
 			stmt.setString(1, hora);
 			stmt.setString(2, nombre);
 			
