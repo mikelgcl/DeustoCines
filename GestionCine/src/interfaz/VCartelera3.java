@@ -27,7 +27,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 
-public class VCartelera {
+public class VCartelera3 {
 
 	public JFrame frame;
 	public static Date fecha;
@@ -44,7 +44,7 @@ public class VCartelera {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VCartelera window = new VCartelera();
+					VCartelera3 window = new VCartelera3();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -56,7 +56,7 @@ public class VCartelera {
 	/**
 	 * Create the application.
 	 */
-	public VCartelera() {
+	public VCartelera3() {
 		initialize();
 	}
 
@@ -110,20 +110,20 @@ public class VCartelera {
 		});
 		btnPelcula_1.setIcon(new ImageIcon(VCartelera.class.getResource(p.getImagen())));
 		btnPelcula_1.setBackground(Color.LIGHT_GRAY);
-		btnPelcula_1.setBounds(29, 180, 99, 143);
+		btnPelcula_1.setBounds(318, 359, 99, 143);
 		frame.getContentPane().add(btnPelcula_1);
 		
 		JLabel lblZombieland = new JLabel(p.getTitulo());
 		lblZombieland.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblZombieland.setBounds(149, 191, 99, 14);
+		lblZombieland.setBounds(438, 369, 99, 14);
 		frame.getContentPane().add(lblZombieland);
 		
 		JLabel lblM = new JLabel(p.getEdad());
-		lblM.setBounds(149, 210, 34, 14);
+		lblM.setBounds(438, 389, 34, 14);
 		frame.getContentPane().add(lblM);
 		
 		JLabel label = new JLabel(p.getDuracion());
-		label.setBounds(182, 210, 46, 14);
+		label.setBounds(463, 389, 54, 14);
 		frame.getContentPane().add(label);
 
 
@@ -145,34 +145,34 @@ String part1 = parts[0];
 				
 			}
 		});
-		btn1420.setBounds(149, 232, 65, 32);
+		btn1420.setBounds(438, 414, 65, 32);
 		frame.getContentPane().add(btn1420);
 		
-		JLabel lblJoker = new JLabel("Bad Boys");
+		JLabel lblJoker = new JLabel("Black Widow");
 		lblJoker.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblJoker.setBounds(438, 191, 79, 14);
+		lblJoker.setBounds(149, 359, 79, 14);
 		frame.getContentPane().add(lblJoker);
 		
-		JLabel lblTp_1 = new JLabel("M18");
-		lblTp_1.setBounds(438, 210, 34, 14);
+		JLabel lblTp_1 = new JLabel("M7");
+		lblTp_1.setBounds(149, 389, 34, 14);
 		frame.getContentPane().add(lblTp_1);
 		
 		JLabel label_6 = new JLabel("121'");
-		label_6.setBounds(471, 210, 46, 14);
+		label_6.setBounds(182, 389, 46, 14);
 		frame.getContentPane().add(label_6);
 		
 		JComboBox comboBoxFecha = new JComboBox();
 		comboBoxFecha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (comboBoxFecha.getSelectedItem() == "18/01/2020") {
+				if (comboBoxFecha.getSelectedItem() == "17/01/2020") {
 					
-					VCartelera2 nuevaVentana = new VCartelera2(); 
+					VCartelera nuevaVentana = new VCartelera(); 
 					nuevaVentana.frame.setVisible(true);
 					frame.dispose();
 					
-				} else if (comboBoxFecha.getSelectedItem() == "19/01/2020"){
+				} else if (comboBoxFecha.getSelectedItem() == "18/01/2020"){
 					
-					VCartelera3 nuevaVentana = new VCartelera3(); 
+					VCartelera nuevaVentana = new VCartelera(); 
 					nuevaVentana.frame.setVisible(true);
 					frame.dispose();
 				}
@@ -180,12 +180,22 @@ String part1 = parts[0];
 		});
 		
 	
+		//////Hacer que las fechas que aparecen en el ComboBox sean la reales
 		
+		/*Calendar c1 = Calendar.getInstance();
+		Calendar c2 = new GregorianCalendar();
+		
+		String dia = Integer.toString(c2.get(Calendar.DATE));
+		String mes = Integer.toString(c2.get(Calendar.MONTH));
+		String annio = Integer.toString(c2.get(Calendar.YEAR));
+		
+		System.out.println(dia + "/" + mes + "/" + annio);*/
 		
 		comboBoxFecha.setBounds(86, 140, 114, 20);
-		comboBoxFecha.addItem("17/01/2020");
-		comboBoxFecha.addItem("18/01/2020");
+		
 		comboBoxFecha.addItem("19/01/2020");
+		comboBoxFecha.addItem("18/01/2020");
+		comboBoxFecha.addItem("17/01/2020");
 		comboBoxFecha.addItem("20/01/2020");
 		comboBoxFecha.addItem("21/01/2020");
 		comboBoxFecha.addItem("22/01/2020");
@@ -240,47 +250,47 @@ String part1 = parts[0];
 		frame.getContentPane().add(btnCerrar);
 		
 		JButton button_24 = new JButton("");
-		button_24.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli1buena.jpg")));
+		button_24.setIcon(new ImageIcon(VCartelera3.class.getResource("/imagenes/sonic3.jpg")));
 		button_24.setBackground(Color.LIGHT_GRAY);
-		button_24.setBounds(318, 359, 99, 143);
+		button_24.setBounds(318, 180, 99, 143);
 		frame.getContentPane().add(button_24);
 		
 		JButton button_6 = new JButton("");
-		button_6.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/starwars9 (1).jpg")));
+		button_6.setIcon(new ImageIcon(VCartelera3.class.getResource("/imagenes/birdsofprey2.jpg")));
 		button_6.setBackground(Color.LIGHT_GRAY);
-		button_6.setBounds(29, 359, 99, 143);
+		button_6.setBounds(29, 180, 99, 143);
 		frame.getContentPane().add(button_6);
 		
-		JLabel lblM_1 = new JLabel("M7");
-		lblM_1.setBounds(149, 393, 34, 14);
+		JLabel lblM_1 = new JLabel("M13");
+		lblM_1.setBounds(149, 204, 34, 20);
 		frame.getContentPane().add(lblM_1);
 		
-		JLabel lblAdAstra = new JLabel("Star Wars IV");
+		JLabel lblAdAstra = new JLabel("Birds of Prey");
 		lblAdAstra.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblAdAstra.setBounds(149, 374, 79, 14);
+		lblAdAstra.setBounds(149, 180, 140, 14);
 		frame.getContentPane().add(lblAdAstra);
 		
 		JButton button_19 = new JButton("");
-		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/badboys2.jpg")));
+		button_19.setIcon(new ImageIcon(VCartelera3.class.getResource("/imagenes/blackwidow3.jpg")));
 		button_19.setBackground(Color.LIGHT_GRAY);
-		button_19.setBounds(318, 180, 99, 143);
+		button_19.setBounds(28, 359, 99, 143);
 		frame.getContentPane().add(button_19);
 		
-		JLabel lblTp = new JLabel("M18");
-		lblTp.setBounds(438, 389, 34, 14);
+		JLabel lblTp = new JLabel("TP");
+		lblTp.setBounds(438, 203, 34, 23);
 		frame.getContentPane().add(lblTp);
 		
-		JLabel lblDoraYLa = new JLabel("Joker");
+		JLabel lblDoraYLa = new JLabel("Sonic");
 		lblDoraYLa.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblDoraYLa.setBounds(438, 370, 155, 14);
+		lblDoraYLa.setBounds(438, 180, 155, 20);
 		frame.getContentPane().add(lblDoraYLa);
 		
 		JLabel label_7 = new JLabel("132'");
-		label_7.setBounds(471, 389, 46, 14);
+		label_7.setBounds(463, 204, 54, 20);
 		frame.getContentPane().add(label_7);
 		
-		JLabel label_1 = new JLabel("164'");
-		label_1.setBounds(180, 393, 46, 14);
+		JLabel label_1 = new JLabel("94'");
+		label_1.setBounds(183, 204, 34, 20);
 		frame.getContentPane().add(label_1);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -301,7 +311,7 @@ String part1 = parts[0];
 			}
 		});
 		button.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button.setBounds(224, 232, 65, 32);
+		button.setBounds(513, 414, 65, 32);
 		frame.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("part3");
@@ -315,7 +325,7 @@ String part1 = parts[0];
 			}
 		});
 		button_1.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_1.setBounds(149, 275, 65, 32);
+		button_1.setBounds(437, 457, 65, 32);
 		frame.getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("part4");
@@ -329,7 +339,7 @@ String part1 = parts[0];
 			}
 		});
 		button_2.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_2.setBounds(224, 275, 65, 32);
+		button_2.setBounds(512, 457, 65, 32);
 		frame.getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("17:30");
@@ -343,7 +353,7 @@ String part1 = parts[0];
 			}
 		});
 		button_3.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_3.setBounds(438, 238, 65, 32);
+		button_3.setBounds(149, 232, 65, 32);
 		frame.getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("18:00");
@@ -357,7 +367,7 @@ String part1 = parts[0];
 			}
 		});
 		button_4.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_4.setBounds(512, 238, 65, 32);
+		button_4.setBounds(224, 232, 65, 32);
 		frame.getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("19:45");
@@ -371,7 +381,7 @@ String part1 = parts[0];
 			}
 		});
 		button_5.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_5.setBounds(438, 281, 65, 32);
+		button_5.setBounds(149, 275, 65, 32);
 		frame.getContentPane().add(button_5);
 		
 		JButton button_7 = new JButton("15:30");
@@ -402,20 +412,6 @@ String part1 = parts[0];
 		button_8.setBounds(224, 414, 65, 32);
 		frame.getContentPane().add(button_8);
 		
-		JButton button_9 = new JButton("20:50");
-		button_9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				hora=button_9.getText();
-				peli=lblAdAstra. getText();
-				VComprar nuevaVentana = new VComprar(); 
-				nuevaVentana.frame.setVisible(true);
-				frame.dispose();
-			}
-		});
-		button_9.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_9.setBounds(149, 457, 65, 32);
-		frame.getContentPane().add(button_9);
-		
 		JButton button_10 = new JButton("16:00");
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -427,7 +423,7 @@ String part1 = parts[0];
 			}
 		});
 		button_10.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_10.setBounds(438, 414, 65, 32);
+		button_10.setBounds(438, 232, 65, 32);
 		frame.getContentPane().add(button_10);
 		
 		JButton button_11 = new JButton("18:15");
@@ -441,7 +437,7 @@ String part1 = parts[0];
 			}
 		});
 		button_11.setFont(new Font("Tahoma", Font.BOLD, 9));
-		button_11.setBounds(512, 414, 65, 32);
+		button_11.setBounds(512, 232, 65, 32);
 		frame.getContentPane().add(button_11);
 		
 		JButton btnAadirPelcula = new JButton("A\u00F1adir pel\u00EDcula");

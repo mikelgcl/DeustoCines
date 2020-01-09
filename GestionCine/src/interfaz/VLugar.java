@@ -93,17 +93,13 @@ public class VLugar {
 		
 		JComboBox<String>comboBoxLugar=new JComboBox<>();	
 		for (String string : cines) {
-			comboBoxLugar.addItem(string);
+			if (!string.equals("")) {
+				comboBoxLugar.addItem(string);
+			}
 		}
 		
 		comboBoxLugar.setBounds(84, 146, 255, 27);
-		/*comboBoxLugar.addItem("Deusto");
 		
-		comboBoxLugar.addItem("Santurtzi");
-		comboBoxLugar.addItem("Getxo");
-		comboBoxLugar.addItem("Barakaldo");
-		comboBoxLugar.addItem("Basauri");
-	*/
 		
 		frame.getContentPane().add(comboBoxLugar);
 		
@@ -177,6 +173,10 @@ public class VLugar {
 				String respuesta = JOptionPane.showInputDialog("Nombre del cine que quieres añadir:");
 				c.setNombre(respuesta);
 				bd.insertDatosCine(con, c);
+				
+				VLugar nuevaVentana = new VLugar(); 
+				nuevaVentana.frame.setVisible(true);
+				frame.dispose();
 			}
 		});
 		//AdminAnadir.setVisible(false);
@@ -203,6 +203,10 @@ public class VLugar {
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione el cine a eliminar",
 				  "Cine", JOptionPane.DEFAULT_OPTION, null, cines1, cines1[0]);
 				  bd.delete(con,resp);
+				  
+				  VLugar nuevaVentana = new VLugar(); 
+					nuevaVentana.frame.setVisible(true);
+					frame.dispose();
 			}
 		});
 		//AdminQuitar.setVisible(false);
