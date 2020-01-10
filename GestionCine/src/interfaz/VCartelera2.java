@@ -64,7 +64,7 @@ public class VCartelera2 {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Connection con=bd.initBD("DeustoCines");
+		Connection con=bd.initBD();
 		Pelicula p=bd.getpelicula(con, 1);
 		frame = new JFrame();
 		frame.setBounds(100, 100, 642, 624);

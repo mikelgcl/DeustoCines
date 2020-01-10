@@ -9,6 +9,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import baseDeDatos.Cine;
 import baseDeDatos.Pelicula;
 import baseDeDatos.ZBaseDeDatos;
 
@@ -64,8 +65,13 @@ public class VCartelera {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Connection con=bd.initBD("DeustoCines");
+		Connection con=bd.initBD();
 		Pelicula p=bd.getpelicula(con, 1);
+		Pelicula p1=bd.getpelicula(con, 2);
+		Pelicula p2=bd.getpelicula(con, 3);
+		Pelicula p3=bd.getpelicula(con, 4);
+		
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 642, 624);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -132,6 +138,31 @@ String string = p.getHoras();
 System.out.println(p.getHoras());
 String[] parts = string.split(",");
 String part1 = parts[0]; 
+String part2 = parts[1]; 
+String part3 = parts[2]; 
+String part4 = parts[3]; 
+
+String string1 = p1.getHoras();
+String[] parts1 = string1.split(",");
+String part11 = parts1[0]; 
+String part21 = parts1[1]; 
+
+
+
+String string2 = p2.getHoras();
+String[] parts2 = string2.split(",");
+String part12 = parts2[0]; 
+String part22 = parts2[1]; 
+String part32 = parts2[2]; 
+
+
+
+String string3 = p3.getHoras();
+String[] parts3 = string3.split(",");
+String part13 = parts3[0]; 
+String part23 = parts3[1]; 
+String part33 = parts3[2]; 
+
  
 		JButton btn1420 = new JButton(part1);
 		btn1420.setFont(new Font("Tahoma", Font.BOLD, 9));
@@ -148,16 +179,16 @@ String part1 = parts[0];
 		btn1420.setBounds(149, 232, 65, 32);
 		frame.getContentPane().add(btn1420);
 		
-		JLabel lblJoker = new JLabel("Bad Boys");
+		JLabel lblJoker = new JLabel(p3.getTitulo());
 		lblJoker.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblJoker.setBounds(438, 191, 79, 14);
 		frame.getContentPane().add(lblJoker);
 		
-		JLabel lblTp_1 = new JLabel("M18");
+		JLabel lblTp_1 = new JLabel(p3.getEdad());
 		lblTp_1.setBounds(438, 210, 34, 14);
 		frame.getContentPane().add(lblTp_1);
 		
-		JLabel label_6 = new JLabel("121'");
+		JLabel label_6 = new JLabel(p3.getDuracion());
 		label_6.setBounds(471, 210, 46, 14);
 		frame.getContentPane().add(label_6);
 		
@@ -240,46 +271,46 @@ String part1 = parts[0];
 		frame.getContentPane().add(btnCerrar);
 		
 		JButton button_24 = new JButton("");
-		button_24.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/peli1buena.jpg")));
+		button_24.setIcon(new ImageIcon(VCartelera.class.getResource(p1.getImagen())));
 		button_24.setBackground(Color.LIGHT_GRAY);
 		button_24.setBounds(318, 359, 99, 143);
 		frame.getContentPane().add(button_24);
 		
 		JButton button_6 = new JButton("");
-		button_6.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/starwars9 (1).jpg")));
+		button_6.setIcon(new ImageIcon(VCartelera.class.getResource(p2.getImagen())));
 		button_6.setBackground(Color.LIGHT_GRAY);
 		button_6.setBounds(29, 359, 99, 143);
 		frame.getContentPane().add(button_6);
 		
-		JLabel lblM_1 = new JLabel("M7");
+		JLabel lblM_1 = new JLabel(p2.getEdad());
 		lblM_1.setBounds(149, 393, 34, 14);
 		frame.getContentPane().add(lblM_1);
 		
-		JLabel lblAdAstra = new JLabel("Star Wars IV");
+		JLabel lblAdAstra = new JLabel(p2.getTitulo());
 		lblAdAstra.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblAdAstra.setBounds(149, 374, 79, 14);
 		frame.getContentPane().add(lblAdAstra);
 		
 		JButton button_19 = new JButton("");
-		button_19.setIcon(new ImageIcon(VCartelera.class.getResource("/imagenes/badboys2.jpg")));
+		button_19.setIcon(new ImageIcon(VCartelera.class.getResource(p3.getImagen())));
 		button_19.setBackground(Color.LIGHT_GRAY);
 		button_19.setBounds(318, 180, 99, 143);
 		frame.getContentPane().add(button_19);
 		
-		JLabel lblTp = new JLabel("M18");
+		JLabel lblTp = new JLabel(p1.getEdad());
 		lblTp.setBounds(438, 389, 34, 14);
 		frame.getContentPane().add(lblTp);
 		
-		JLabel lblDoraYLa = new JLabel("Joker");
+		JLabel lblDoraYLa = new JLabel(p1.getTitulo());
 		lblDoraYLa.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblDoraYLa.setBounds(438, 370, 155, 14);
 		frame.getContentPane().add(lblDoraYLa);
 		
-		JLabel label_7 = new JLabel("132'");
+		JLabel label_7 = new JLabel(p1.getDuracion());
 		label_7.setBounds(471, 389, 46, 14);
 		frame.getContentPane().add(label_7);
 		
-		JLabel label_1 = new JLabel("164'");
+		JLabel label_1 = new JLabel(p2.getDuracion());
 		label_1.setBounds(180, 393, 46, 14);
 		frame.getContentPane().add(label_1);
 		
@@ -290,7 +321,7 @@ String part1 = parts[0];
 		frame.getContentPane().add(lblNewLabel);
 		
 		
-		JButton button = new JButton("part2");
+		JButton button = new JButton(part2);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				hora=button.getText();
@@ -304,7 +335,7 @@ String part1 = parts[0];
 		button.setBounds(224, 232, 65, 32);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton("part3");
+		JButton button_1 = new JButton(part3);
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_1.getText();
@@ -318,7 +349,7 @@ String part1 = parts[0];
 		button_1.setBounds(149, 275, 65, 32);
 		frame.getContentPane().add(button_1);
 		
-		JButton button_2 = new JButton("part4");
+		JButton button_2 = new JButton(part4);
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_2.getText();
@@ -332,7 +363,7 @@ String part1 = parts[0];
 		button_2.setBounds(224, 275, 65, 32);
 		frame.getContentPane().add(button_2);
 		
-		JButton button_3 = new JButton("17:30");
+		JButton button_3 = new JButton(part13);
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_3.getText();
@@ -346,7 +377,7 @@ String part1 = parts[0];
 		button_3.setBounds(438, 238, 65, 32);
 		frame.getContentPane().add(button_3);
 		
-		JButton button_4 = new JButton("18:00");
+		JButton button_4 = new JButton(part23);
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_4.getText();
@@ -360,7 +391,7 @@ String part1 = parts[0];
 		button_4.setBounds(512, 238, 65, 32);
 		frame.getContentPane().add(button_4);
 		
-		JButton button_5 = new JButton("19:45");
+		JButton button_5 = new JButton(part33);
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_5.getText();
@@ -374,7 +405,7 @@ String part1 = parts[0];
 		button_5.setBounds(438, 281, 65, 32);
 		frame.getContentPane().add(button_5);
 		
-		JButton button_7 = new JButton("15:30");
+		JButton button_7 = new JButton(part12);
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_7.getText();
@@ -388,7 +419,7 @@ String part1 = parts[0];
 		button_7.setBounds(149, 414, 65, 32);
 		frame.getContentPane().add(button_7);
 		
-		JButton button_8 = new JButton("17:00");
+		JButton button_8 = new JButton(part22);
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_8.getText();
@@ -402,7 +433,7 @@ String part1 = parts[0];
 		button_8.setBounds(224, 414, 65, 32);
 		frame.getContentPane().add(button_8);
 		
-		JButton button_9 = new JButton("20:50");
+		JButton button_9 = new JButton(part32);
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_9.getText();
@@ -416,7 +447,7 @@ String part1 = parts[0];
 		button_9.setBounds(149, 457, 65, 32);
 		frame.getContentPane().add(button_9);
 		
-		JButton button_10 = new JButton("16:00");
+		JButton button_10 = new JButton(part11);
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			hora=button_10.getText();
@@ -430,7 +461,7 @@ String part1 = parts[0];
 		button_10.setBounds(438, 414, 65, 32);
 		frame.getContentPane().add(button_10);
 		
-		JButton button_11 = new JButton("18:15");
+		JButton button_11 = new JButton(part21);
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_11.getText();
@@ -445,9 +476,13 @@ String part1 = parts[0];
 		frame.getContentPane().add(button_11);
 		
 		JButton btnAadirPelcula = new JButton("A\u00F1adir pel\u00EDcula");
+		
 		btnAadirPelcula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String respuesta = JOptionPane.showInputDialog("Nombre de la película que quieres añadir:");
+				Pelicula pelicula=new Pelicula();
+				pelicula.setTitulo(respuesta);
+				bd.insertDatosPelicula(con, pelicula);
 			}
 		});
 

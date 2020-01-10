@@ -18,7 +18,7 @@ class TestInicioSesion {
 	void testinicio() {
 		String a="a";
 		ZBaseDeDatos z=new ZBaseDeDatos();
-		Connection con=z.initBD("DeustoCines");
+		Connection con=z.initBD();
 		Usuario u=z.iniciarSesion(con, a);
 		assertEquals(a, u.getCorreo());
 	}

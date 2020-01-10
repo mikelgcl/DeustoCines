@@ -11,11 +11,11 @@ private String pelicula;
 private Date fecha;
 private String hora;
 private int numasientos;
-private int asiento;
+private String asiento;
 private double precio;
 private String tarjeta;
 
-public Reserva(String usu, String cine, String pelicula, Date fecha, String hora, int numasientos, int asiento,
+public Reserva(String usu, String cine, String pelicula, Date fecha, String hora, int numasientos, String asiento,
 		double precio, String tarjeta) {
 	super();
 	this.Cod_res=count++;
@@ -39,7 +39,7 @@ public Reserva() {
 	this.fecha = null;
 	this.hora = "";
 	this.numasientos = 0;
-	this.asiento = 0;
+	this.asiento = "";
 	this.precio = 0;
 	this.tarjeta = "";
 }
@@ -100,11 +100,11 @@ public void setNumasientos(int numasientos) {
 	this.numasientos = numasientos;
 }
 
-public int getAsiento() {
+public String getAsiento() {
 	return asiento;
 }
 
-public void setAsiento(int asiento) {
+public void setAsiento(String asiento) {
 	this.asiento = asiento;
 }
 

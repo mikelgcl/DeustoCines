@@ -17,7 +17,7 @@ public class TestBD {
 
 		Usuario u=new Usuario("t", "", "f", "", "");
 		ZBaseDeDatos z=new ZBaseDeDatos();
-		Connection con=z.initBD("DeustoCines");
+		Connection con=z.initBD();
 		z.insertDatosUsuario(con, u);
 		Usuario usu=z.getusuario(con, "t");
 	    assertEquals("f", usu.getNombre());
@@ -28,7 +28,7 @@ public class TestBD {
 	void testpelicula() {
 		Pelicula p=new Pelicula("g", "", "", "", "", "");
 		ZBaseDeDatos z=new ZBaseDeDatos();
-		Connection con=z.initBD("DeustoCines");
+		Connection con=z.initBD();
 		z.insertDatosPelicula(con, p);
 		Pelicula prueba=z.getpelicula(con, 0);
 		assertEquals(0, prueba.getCod_Pelicula());

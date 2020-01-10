@@ -19,16 +19,16 @@ public class ZBaseDeDatos {
 	
 	Logger logger=Logger.getLogger(ZBaseDeDatos.class.getName());
 
-	public  Connection initBD( String nombreBD ) {
+	public  Connection initBD(  ) {
 		
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection con = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
-			logger.log(Level.INFO, "Conectada base de datos " + nombreBD);
+			Connection con = DriverManager.getConnection("jdbc:sqlite:" + "DeustoCines" );
+			logger.log(Level.INFO, "Conectada base de datos " + "DeustoCines");
 			return con;
 		} catch (ClassNotFoundException | SQLException e) {
 			
-			logger.log( Level.SEVERE, "Error en conexi�n de base de datos " + nombreBD, e );
+			logger.log( Level.SEVERE, "Error en conexi�n de base de datos " + "DeustoCines", e );
 			e.printStackTrace();
 			return null;
 		}
@@ -108,7 +108,7 @@ public class ZBaseDeDatos {
 			stmt.setLong(5, res.getFecha().getTime());
 			stmt.setString(6,res.getHora());
 			stmt.setInt(7, res.getNumasientos());
-			stmt.setInt(8, res.getAsiento());
+			stmt.setString(8, res.getAsiento());
 			stmt.setDouble(9, res.getPrecio());
 			stmt.setString(10,res.getTarjeta());
 			stmt.executeUpdate();
@@ -264,7 +264,7 @@ public Set<String> getpeliculasnombres (Connection con)  {
 				r.setFecha(rs.getDate("fecha"));
 				r.setHora(rs.getString("hora"));
 				r.setNumasientos(rs.getInt("numasientos"));
-				r.setAsiento(rs.getInt("asiento"));
+				r.setAsiento(rs.getString("asiento"));
 				r.setPrecio(rs.getDouble("precio"));
 				r.setTarjeta(rs.getString("tarjeta"));
 			}
@@ -272,6 +272,20 @@ public Set<String> getpeliculasnombres (Connection con)  {
 			e.printStackTrace();
 		}
 		return r;
+		}
+	public int getasiento(Connection con,String codigo)  {
+		int res=0;
+		try {
+			PreparedStatement stmt=con.prepareStatement("Select activo from Sala where asiento=?");
+			stmt.setString(1,codigo);
+			ResultSet rs=stmt.executeQuery();
+			while(rs.next()) {
+			res=rs.getInt("activo");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 		}
 	public Set<String> getcines(Connection con)  {
 		Set<String> cines=new HashSet<>();
@@ -315,7 +329,16 @@ public Set<String> getpeliculasnombres (Connection con)  {
 			
 		}
 	}			
-
+	public void updateasiento(Connection con,int asiento,String nombre)  {
+		try (PreparedStatement stmt = con.prepareStatement("UPDATE Sala SET activo=? WHERE asiento=?")) {
+			stmt.setInt(1, asiento);
+			stmt.setString(2, nombre);
+			
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			
+		}
+	}	
 
 	public static void main(String[] args) {
 		

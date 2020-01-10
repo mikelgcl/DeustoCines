@@ -30,7 +30,7 @@ public class VRegistro extends JFrame {
 	Logger logger=Logger.getLogger(VRegistro.class.getName());
 	
 	public VRegistro() {
-		Connection conn=c.initBD("DeustoCines");
+		Connection conn=c.initBD();
 		this.setSize(360, 585);
 		getContentPane().setBackground(new Color(230, 230, 250));
 		getContentPane().setForeground(Color.WHITE);

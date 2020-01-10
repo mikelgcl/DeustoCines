@@ -103,7 +103,7 @@ public class VInicio {
 		frame.getContentPane().add(lblError);
 		
 		JButton buttonEntrar = new JButton("Entrar");
-		Connection conn=c.initBD("DeustoCines");
+		Connection conn=c.initBD();
 		buttonEntrar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -170,9 +170,7 @@ public class VInicio {
 		
 		frame.setLocationRelativeTo(null);
 		
-		Properties properties=new Properties();
-		String cor=new String(textUsuario.getText());
-		properties.setProperty("Correo", cor);
+		
 		
 	}
 	

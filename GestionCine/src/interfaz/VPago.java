@@ -202,7 +202,7 @@ public class VPago {
 		frame.getContentPane().add(labelNum);
 		
 		JButton btnConfirmar = new JButton("Confirmar compra");
-		Connection conn=c.initBD("DeustoCines");
+		Connection conn=c.initBD();
 		btnConfirmar.addActionListener(new ActionListener() {
 			private Reserva v;
 
@@ -254,7 +254,7 @@ public class VPago {
 						Date fecha=VCartelera.fecha;
 						String hora=VCartelera.hora;
 						int numasientos=VComprar.conmum;
-						int asiento=VComprar.asiento;
+						String asiento=VComprar.asientos;
 						double p=0;
 						p=p+(8*numasientos);
 						String factura="Compra procesada correctamente, los detalles de su reserva son: \n"
@@ -264,7 +264,10 @@ public class VPago {
 								+ "\n 	Cine: " + VLugar.nomLugar
 								+ "\n	Película: " + VCartelera.peli
 								+ "\n	Hora: " + VCartelera.hora
-								+ "\n 	Número de asientos: " + numEntradas;
+								+ "\n 	Número de asientos: " + numEntradas
+								+ "\n 	Asientos: " + VComprar.asientos;
+					
+								
 						logger.log(Level.INFO, factura);
 						
 						
@@ -330,7 +333,7 @@ public class VPago {
 				Date fecha=VCartelera.fecha;
 				String hora=VCartelera.hora;
 				int numasientos=VComprar.conmum;
-				int asiento=VComprar.asiento;
+				String asiento=VComprar.asientos;
 				double p=0;
 				p=p+(8*numasientos);
 				String factura="Compra procesada correctamente, los detalles de su reserva son: \n"

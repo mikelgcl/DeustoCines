@@ -12,13 +12,14 @@ import java.awt.GridLayout;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-
+import baseDeDatos.ZBaseDeDatos;
 
 import java.awt.SystemColor;
 import java.awt.Button;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
@@ -29,7 +30,9 @@ public class VComprar {
 	int x;
 	public JFrame frame;
 	public static int asiento;
+	public static String asientos;
 	public static int conmum=0;
+	ZBaseDeDatos zb=new ZBaseDeDatos();
 	
 	/**
 	 * Launch the application.
@@ -58,8 +61,9 @@ public class VComprar {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		Connection con=zb.initBD();
 		frame = new JFrame();
-		frame.setBounds(100, 100, 443, 695);
+		frame.setBounds(100, 100, 460, 695);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -145,7 +149,7 @@ public class VComprar {
 		
 		btnContinuar.setForeground(Color.WHITE);
 		btnContinuar.setBackground(new Color(0, 0, 153));
-		btnContinuar.setBounds(295, 608, 100, 23);
+		btnContinuar.setBounds(310, 608, 100, 23);
 		frame.getContentPane().add(btnContinuar);
 		
 		JLabel label = new JLabel(VCartelera.hora);
@@ -213,41 +217,46 @@ public class VComprar {
 		
 		JLabel label_9 = new JLabel("1");
 		label_9.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_9.setBounds(392, 251, 25, 14);
+		label_9.setBounds(409, 251, 25, 14);
 		frame.getContentPane().add(label_9);
 		
 		JLabel label_10 = new JLabel("2");
 		label_10.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_10.setBounds(392, 305, 25, 14);
+		label_10.setBounds(409, 305, 25, 14);
 		frame.getContentPane().add(label_10);
 		
 		JLabel label_11 = new JLabel("3");
 		label_11.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_11.setBounds(392, 365, 25, 14);
+		label_11.setBounds(409, 365, 25, 14);
 		frame.getContentPane().add(label_11);
 		
 		JLabel label_15 = new JLabel("6");
 		label_15.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_15.setBounds(392, 533, 25, 14);
+		label_15.setBounds(409, 533, 25, 14);
 		frame.getContentPane().add(label_15);
 		
 		JLabel label_16 = new JLabel("5");
 		label_16.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_16.setBounds(392, 473, 25, 14);
+		label_16.setBounds(409, 473, 25, 14);
 		frame.getContentPane().add(label_16);
 		
 		JLabel label_17 = new JLabel("4");
 		label_17.setFont(new Font("Tahoma", Font.BOLD, 13));
-		label_17.setBounds(392, 416, 25, 14);
+		label_17.setBounds(409, 416, 25, 14);
 		frame.getContentPane().add(label_17);
 		
-		JButton b5 = new JButton("3");
+		JButton b5 = new JButton("5");
+		b5.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b5.getBackground().equals(new Color(50,220,50))) {
+					
+					zb.updateasiento(con,0, "5");
 					b5.setBackground(SystemColor.activeCaptionBorder);
 					conmum = conmum - 1;
 				} else {
+					System.out.println("fff");
+					zb.updateasiento(con, 1, "5");
 					b5.setBackground(new Color(50,220,50));
 					conmum = conmum + 1;
 				}
@@ -257,14 +266,21 @@ public class VComprar {
 		b5.setBounds(115, 296, 41, 37);
 		frame.getContentPane().add(b5);
 		
-		JButton b6 = new JButton("1");
+		JButton b6 = new JButton("6");
+		b6.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b6.getBackground().equals(new Color(50,220,50))) {
 					b6.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "6");
 					conmum = conmum - 1;
 				} else {
 					b6.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "6");
+					System.out.println(b6.getText());
+					System.out.println(b6.getText());
+					asientos=b6.getText();
+					
 					conmum = conmum + 1;
 				}
 			}
@@ -273,15 +289,18 @@ public class VComprar {
 		b6.setBounds(166, 296, 41, 37);
 		frame.getContentPane().add(b6);
 		
-		JButton b7 = new JButton("2");
+		JButton b7 = new JButton("7");
+		b7.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b7.getBackground().equals(new Color(50,220,50))) {
 					b7.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "7");
 					conmum = conmum - 1;
 				} else {
 					b7.setBackground(new Color(50,220,50));
 					conmum = conmum + 1;
+					zb.updateasiento(con, 1, "7");
 				}
 			}
 		});
@@ -289,14 +308,17 @@ public class VComprar {
 		b7.setBounds(216, 296, 41, 37);
 		frame.getContentPane().add(b7);
 		
-		JButton b8 = new JButton("4");
+		JButton b8 = new JButton("8");
+		b8.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b8.getBackground().equals(new Color(50,220,50))) {
 					b8.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "8");
 					conmum = conmum - 1;
 				} else {
 					b8.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "8");
 					conmum = conmum + 1;
 				}
 			}
@@ -305,14 +327,17 @@ public class VComprar {
 		b8.setBounds(267, 296, 41, 37);
 		frame.getContentPane().add(b8);
 		
-		JButton b9 = new JButton("5");
+		JButton b9 = new JButton("9");
+		b9.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		b9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b9.getBackground().equals(new Color(50,220,50))) {
+					zb.updateasiento(con,0, "9");
 					b9.setBackground(SystemColor.activeCaptionBorder);
 					conmum = conmum - 1;
 				} else {
 					b9.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "9");
 					conmum = conmum + 1;
 				}
 			}
@@ -321,14 +346,17 @@ public class VComprar {
 		b9.setBounds(64, 353, 41, 37);
 		frame.getContentPane().add(b9);
 		
-		JButton b10 = new JButton("3");
+		JButton b10 = new JButton("10");
+		b10.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b10.getBackground().equals(new Color(50,220,50))) {
 					b10.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "10");
 					conmum = conmum - 1;
 				} else {
 					b10.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "10");
 					conmum = conmum + 1;
 				}
 			}
@@ -337,14 +365,17 @@ public class VComprar {
 		b10.setBounds(115, 353, 41, 37);
 		frame.getContentPane().add(b10);
 		
-		JButton b11 = new JButton("1");
+		JButton b11 = new JButton("11");
+		b11.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b11.getBackground().equals(new Color(50,220,50))) {
 					b11.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "11");
 					conmum = conmum - 1;
 				} else {
 					b11.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "11");
 					conmum = conmum + 1;
 				}
 			}
@@ -353,14 +384,18 @@ public class VComprar {
 		b11.setBounds(166, 353, 41, 37);
 		frame.getContentPane().add(b11);
 		
-		JButton b12 = new JButton("2");
+		JButton b12 = new JButton("12");
+		b12.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b12.getBackground().equals(new Color(50,220,50))) {
 					b12.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "12");
 					conmum = conmum - 1;
+					
 				} else {
 					b12.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "12");
 					conmum = conmum + 1;
 				}
 			}
@@ -369,15 +404,18 @@ public class VComprar {
 		b12.setBounds(216, 353, 41, 37);
 		frame.getContentPane().add(b12);
 		
-		JButton b13 = new JButton("4");
+		JButton b13 = new JButton("13");
+		b13.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b13.getBackground().equals(new Color(50,220,50))) {
 					b13.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "13");
 					conmum = conmum - 1;
 				} else {
 					b13.setBackground(new Color(50,220,50));
 					conmum = conmum + 1;
+					zb.updateasiento(con, 1, "13");
 				}
 			}
 		});
@@ -385,14 +423,17 @@ public class VComprar {
 		b13.setBounds(267, 353, 41, 37);
 		frame.getContentPane().add(b13);
 		
-		JButton b14 = new JButton("6");
+		JButton b14 = new JButton("14");
+		b14.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b14.getBackground().equals(new Color(50,220,50))) {
 					b14.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "14");
 					conmum = conmum - 1;
 				} else {
 					b14.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "14");
 					conmum = conmum + 1;
 				}
 			}
@@ -401,14 +442,17 @@ public class VComprar {
 		b14.setBounds(318, 353, 41, 37);
 		frame.getContentPane().add(b14);
 		
-		JButton b15 = new JButton("5");
+		JButton b15 = new JButton("15");
+		b15.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b15.getBackground().equals(new Color(50,220,50))) {
 					b15.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "15");
 					conmum = conmum - 1;
 				} else {
 					b15.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "15");
 					conmum = conmum + 1;
 				}
 			}
@@ -417,15 +461,17 @@ public class VComprar {
 		b15.setBounds(64, 406, 41, 37);
 		frame.getContentPane().add(b15);
 		
-		JButton b16 = new JButton("3");
+		JButton b16 = new JButton("16");
+		b16.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b16.getBackground().equals(new Color(50,220,50))) {
 					b16.setBackground(SystemColor.activeCaptionBorder);
-					
+					zb.updateasiento(con,0, "16");
 					conmum = conmum - 1;
 				} else {
 					b16.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "16");
 					conmum = conmum + 1;
 				}
 			}
@@ -434,14 +480,17 @@ public class VComprar {
 		b16.setBounds(115, 406, 41, 37);
 		frame.getContentPane().add(b16);
 		
-		JButton b17 = new JButton("4");
+		JButton b17 = new JButton("17");
+		b17.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b17.getBackground().equals(new Color(50,220,50))) {
 					b17.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "17");
 					conmum = conmum - 1;
 				} else {
 					b17.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "17");
 					conmum = conmum + 1;
 				}
 			}
@@ -450,14 +499,17 @@ public class VComprar {
 		b17.setBounds(267, 406, 41, 37);
 		frame.getContentPane().add(b17);
 		
-		JButton b18 = new JButton("6");
+		JButton b18 = new JButton("18");
+		b18.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b18.getBackground().equals(new Color(50,220,50))) {
 					b18.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "18");
 					conmum = conmum - 1;
 				} else {
 					b18.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "18");
 					conmum = conmum + 1;
 				}
 			}
@@ -466,14 +518,17 @@ public class VComprar {
 		b18.setBounds(318, 406, 41, 37);
 		frame.getContentPane().add(b18);
 		
-		JButton b19 = new JButton("5");
+		JButton b19 = new JButton("19");
+		b19.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b19.getBackground().equals(new Color(50,220,50))) {
 					b19.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "19");
 					conmum = conmum - 1;
 				} else {
 					b19.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "19");
 					conmum = conmum + 1;
 				}
 			}
@@ -482,14 +537,17 @@ public class VComprar {
 		b19.setBounds(64, 463, 41, 37);
 		frame.getContentPane().add(b19);
 		
-		JButton b20 = new JButton("3");
+		JButton b20 = new JButton("20");
+		b20.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b20.getBackground().equals(new Color(50,220,50))) {
 					b20.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "20");
 					conmum = conmum - 1;
 				} else {
 					b20.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "20");
 					conmum = conmum + 1;
 				}
 			}
@@ -498,14 +556,17 @@ public class VComprar {
 		b20.setBounds(115, 463, 41, 37);
 		frame.getContentPane().add(b20);
 		
-		JButton b21 = new JButton("1");
+		JButton b21 = new JButton("21");
+		b21.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b21.getBackground().equals(new Color(50,220,50))) {
 					b21.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "21");
 					conmum = conmum - 1;
 				} else {
 					b21.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "21");
 					conmum = conmum + 1;
 				}
 			}
@@ -514,14 +575,17 @@ public class VComprar {
 		b21.setBounds(166, 463, 41, 37);
 		frame.getContentPane().add(b21);
 		
-		JButton b22 = new JButton("2");
+		JButton b22 = new JButton("22");
+		b22.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b22.getBackground().equals(new Color(50,220,50))) {
 					b22.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "22");
 					conmum = conmum - 1;
 				} else {
 					b22.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "22");
 					conmum = conmum + 1;
 				}
 			}
@@ -530,14 +594,17 @@ public class VComprar {
 		b22.setBounds(216, 463, 41, 37);
 		frame.getContentPane().add(b22);
 		
-		JButton b23 = new JButton("4");
+		JButton b23 = new JButton("23");
+		b23.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b23.getBackground().equals(new Color(50,220,50))) {
 					b23.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "23");
 					conmum = conmum - 1;
 				} else {
 					b23.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "23");
 					conmum = conmum + 1;
 				}
 			}
@@ -546,14 +613,17 @@ public class VComprar {
 		b23.setBounds(267, 463, 41, 37);
 		frame.getContentPane().add(b23);
 		
-		JButton b24 = new JButton("6");
+		JButton b24 = new JButton("24");
+		b24.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b24.getBackground().equals(new Color(50,220,50))) {
 					b24.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "24");
 					conmum = conmum - 1;
 				} else {
 					b24.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "24");
 					conmum = conmum + 1;
 				}
 			}
@@ -562,14 +632,17 @@ public class VComprar {
 		b24.setBounds(318, 463, 41, 37);
 		frame.getContentPane().add(b24);
 		
-		JButton b25 = new JButton("5");
+		JButton b25 = new JButton("25");
+		b25.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b25.getBackground().equals(new Color(50,220,50))) {
 					b25.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "25");
 					conmum = conmum - 1;
 				} else {
 					b25.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "25");
 					conmum = conmum + 1;
 				}
 			}
@@ -578,14 +651,17 @@ public class VComprar {
 		b25.setBounds(64, 520, 41, 37);
 		frame.getContentPane().add(b25);
 		
-		JButton b26 = new JButton("3");
+		JButton b26 = new JButton("26");
+		b26.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b26.getBackground().equals(new Color(50,220,50))) {
 					b26.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "26");
 					conmum = conmum - 1;
 				} else {
 					b26.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "26");
 					conmum = conmum + 1;
 				}
 			}
@@ -594,14 +670,17 @@ public class VComprar {
 		b26.setBounds(115, 520, 41, 37);
 		frame.getContentPane().add(b26);
 		
-		JButton b27 = new JButton("1");
+		JButton b27 = new JButton("27");
+		b27.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b27.getBackground().equals(new Color(50,220,50))) {
 					b27.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "27");
 					conmum = conmum - 1;
 				} else {
 					b27.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "27");
 					conmum = conmum + 1;
 				}
 			}
@@ -610,14 +689,17 @@ public class VComprar {
 		b27.setBounds(166, 520, 41, 37);
 		frame.getContentPane().add(b27);
 		
-		JButton b28 = new JButton("2");
+		JButton b28 = new JButton("28");
+		b28.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b28.getBackground().equals(new Color(50,220,50))) {
 					b28.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "28");
 					conmum = conmum - 1;
 				} else {
 					b28.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "28");
 					conmum = conmum + 1;
 				}
 			}
@@ -626,14 +708,17 @@ public class VComprar {
 		b28.setBounds(216, 520, 41, 37);
 		frame.getContentPane().add(b28);
 		
-		JButton b29 = new JButton("4");
+		JButton b29 = new JButton("29");
+		b29.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b29.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b29.getBackground().equals(new Color(50,220,50))) {
 					b29.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "29");
 					conmum = conmum - 1;
 				} else {
 					b29.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "29");
 					conmum = conmum + 1;
 				}
 			}
@@ -642,14 +727,17 @@ public class VComprar {
 		b29.setBounds(267, 520, 41, 37);
 		frame.getContentPane().add(b29);
 		
-		JButton b30 = new JButton("6");
+		JButton b30 = new JButton("30");
+		b30.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b30.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b30.getBackground().equals(new Color(50,220,50))) {
 					b30.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "30");
 					conmum = conmum - 1;
 				} else {
 					b30.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "30");
 					conmum = conmum + 1;
 				}
 			}
@@ -658,14 +746,17 @@ public class VComprar {
 		b30.setBounds(318, 520, 41, 37);
 		frame.getContentPane().add(b30);
 		
-		JButton b1 = new JButton("3");
+		JButton b1 = new JButton("1");
+		b1.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (b1.getBackground().equals(new Color(50,220,50))) {
 					b1.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "1");
 					conmum = conmum - 1;
 				} else {
 					b1.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "1");
 					conmum = conmum + 1;
 				}
 			}
@@ -674,14 +765,17 @@ public class VComprar {
 		b1.setBounds(115, 240, 41, 37);
 		frame.getContentPane().add(b1);
 		
-		JButton b2 = new JButton("1");
+		JButton b2 = new JButton("2");
+		b2.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b2.getBackground().equals(new Color(50,220,50))) {
 					b2.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "2");
 					conmum = conmum - 1;
 				} else {
 					b2.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "2");
 					conmum = conmum + 1;
 				}
 			}
@@ -691,14 +785,17 @@ public class VComprar {
 		b2.setBounds(166, 240, 41, 37);
 		frame.getContentPane().add(b2);
 		
-		JButton b3 = new JButton("2");
+		JButton b3 = new JButton("3");
+		b3.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b3.getBackground().equals(new Color(50,220,50))) {
 					b3.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "3");
 					conmum = conmum - 1;
 				} else {
 					b3.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "3");
 					conmum = conmum + 1;
 				}
 			}
@@ -708,13 +805,16 @@ public class VComprar {
 		frame.getContentPane().add(b3);
 		
 		JButton b4 = new JButton("4");
+		b4.setFont(new Font("Tahoma", Font.PLAIN, 8));
 		b4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (b4.getBackground().equals(new Color(50,220,50))) {
 					b4.setBackground(SystemColor.activeCaptionBorder);
+					zb.updateasiento(con,0, "4");
 					conmum = conmum - 1;
 				} else {
 					b4.setBackground(new Color(50,220,50));
+					zb.updateasiento(con, 1, "4");
 					conmum = conmum + 1;
 				}
 			}

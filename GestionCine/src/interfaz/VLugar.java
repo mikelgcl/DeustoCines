@@ -65,7 +65,7 @@ public class VLugar {
 	 */
 	private void initialize() {
 		ZBaseDeDatos bd=new ZBaseDeDatos();
-		Connection con=bd.initBD("DeustoCines");
+		Connection con=bd.initBD();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 433, 319);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,9 +93,9 @@ public class VLugar {
 		
 		JComboBox<String>comboBoxLugar=new JComboBox<>();	
 		for (String string : cines) {
-			if (!string.equals("")) {
+			//if (string.equals("")) {
 				comboBoxLugar.addItem(string);
-			}
+			
 		}
 		
 		comboBoxLugar.setBounds(84, 146, 255, 27);
