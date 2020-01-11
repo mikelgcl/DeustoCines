@@ -202,7 +202,7 @@ public class VLugar {
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione el cine a eliminar",
 				  "Cine", JOptionPane.DEFAULT_OPTION, null, cines1, cines1[0]);
-				  bd.delete(con,resp);
+				  bd.deleteCine(con,resp);
 				  
 				  VLugar nuevaVentana = new VLugar(); 
 					nuevaVentana.frame.setVisible(true);

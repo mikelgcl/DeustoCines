@@ -302,14 +302,22 @@ public Set<String> getpeliculasnombres (Connection con)  {
 		}
 		return cines;
 		}	
-	public void delete(Connection con,String n)  {
+	public void deleteCine(Connection con,String n)  {
 		try (PreparedStatement stmt = con.prepareStatement("DELETE FROM cine WHERE cinnombre=?")) {
 			stmt.setString(1,n);
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}			
+	}	
+	public void deletePelicula(Connection con,String n)  {
+		try (PreparedStatement stmt = con.prepareStatement("DELETE FROM pelicula WHERE titulo=?")) {
+			stmt.setString(1,n);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	public void deletehoras(Connection con,String hora, String nombre)  {
 		try (PreparedStatement stmt = con.prepareStatement("UPDATE pelicula SET id_horas=? WHERE titulo=?")) {
 			stmt.setString(1, hora);

@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Set;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
@@ -133,6 +134,8 @@ public class VCartelera {
 		frame.getContentPane().add(label);
 
 
+Set<String> peliculas1=bd.getpeliculasnombres(con);
+Object[] peliculas=peliculas1.toArray();
 
 String string = p.getHoras();
 System.out.println(p.getHoras());
@@ -498,17 +501,12 @@ String part33 = parts3[2];
 		JButton btnQuitarPelcula = new JButton("Quitar pel\u00EDcula");
 		btnQuitarPelcula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String[] peliculas = {
-				            "Zombieland 2",
-				            "Joker",
-				            "Ad Astra",
-				            "Dora la exploradora",
-				           
-				        };
+				
 				   
 				  
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
+				  bd.deletePelicula(con, resp);
 			}
 		});
 		btnQuitarPelcula.setBackground(new Color(0, 204, 51));
@@ -523,13 +521,7 @@ String part33 = parts3[2];
 		JButton btnAadirHora = new JButton("A\u00F1adir hora");
 		btnAadirHora.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String[] peliculas = {
-				            "Zombieland 2",
-				            "Joker",
-				            "Ad Astra",
-				            "Dora la exploradora",
-				           
-				        };
+				 
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
@@ -556,13 +548,7 @@ String part33 = parts3[2];
 		JButton btnQuitarHora = new JButton("Quitar hora");
 		btnQuitarHora.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String[] peliculas = {
-				            "Zombieland 2",
-				            "Joker",
-				            "Ad Astra",
-				            "Dora la exploradora",
-				           
-				        };
+				 
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
