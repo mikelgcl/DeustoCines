@@ -1,9 +1,9 @@
 Compra procesada correctamente, los detalles de su reserva son: 
 	Titular de la reserva: jon
  	Número de tarjeta: 1234567812345678
- 	Correo: admin@gmail.com
- 	Cine: Sestao
-	Película: Joker
-	Hora: 12:30
+ 	Correo: a@gmail.com
+ 	Cine: Deusto
+	Película: Birds of Prey
+	Hora: 19:45
  	Número de asientos: 1
- 	Asientos:  29
+ 	Asientos:  28

@@ -177,13 +177,26 @@ public class VPago {
 		labelCine.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		labelCine.setBounds(174, 194, 197, 14);
 		frame.getContentPane().add(labelCine);
-		
-		JLabel labelPelicula = new JLabel(VCartelera.peli);
+		String c1=null;
+		String h=null;
+		if(VCartelera2.peli!=null && VCartelera2.hora!=null) {
+			c1=VCartelera2.peli;
+			h=VCartelera2.hora;
+			}
+			if(VCartelera3.peli!=null && VCartelera3.hora!=null) {
+				c1=VCartelera3.peli;
+				h=VCartelera3.hora;
+				}
+			if(VCartelera.peli!=null && VCartelera2.hora!=null) {
+				c1=VCartelera.peli;
+				h=VCartelera.hora;
+				}
+		JLabel labelPelicula = new JLabel(c1);
 		labelPelicula.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		labelPelicula.setBounds(174, 229, 197, 14);
 		frame.getContentPane().add(labelPelicula);
 		
-		JLabel labelHora = new JLabel(VCartelera.hora);
+		JLabel labelHora = new JLabel(h);
 		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		labelHora.setBounds(174, 264, 197, 14);
 		frame.getContentPane().add(labelHora);
@@ -235,7 +248,7 @@ public class VPago {
 				if (con1.equals(con) && con.length() == 3 && textNumero.getText().length() == 16 && textTitular.getText().length() >1) {
 					int seleccion = JOptionPane.showOptionDialog(null,"¿Está seguro de que desea realizar su compra?", "",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,null, "opcion 2");
 					if(seleccion==1 ){
-					//Que no pase nah
+					
 					}
 					else{
 						String tar=textNumero.getText();
@@ -247,15 +260,18 @@ public class VPago {
 						String hora=null;
 						if(VCartelera.peli!=null && VCartelera.fecha!=null && VCartelera.hora!=null) {
 						pelicula=VCartelera.peli;
+						System.out.println(pelicula);
 						fecha=VCartelera.fecha;
 						hora=VCartelera.hora;
 						
 						}
 						if(VCartelera2.peli!=null && VCartelera2.fecha!=null && VCartelera2.hora!=null ) {
 						pelicula=VCartelera2.peli;
+						System.out.println(pelicula);
 						fecha=VCartelera2.fecha;
 						hora=VCartelera2.hora;
 							}
+						
 						if(VCartelera3.peli!=null && VCartelera3.fecha!=null && VCartelera3.hora!=null) {
 						pelicula=VCartelera3.peli;
 						fecha=VCartelera3.fecha;
