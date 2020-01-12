@@ -3,8 +3,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-import baseDeDatos.Reserva;
-
 public class CrearArchivo {
 	
 	public static void crearArchivo(String factura) {

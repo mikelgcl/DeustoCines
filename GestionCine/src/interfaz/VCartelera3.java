@@ -6,23 +6,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import baseDeDatos.Pelicula;
 import baseDeDatos.ZBaseDeDatos;
 
-import java.awt.SystemColor;
 import java.awt.Color;
-import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
@@ -161,7 +155,7 @@ String part1 = parts[0];
 		label_6.setBounds(182, 389, 46, 14);
 		frame.getContentPane().add(label_6);
 		
-		JComboBox comboBoxFecha = new JComboBox();
+		JComboBox<String> comboBoxFecha = new JComboBox<String>();
 		comboBoxFecha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (comboBoxFecha.getSelectedItem() == "17/01/2020") {

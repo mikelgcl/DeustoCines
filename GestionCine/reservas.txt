@@ -1,1 +1,9 @@
-Buenos dias
+Compra procesada correctamente, los detalles de su reserva son: 
+	Titular de la reserva: job
+ 	Número de tarjeta: 1234567812345678
+ 	Correo: a@gmail.com
+ 	Cine: Deusto
+	Película: Jumanji
+	Hora: 12:30
+ 	Número de asientos: 4
+ 	Asientos:  1 2 3 4

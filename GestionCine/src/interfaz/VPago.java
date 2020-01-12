@@ -10,10 +10,8 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import baseDeDatos.Reserva;
-import baseDeDatos.Usuario;
 import baseDeDatos.ZBaseDeDatos;
 
-import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
@@ -22,12 +20,8 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
-import javax.swing.JComboBox;
-import javax.swing.JTextArea;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 
 public class VPago {
 
@@ -204,8 +198,6 @@ public class VPago {
 		JButton btnConfirmar = new JButton("Confirmar compra");
 		Connection conn=c.initBD();
 		btnConfirmar.addActionListener(new ActionListener() {
-			private Reserva v;
-
 			public void actionPerformed(ActionEvent arg0) {
 				
 				char[] conc = textCodigo.getPassword(); 

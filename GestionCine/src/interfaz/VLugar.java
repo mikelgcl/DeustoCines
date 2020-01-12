@@ -6,7 +6,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import baseDeDatos.Cine;
@@ -14,18 +13,14 @@ import baseDeDatos.ZBaseDeDatos;
 
 import java.awt.SystemColor;
 import java.awt.Color;
-import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 
 import java.awt.event.ActionListener;
 import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
-import javax.swing.ComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class VLugar {
@@ -123,7 +118,7 @@ public class VLugar {
 							i = i + i/150000;
 							
 							progreso = (int)i/10000;
-							System.out.println();
+							
 							progressBar.setValue(progreso);
 							if (progreso == 100) {
 								//cine=(String) comboBox.getSelectedItem();
@@ -210,7 +205,7 @@ public class VLugar {
 			}
 		});
 		//AdminQuitar.setVisible(false);
-		System.out.println(VInicio.v);
+		
 		if (VInicio.v == true) {
 			AdminQuitar.setVisible(true);
 		}else {

@@ -5,18 +5,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 
 
-import java.awt.SystemColor;
 import java.awt.Color;
-import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JComboBox;
-import javax.swing.JTextArea;
 import javax.swing.ImageIcon;
 import javax.swing.JTextPane;
 
@@ -100,6 +95,7 @@ public class VAyuda {
 		JTextPane txtpnCondicionesGeneralesDe = new JTextPane();
 		txtpnCondicionesGeneralesDe.setText(" \nCINES DEUSTO es propietaria del dominio y titular de la aplicacion DeustoCines \n\n  \nLa totalidad de esta aplicación: texto, imágenes, marca comercial, logotipo, archivos descargables, botones, combinaciones de colores, así como la estructura, selección, ordenación y presentación de sus contenidos, se encuentra protegida por las leyes españolas e internacionales sobre propie- dad intelectual e industrial. Asimismo, y sin perjuicio de lo anteriormente citado, el contenido de este website también tiene la consideración de programa de ordenador y le es de aplicación toda la normativa española y comunitaria europea vigente sobre la materia. \n\n \nLos criterios y reglas que sigue CINES DEUSTO respecto a la utilización de los datos, que libre y voluntariamente usted facilite a través de nuestra página web, son los que se exponen en la Política de Privacidad." );
 		txtpnCondicionesGeneralesDe.setBounds(54, 127, 346, 345);
+		txtpnCondicionesGeneralesDe.setEditable(false);
 		frame.getContentPane().add(txtpnCondicionesGeneralesDe);
 		
 		frame.setLocationRelativeTo(null);

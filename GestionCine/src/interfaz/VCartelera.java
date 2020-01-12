@@ -6,24 +6,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
-import javax.swing.JTextField;
 import javax.swing.UIManager;
 
-import baseDeDatos.Cine;
 import baseDeDatos.Pelicula;
 import baseDeDatos.ZBaseDeDatos;
 
-import java.awt.SystemColor;
 import java.awt.Color;
-import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Set;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -109,8 +102,6 @@ public class VCartelera {
 		btnPelcula_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				VInfoPeli nuevaVentana = new VInfoPeli(); 
-				nuevaVentana.frame.setVisible(true);
 				
 				
 			}
@@ -138,7 +129,7 @@ Set<String> peliculas1=bd.getpeliculasnombres(con);
 Object[] peliculas=peliculas1.toArray();
 
 String string = p.getHoras();
-System.out.println(p.getHoras());
+
 String[] parts = string.split(",");
 String part1 = parts[0]; 
 String part2 = parts[1]; 
@@ -195,7 +186,7 @@ String part33 = parts3[2];
 		label_6.setBounds(471, 210, 46, 14);
 		frame.getContentPane().add(label_6);
 		
-		JComboBox comboBoxFecha = new JComboBox();
+		JComboBox<String> comboBoxFecha = new JComboBox<String>();
 		comboBoxFecha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (comboBoxFecha.getSelectedItem() == "18/01/2020") {
@@ -485,7 +476,9 @@ String part33 = parts3[2];
 				String respuesta = JOptionPane.showInputDialog("Nombre de la película que quieres añadir:");
 				Pelicula pelicula=new Pelicula();
 				pelicula.setTitulo(respuesta);
+				if(respuesta!=null) {
 				bd.insertDatosPelicula(con, pelicula);
+				}
 			}
 		});
 
@@ -506,7 +499,9 @@ String part33 = parts3[2];
 				  
 				  String resp = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
+				  if(resp!=null) {
 				  bd.deletePelicula(con, resp);
+				  }
 			}
 		});
 		btnQuitarPelcula.setBackground(new Color(0, 204, 51));
@@ -525,12 +520,34 @@ String part33 = parts3[2];
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
-				  System.out.println(resp);
+				 
 				  String respuesta = JOptionPane.showInputDialog("¿Qué hora quieres añadir?");
 				if(respuesta != null) {
-					String anadirh=string +","+ respuesta;
-					 System.out.println(anadirh);
-					  bd.updatehoras(con, anadirh, resp);
+					if(resp==peliculas[0]) {
+						String anadirh=string.replace("Sin Hora", respuesta);
+						 if(anadirh!=null) {
+						  bd.updatehoras(con, anadirh, resp);
+						 }
+					}
+					if(resp==peliculas[1]) {
+						String anadirh1=string1.replace("Sin Hora", respuesta);
+						 if(anadirh1!=null) {
+						  bd.updatehoras(con, anadirh1, resp);
+						 }
+					}
+					if(resp==peliculas[2]) {
+						String anadirh2=string2.replace("Sin Hora", respuesta);
+						 if(anadirh2!=null) {
+						  bd.updatehoras(con, anadirh2, resp);
+						 }
+					}
+					if(resp==peliculas[3]) {
+						String anadirh3=string3.replace("Sin Hora", respuesta);
+						 if(anadirh3!=null) {
+						  bd.updatehoras(con, anadirh3, resp);
+						 }
+					}
+					
 				}
 				  
 				
@@ -552,22 +569,96 @@ String part33 = parts3[2];
 				      
 				  String resp = (String) JOptionPane.showInputDialog(null, "¿De qué película quieres eliminar una hora?",
 				  "Película", JOptionPane.DEFAULT_OPTION, null, peliculas, peliculas[0]);
-				  
+				  if(resp!=null) {
+					  if(resp==peliculas[0]) {
 					
 					  String respo = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
 					  "Película", JOptionPane.DEFAULT_OPTION, null, parts, parts[0]);
-					  String[] se=new String[parts.length-1];
+					  String[] se=new String[parts.length];
 					  for (int i = 0; i < parts.length; i++) {
-				            if (parts[i] != respo) {
+				            
+				            	if(parts[i]==respo) {
+				            		parts[i]="Sin Hora";
+				            	}
 				                for (int j = 0; j < se.length; j++) {
-				                    se[j] = parts[i];
-				              System.out.println(se[j]+"ff");
+				                    se[j] = parts[j];
+				             
 				                }
-				            }}
+				            }
 				String quitarh=String.join(",",se);
-				System.out.println(quitarh);
-				//System.out.println(quitarh);
+				if(quitarh!=null) {
+				
 				bd.deletehoras(con, quitarh, resp);
+				}
+				  }
+					  if(resp==peliculas[1]) {
+						  String respo1 = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
+								  "Película", JOptionPane.DEFAULT_OPTION, null, parts1, parts1[0]);
+								  String[] se1=new String[parts1.length];
+								  for (int i = 0; i < parts1.length; i++) {
+							           
+							            	if(parts1[i]==respo1) {
+							            		
+							            		parts1[i]="Sin Hora";
+							            		
+							            		 
+							            	}
+							            	
+							               
+							            }
+								
+								  for (int j = 0; j < se1.length; j++) {
+					                    se1[j] = parts1[j];
+					                    
+					             
+					                }
+							String quitarh1=String.join(",",se1);
+							if(quitarh1!=null) {
+							
+							bd.deletehoras(con, quitarh1, resp);
+							}  
+					  }
+					  if(resp==peliculas[2]) {
+						  String respo2 = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
+								  "Película", JOptionPane.DEFAULT_OPTION, null, parts2, parts2[0]);
+								  String[] se2=new String[parts2.length];
+								  for (int i = 0; i < parts2.length; i++) {
+							            
+							            	if(parts2[i]==respo2) {
+							            		parts2[i]="Sin Hora";
+							            	}
+							                for (int j = 0; j < se2.length; j++) {
+							                    se2[j] = parts2[j];
+							             
+							                }
+							            }
+							String quitarh2=String.join(",",se2);
+							if(quitarh2!=null) {
+							
+							bd.deletehoras(con, quitarh2, resp);
+							}
+					  }
+					  if(resp==peliculas[3]) {
+						  String respo3 = (String) JOptionPane.showInputDialog(null, "Seleccione la película a eliminar",
+								  "Película", JOptionPane.DEFAULT_OPTION, null, parts3, parts3[0]);
+								  String[] se3=new String[parts3.length];
+								  for (int i = 0; i < parts3.length; i++) {
+							           
+							            	if(parts3[i]==respo3) {
+							            		parts3[i]="Sin Hora";
+							            	}
+							                for (int j = 0; j < se3.length; j++) {
+							                    se3[j] = parts3[j];
+							             
+							                }
+							            }
+							String quitarh3=String.join(",",se3);
+							if(quitarh3!=null) {
+							
+							bd.deletehoras(con, quitarh3, resp);
+							}
+					  }
+				  }
 			}
 		});
 		btnQuitarHora.setBackground(new Color(0, 204, 51));

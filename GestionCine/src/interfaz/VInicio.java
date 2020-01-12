@@ -11,7 +11,6 @@ import javax.swing.UIManager;
 import baseDeDatos.Usuario;
 import baseDeDatos.ZBaseDeDatos;
 
-import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
@@ -117,7 +116,7 @@ public class VInicio {
 					if(u.getCorreo().equals("admin@gmail.com")) {
 						v=true;
 						VLugar.v = true;
-						System.out.println("admin");
+						
 					} else {
 						VLugar.v = false;
 						v = false;
@@ -134,7 +133,7 @@ public class VInicio {
 					passwordContraseña.setText("");
 				}
 				
-				System.out.println(correo);
+				
 				
 				
 			}
