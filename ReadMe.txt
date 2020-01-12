@@ -3,6 +3,7 @@ Proyecto gestión Cines Deusto
 1. Se abre la ventana de inicio de sesión, hay dos opciones: crear un nuevo 
 usuario e iniciar sesión o iniciar sesión como administrador (para poder gestionar los cines)
 introduciendo "admin@gmail.com" en usuario y "admin1" como contraseña.
+Tambien esta el cliente "a@gmail.com" y contraseña "123456".
 
 2. Al entrar se nos abrirá la pantalla de selección de lugar. Si hemos entrado como administra- 
 dor podremos añadir o eliminar cines usando los botones de "+++" y "---". 
