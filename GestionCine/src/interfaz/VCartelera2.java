@@ -123,7 +123,7 @@ public class VCartelera2 {
 
 
 String string = p.getHoras();
-System.out.println(p.getHoras());
+
 String[] parts = string.split(",");
 String part1 = parts[0]; 
  
@@ -174,25 +174,13 @@ String part1 = parts[0];
 		});
 		
 	
-		//////Hacer que las fechas que aparecen en el ComboBox sean la reales
 		
-		/*Calendar c1 = Calendar.getInstance();
-		Calendar c2 = new GregorianCalendar();
-		
-		String dia = Integer.toString(c2.get(Calendar.DATE));
-		String mes = Integer.toString(c2.get(Calendar.MONTH));
-		String annio = Integer.toString(c2.get(Calendar.YEAR));
-		
-		System.out.println(dia + "/" + mes + "/" + annio);*/
 		
 		comboBoxFecha.setBounds(86, 140, 114, 20);
 		comboBoxFecha.addItem("18/01/2020");
 		comboBoxFecha.addItem("17/01/2020");
 		comboBoxFecha.addItem("19/01/2020");
-		comboBoxFecha.addItem("20/01/2020");
-		comboBoxFecha.addItem("21/01/2020");
-		comboBoxFecha.addItem("22/01/2020");
-		comboBoxFecha.addItem("23/01/2020");
+		
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		String c=(String) comboBoxFecha.getSelectedItem();
@@ -293,7 +281,7 @@ String part1 = parts[0];
 		frame.getContentPane().add(lblNewLabel);
 		
 		
-		JButton button = new JButton("part2");
+		JButton button = new JButton("00:30");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				hora=button.getText();
@@ -307,7 +295,7 @@ String part1 = parts[0];
 		button.setBounds(513, 238, 65, 32);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton("part3");
+		JButton button_1 = new JButton("19:30");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_1.getText();
@@ -321,7 +309,7 @@ String part1 = parts[0];
 		button_1.setBounds(438, 281, 65, 32);
 		frame.getContentPane().add(button_1);
 		
-		JButton button_2 = new JButton("part4");
+		JButton button_2 = new JButton("20:30");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_2.getText();
@@ -339,7 +327,7 @@ String part1 = parts[0];
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_3.getText();
-				peli=lblJoker. getText();
+				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -353,7 +341,7 @@ String part1 = parts[0];
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_4.getText();
-				peli=lblJoker. getText();
+				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -367,7 +355,7 @@ String part1 = parts[0];
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_5.getText();
-				peli=lblJoker. getText();
+				peli=lblAdAstra. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -381,7 +369,7 @@ String part1 = parts[0];
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_7.getText();
-				peli=lblAdAstra. getText();
+				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -395,7 +383,7 @@ String part1 = parts[0];
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_8.getText();
-				peli=lblAdAstra. getText();
+				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -409,7 +397,7 @@ String part1 = parts[0];
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				hora=button_9.getText();
-				peli=lblAdAstra. getText();
+				peli=lblJoker. getText();
 				VComprar nuevaVentana = new VComprar(); 
 				nuevaVentana.frame.setVisible(true);
 				frame.dispose();
@@ -547,8 +535,7 @@ String part1 = parts[0];
 				                }
 				            }}
 				String quitarh=String.join(",",se);
-				System.out.println(quitarh);
-				//System.out.println(quitarh);
+				;
 				bd.deletehoras(con, quitarh, resp);
 			}
 		});

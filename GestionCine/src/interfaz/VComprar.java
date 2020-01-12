@@ -83,9 +83,17 @@ public class VComprar {
 		frame.getContentPane().add(btnCerrar);
 		
 	
-		
-		
-		JLabel lblAyuda = new JLabel(VCartelera.peli);
+		String c=null;
+		if(VCartelera2.peli!=null) {
+		c=VCartelera2.peli;
+		}
+		if(VCartelera3.peli!=null) {
+			c=VCartelera3.peli;
+			}
+		if(VCartelera.peli!=null) {
+			c=VCartelera.peli;
+			}
+		JLabel lblAyuda = new JLabel(c);
 		lblAyuda.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblAyuda.setBounds(33, 111, 309, 19);
 		frame.getContentPane().add(lblAyuda);
@@ -143,8 +151,17 @@ public class VComprar {
 		btnContinuar.setBackground(new Color(0, 0, 153));
 		btnContinuar.setBounds(310, 608, 100, 23);
 		frame.getContentPane().add(btnContinuar);
-		
-		JLabel label = new JLabel(VCartelera.hora);
+		String h=null;
+		if(VCartelera2.hora!=null) {
+		h=VCartelera2.hora;
+		}
+		if(VCartelera3.hora!=null) {
+			h=VCartelera3.hora;
+			}
+		if(VCartelera.hora!=null) {
+			h=VCartelera.hora;
+			}
+		JLabel label = new JLabel(h);
 		label.setFont(new Font("Tahoma", Font.BOLD, 13));
 		label.setBounds(33, 141, 132, 43);
 		frame.getContentPane().add(label);

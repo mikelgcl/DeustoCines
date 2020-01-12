@@ -242,9 +242,25 @@ public class VPago {
 						Reserva r = null;
 						String cor=VInicio.correo;
 						String cine=VLugar.nomLugar;
-						String pelicula=VCartelera.peli;
-						Date fecha=VCartelera.fecha;
-						String hora=VCartelera.hora;
+						String pelicula=null;
+						Date fecha=null;
+						String hora=null;
+						if(VCartelera.peli!=null && VCartelera.fecha!=null && VCartelera.hora!=null) {
+						pelicula=VCartelera.peli;
+						fecha=VCartelera.fecha;
+						hora=VCartelera.hora;
+						
+						}
+						if(VCartelera2.peli!=null && VCartelera2.fecha!=null && VCartelera2.hora!=null ) {
+						pelicula=VCartelera2.peli;
+						fecha=VCartelera2.fecha;
+						hora=VCartelera2.hora;
+							}
+						if(VCartelera3.peli!=null && VCartelera3.fecha!=null && VCartelera3.hora!=null) {
+						pelicula=VCartelera3.peli;
+						fecha=VCartelera3.fecha;
+						hora=VCartelera3.hora;
+							}
 						int numasientos=VComprar.conmum;
 						String asiento=VComprar.asientos;
 						double p=0;
@@ -254,8 +270,8 @@ public class VPago {
 								+ "\n 	Número de tarjeta: " + VPago.textNumero.getText()
 								+ "\n 	Correo: " + VInicio.correo
 								+ "\n 	Cine: " + VLugar.nomLugar
-								+ "\n	Película: " + VCartelera.peli
-								+ "\n	Hora: " + VCartelera.hora
+								+ "\n	Película: " + pelicula
+								+ "\n	Hora: " + hora
 								+ "\n 	Número de asientos: " + numEntradas
 								+ "\n 	Asientos: " + VComprar.asientos;
 					
